@@ -1,6 +1,6 @@
 // Re-export the shared Prisma client from the database package
-export { prisma, connectToDatabase, disconnectFromDatabase, checkDatabaseHealth } from "@pk/database";
+import { PrismaClient } from "@prisma/client";
 
 // Export as default for backward compatibility
-import { prisma } from "@pk/database";
+const prisma = new PrismaClient();
 export default prisma;
