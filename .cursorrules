@@ -1,0 +1,526 @@
+# Cursor Rules for VerifiedNeedy App
+
+## 🎯 MANDATORY REQUIREMENTS: 100% Type Safe, Secure, and Production Ready
+
+**ALL code enhancements MUST be:**
+- ✅ **100% Type Safe**: Zero `any` types, complete type coverage, strict null checks
+- ✅ **100% Secure**: Input validation, authentication checks, no exposed secrets, XSS prevention
+- ✅ **100% Production Ready**: No debug code, proper error handling, optimized performance, clean code
+
+**These requirements are NON-NEGOTIABLE and apply to ALL code changes.**
+
+---
+
+## ⚠️ CRITICAL PRIORITY: Code Minimization & Redundancy Prevention
+
+### **ABSOLUTE MINIMUM CODE CHANGES REQUIRED**
+- **BEFORE writing ANY new code, ALWAYS check for existing implementations:**
+  1. Search the codebase for similar functionality
+  2. Check if existing endpoints, functions, or components can be reused
+  3. Verify if existing patterns can be extended rather than duplicated
+  4. **NEVER create new code without first confirming no existing solution exists**
+- **When resolving issues or adding functionality:**
+  - **Make the ABSOLUTE MINIMUM amount of code changes necessary**
+  - Reuse existing patterns, functions, and endpoints whenever possible
+  - Extend existing implementations rather than creating duplicates
+  - Only add new code when absolutely necessary and no existing solution can be adapted
+- **Code redundancy is STRICTLY PROHIBITED:**
+  - If similar logic exists in 2+ places, extract it (see DRY section)
+  - If an endpoint/function already exists that can be extended, extend it
+  - If a pattern already exists, follow it rather than creating a new one
+- **Verification checklist before implementing:**
+  - [ ] Searched codebase for existing similar functionality
+  - [ ] Confirmed no existing endpoint/function/component can be reused
+  - [ ] Verified no existing pattern can be followed
+  - [ ] Confirmed the minimal amount of code changes needed
+  - [ ] Documented why new code is necessary (if applicable)
+
+### **Examples of Code Minimization:**
+- ✅ **Good**: Extend existing component to handle additional props
+- ❌ **Bad**: Create a new component when existing one can be extended
+- ✅ **Good**: Reuse existing form validation pattern from ContactForm
+- ❌ **Bad**: Duplicate validation logic in new form component
+- ✅ **Good**: Add minimal utility function only for needed conversion
+- ❌ **Bad**: Create comprehensive conversion utilities when only one is needed
+
+## Code Review Requirements
+
+### Documentation Review
+- **Always review all code changes against the files in the `project-documentation/` folder**
+- Ensure all implementations align with the documented architecture, requirements, and specifications
+- Reference relevant documentation files when making changes
+
+### Code Reuse from Related Projects
+- **Whenever possible, copy applicable code from related Plentiful Knowledge projects:**
+  - GDAP app: `C:\Code\WebApps\PlentifulKnowledge\PK-Website`
+- When building features for VerifiedNeedy, prioritize reusing proven patterns and implementations from related projects
+- **If it's necessary to deviate from related project codebases:**
+  1. Explain the reason for the deviation in detail
+  2. Wait for explicit approval before implementing code that deviates from proven patterns
+  3. Document why the deviation is necessary and what alternative approach is being used
+
+### Code Change Approval Process
+- **Describe the purpose of code changes in detail before implementation**
+- Explain:
+  - What the change accomplishes
+  - Why it's necessary
+  - How it fits into the overall architecture
+  - Any potential side effects or considerations
+- **Wait for approval before implementing code changes**
+
+### Code Quality Standards
+
+#### Magic Numbers
+- **Use named constants instead of "magic numbers"** (unexplained numerical literals)
+- Define constants with descriptive names that explain their purpose
+- Examples:
+  - ❌ `setTimeout(() => {}, 5000)`
+  - ✅ `const EMAIL_VERIFICATION_TIMEOUT_MS = 5000; setTimeout(() => {}, EMAIL_VERIFICATION_TIMEOUT_MS)`
+
+## DRY (Don't Repeat Yourself) Principle
+
+### Code Duplication Prevention
+- **Before writing new code, check for existing implementations** in:
+  - `components/` - Reusable components
+  - `app/` - Page components and layouts
+  - `lib/` - Utility functions and services (create if needed)
+- **If similar logic appears in 2+ places, extract it** into:
+  - A reusable component (if it's UI)
+  - A utility function (if it's pure logic)
+  - A custom hook (if it uses React hooks or state)
+- **When extracting code:**
+  - Create well-typed interfaces/parameters
+  - Add JSDoc comments explaining usage
+  - Place in appropriate directory (`components/`, `lib/`, or create `hooks/` if needed)
+  - Update all usages to use the extracted code
+
+### Component Extraction Guidelines
+- **Extract components when:**
+  - Same JSX appears in 2+ files
+  - Component has clear, single responsibility
+  - Component can be reused across different pages/features
+- **Extract hooks when:**
+  - Same logic with `useState`, `useEffect`, or other hooks appears in 2+ components
+  - Logic involves side effects or state management
+  - Logic can be tested independently
+
+## Type Safety Standards
+
+### 100% Type Safety Requirement
+- **ALL code MUST be 100% type safe** - Zero tolerance for `any` types or type assertions
+- **Complete type coverage required** - All functions, parameters, return values, and variables must be explicitly typed
+- **Strict null checks mandatory** - All `null` and `undefined` cases must be handled explicitly
+
+### TypeScript Best Practices
+- **NEVER use `any` type** - Use `unknown` if type is truly unknown, then narrow with type guards
+- **Avoid type assertions (`as`)** - Prefer type guards, proper typing, or type narrowing
+- **Use proper type definitions:**
+  - ✅ `interface` for object shapes
+  - ✅ `type` for unions, intersections, or computed types
+  - ✅ Generic types for reusable components/functions
+- **Type all function parameters and return values:**
+  - ❌ `function processData(data) { ... }`
+  - ✅ `function processData(data: UserData): ProcessedResult { ... }`
+- **Use strict null checks:**
+  - Always handle `null` and `undefined` explicitly
+  - Use optional chaining (`?.`) and nullish coalescing (`??`) appropriately
+
+### Type Guard Requirements
+- **Create type guards for runtime type validation:**
+  - Use `typeof`, `instanceof`, or custom predicates
+  - Return type should be `value is Type`
+  - Example: `function isUser(value: unknown): value is User { ... }`
+
+## Security Standards
+
+### 100% Security Requirement
+- **ALL code MUST be 100% secure** - Zero tolerance for security vulnerabilities
+- **Complete security coverage required** - Input validation, authentication, authorization, and data sanitization mandatory
+- **No security shortcuts allowed** - All security best practices must be followed without exception
+
+### Production Code Security
+- **NEVER commit debug code:**
+  - ❌ `console.log()`, `console.error()`, `console.warn()` in production code
+  - ❌ `debugger` statements
+  - ✅ Use proper logging service for production logging (if needed)
+- **Input Validation:**
+  - Always validate and sanitize user input
+  - Use validation schemas (Zod, Yup, react-hook-form validators, etc.) for forms
+  - Never trust client-side data - validate on server if using API routes
+- **Form Security:**
+  - Use react-hook-form for form management and validation
+  - Validate all form inputs on both client and server side
+  - Sanitize form data before submission
+- **Environment Variables:**
+  - Never hardcode secrets, API keys, or sensitive data
+  - Use environment variables with proper `.env` files
+  - Validate environment variables at application startup
+- **XSS Prevention:**
+  - Escape user-generated content before rendering
+  - Use React's built-in XSS protection (auto-escaping)
+  - Sanitize HTML if using `dangerouslySetInnerHTML`
+- **External Links:**
+  - Always use `rel="noopener noreferrer"` for external links
+  - Validate external URLs before linking
+
+### API Route Security (if using Next.js API routes)
+- **All API routes must:**
+  - Validate request methods (GET, POST, etc.)
+  - Validate request body/query parameters
+  - Handle errors gracefully without exposing internals
+  - Return consistent error response format
+  - Implement rate limiting if handling form submissions
+
+## Accessibility Standards
+
+### 100% Accessibility Requirement
+- **ALL interactive components MUST be fully accessible** - Zero tolerance for accessibility barriers
+- **Complete accessibility coverage required** - Keyboard navigation, ARIA attributes, focus management, and screen reader support mandatory
+- **WCAG 2.1 Level AA compliance** - All components must meet accessibility standards
+
+### Keyboard Navigation
+- **All interactive elements must be keyboard accessible:**
+  - Buttons, links, and form controls must be focusable via Tab key
+  - Custom interactive components must handle Enter and Space keys
+  - Focus order must be logical and intuitive
+  - Focus must be visible with clear focus indicators
+- **Keyboard event handlers:**
+  - Use `onKeyDown` for keyboard interactions
+  - Handle `Enter` and `Space` keys for button-like elements
+  - Prevent default behavior when appropriate
+  - Example: `onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } }}`
+
+### ARIA Attributes
+- **Use proper ARIA attributes for dynamic content:**
+  - `aria-expanded` for expandable/collapsible elements (accordions, dropdowns)
+  - `aria-controls` to link controls to their controlled content
+  - `aria-labelledby` to associate content with its label
+  - `aria-hidden="true"` for decorative or measurement-only elements
+  - `role` attributes when semantic HTML isn't sufficient
+- **Form accessibility:**
+  - Associate labels with inputs using `htmlFor` and `id`
+  - Use `aria-describedby` for error messages and help text
+  - Use `aria-required` for required fields
+  - Use `aria-invalid` for validation errors
+
+### Focus Management
+- **Visible focus indicators:**
+  - All focusable elements must have visible focus styles
+  - Use Tailwind focus utilities: `focus:outline-none focus:ring-2 focus:ring-[color] focus:ring-offset-2`
+  - Ensure focus indicators have sufficient contrast
+- **Focus trapping:**
+  - Trap focus within modals and dialogs
+  - Return focus to trigger element when closing modals
+  - Manage focus for dynamic content (accordions, tabs)
+
+### Screen Reader Support
+- **Semantic HTML:**
+  - Use appropriate HTML elements (`<button>`, `<nav>`, `<section>`, etc.)
+  - Use heading hierarchy properly (`h1` → `h2` → `h3`)
+  - Use lists (`<ul>`, `<ol>`) for list content
+- **Descriptive text:**
+  - Provide meaningful `alt` text for images
+  - Use descriptive link text (avoid "click here")
+  - Provide context for screen reader users
+- **Live regions:**
+  - Use `aria-live` for dynamic content updates
+  - Use `role="status"` or `role="alert"` for important announcements
+
+### Interactive Component Patterns
+- **Accordions/Collapsible content:**
+  - Button must have `aria-expanded` and `aria-controls`
+  - Content must have `role="region"` and `aria-labelledby`
+  - Support keyboard navigation (Enter/Space to toggle)
+- **Tabs:**
+  - Use `role="tablist"`, `role="tab"`, `role="tabpanel"`
+  - Use `aria-selected` for active tab
+  - Support arrow key navigation between tabs
+- **Modals/Dialogs:**
+  - Use `role="dialog"` or `role="alertdialog"`
+  - Trap focus within modal
+  - Close on Escape key
+  - Return focus to trigger on close
+
+### Accessibility Checklist
+Before submitting code, verify:
+- [ ] All interactive elements are keyboard accessible
+- [ ] Focus indicators are visible and clear
+- [ ] ARIA attributes are properly implemented
+- [ ] Semantic HTML is used appropriately
+- [ ] Screen reader testing completed (or simulated)
+- [ ] Keyboard navigation works for all features
+- [ ] Color contrast meets WCAG AA standards
+- [ ] Form labels are properly associated
+
+## Performance Optimization
+
+### React Performance Best Practices
+- **Use `useMemo` for expensive computations:**
+  - When computing derived values from props/state
+  - When creating objects/arrays that are dependencies
+  - When mapping over data to create component lists
+  - Example: `const filteredData = useMemo(() => data.filter(...), [data])`
+  - Example: `const items = useMemo(() => data.map(...), [data])`
+- **Use `useCallback` for function stability:**
+  - When passing functions as props to memoized components
+  - When functions are dependencies in other hooks (`useEffect`, `useMemo`)
+  - For event handlers that are passed to child components
+  - Example: `const handleClick = useCallback(() => {...}, [deps])`
+  - Example: `const toggleItem = useCallback((id) => {...}, [])`
+- **Memoize components with `React.memo`:**
+  - For components that receive stable props
+  - When re-renders are expensive
+  - When component renders frequently with same props
+  - Example: `export const ExpensiveComponent = React.memo(({ data }) => {...})`
+- **Use stable keys in lists:**
+  - Never use array index as key when items can be reordered, added, or removed
+  - Use unique, stable identifiers (IDs, composite keys)
+  - Example: `key={item.id}` or `key={`${categoryId}-${itemId}`}`
+  - ❌ Bad: `key={index}` when list is dynamic
+  - ✅ Good: `key={item.id}` or `key={stableCompositeKey}`
+- **Optimize `useEffect` dependencies:**
+  - Include all dependencies in dependency array
+  - Use `useCallback`/`useMemo` to stabilize dependencies
+  - Avoid unnecessary effect re-runs
+  - Combine related effects when possible to reduce hook count
+- **Reduce hook overhead:**
+  - Minimize number of `useEffect` hooks per component
+  - Combine related effects when dependencies align
+  - Use cleanup functions to prevent memory leaks
+  - Example: Single effect handling multiple related side effects
+
+### Code Splitting & Lazy Loading
+- **Use dynamic imports for large components:**
+  - `const HeavyComponent = dynamic(() => import('./HeavyComponent'))`
+  - Use `loading` prop for loading states
+- **Lazy load routes when appropriate:**
+  - Use Next.js dynamic imports for route-level code splitting
+
+### Data Fetching Optimization
+- **Avoid over-fetching:**
+  - Only request data needed for current view
+  - Use pagination for large datasets
+- **Implement proper caching:**
+  - Use Next.js caching strategies for static content
+  - Set appropriate cache times for different data types
+- **Debounce/throttle expensive operations:**
+  - Search inputs, resize handlers, scroll handlers
+  - Create `useDebounce` hook if needed
+
+## Production Readiness
+
+### 100% Production Ready Requirement
+- **ALL code MUST be 100% production ready** - Zero tolerance for debug code, incomplete error handling, or unoptimized code
+- **Complete production readiness required** - All code must be clean, tested, optimized, and ready for deployment
+- **No development artifacts allowed** - No `console.log`, `debugger`, `TODO`, or commented-out code in production
+
+### Error Handling
+- **Always handle errors gracefully:**
+  - Use try-catch blocks for async operations
+  - Provide user-friendly error messages
+  - Log errors appropriately (server-side logging if using API routes)
+- **Use Error Boundaries:**
+  - Wrap major sections in error boundaries
+  - Provide fallback UI for component errors
+- **Validate API responses:**
+  - Check response status codes
+  - Validate response data structure
+  - Handle network errors and timeouts
+
+### Code Cleanup
+- **Remove all debug code before committing:**
+  - No `console.log`, `console.error`, `console.warn`
+  - No `debugger` statements
+  - No commented-out code (unless it's documentation)
+  - No `TODO`, `FIXME`, `XXX`, `HACK` comments in production code
+- **Clean up unused code:**
+  - Remove unused imports
+  - Remove unused variables/functions
+  - Remove dead code paths
+
+### Testing Considerations
+- **Write testable code:**
+  - Extract pure functions for business logic
+  - Separate side effects from pure logic
+  - Use dependency injection for testability
+- **Document complex logic:**
+  - Add comments explaining "why", not "what"
+  - Document edge cases and assumptions
+
+### Build & Bundle Optimization
+- **Optimize imports:**
+  - Use named imports instead of default imports when possible
+  - Avoid importing entire libraries when only using small parts
+  - Example: `import { debounce } from 'lodash'` not `import _ from 'lodash'`
+- **Image optimization:**
+  - Use Next.js `Image` component for all images
+  - Provide appropriate `width`, `height`, and `alt` attributes
+  - Use appropriate image formats (WebP, AVIF when supported)
+
+## Maintainability Standards
+
+### Code Organization
+- **Follow consistent file structure:**
+  - Components: `components/ComponentName.tsx`
+  - Pages: `app/[route]/page.tsx`
+  - Layouts: `app/layout.tsx`
+  - Utilities: `lib/utilityName.ts` (create if needed)
+  - Types: `types/typeName.ts` (create if needed)
+  - Hooks: `hooks/useHookName.ts` (create if needed)
+- **Keep files focused:**
+  - One main export per file (component, hook, function)
+  - Related utilities can be grouped in same file
+  - Maximum file size: ~300-400 lines (extract if larger)
+
+### Naming Conventions
+- **Use descriptive names:**
+  - Components: PascalCase (`ContactForm`, `FAQSection`)
+  - Hooks: camelCase starting with "use" (`useFormValidation`)
+  - Functions: camelCase (`validateEmail`, `formatDate`)
+  - Constants: UPPER_SNAKE_CASE (`MAX_RETRY_ATTEMPTS`)
+  - Types/Interfaces: PascalCase (`FormData`, `ApiResponse`)
+
+### Documentation Requirements
+- **Add JSDoc comments for:**
+  - All exported functions
+  - All exported hooks
+  - Complex components
+  - Type definitions (interfaces/types)
+- **JSDoc should include:**
+  - Description of what it does
+  - Parameter descriptions with types
+  - Return value description
+  - Example usage (for complex cases)
+
+### Tailwind CSS Best Practices
+- **Use consistent styling patterns:**
+  - Follow existing Tailwind utility patterns
+  - Use custom classes defined in `globals.css` (e.g., `glass-effect`, `btn-primary`)
+  - Maintain consistent spacing, colors, and typography
+- **Custom color usage:**
+  - Use defined Tailwind colors: `california-blue`, `california-gold`, `fire-red`, `emergency-orange`
+  - Reference `tailwind.config.js` for available colors
+
+## Homepage Section Styling Standards
+
+### 100% Visual Consistency Requirement
+- **ALL homepage sections MUST have identical visual appearance** - Zero tolerance for inconsistent styling
+- **Complete visual consistency required** - All sections must use the same container styling pattern
+- **No visual deviations allowed** - All sections must match the established design pattern
+
+### Homepage Section Structure Pattern
+- **MANDATORY structure for all homepage sections:**
+  1. **Outer container** (for spacing and layout):
+     - Use `<section>` with `id` attribute for anchor navigation
+     - Apply spacing classes: `mt-8 md:mt-12 pt-8 pb-8` (and `mb-8 md:mb-12` if needed)
+     - **NEVER use `bg-white`** on outer container (creates inconsistent white background layer)
+  2. **Layout container** (for responsive width):
+     - Use `container mx-auto px-4` with appropriate `max-w-*` class
+     - Or use `w-full max-w-* mx-auto` pattern (as in ContactForm)
+  3. **Visual container** (MANDATORY for consistent appearance):
+     - **MUST use**: `glass-effect rounded-2xl p-8 shadow-2xl`
+     - This creates the consistent glass-morphism effect with rounded corners, padding, and shadow
+     - All section content goes inside this container
+
+### Homepage Section Width Standards
+- **MANDATORY width consistency for all homepage sections:**
+  - **ALL homepage sections (except "Find Your Government Leaders") MUST use**: `max-w-6xl` (1152px)
+  - This includes: "How It Works", "FAQS", "Key Issues / About Section", introductory content, and any new sections
+  - **Exception**: "Find Your Government Leaders" section uses `max-w-2xl` (672px) and should remain unchanged
+  - **Width classes to use:**
+    - ✅ `max-w-6xl` - For all standard homepage sections
+    - ✅ `max-w-2xl` - Only for "Find Your Government Leaders" section
+    - ❌ `max-w-4xl` - NOT allowed (creates inconsistent widths)
+    - ❌ `max-w-5xl` - NOT allowed (creates inconsistent widths)
+
+### Homepage Section Vertical Spacing Standards
+- **MANDATORY vertical spacing consistency:**
+  - **Top margin**: Use `mt-8 md:mt-12` (32px mobile, 48px desktop) - Creates 64px/80px total spacing with padding
+  - **Bottom margin**: Use `mb-8 md:mb-12` (32px mobile, 48px desktop) - Creates 64px/80px total spacing with padding
+  - **Internal padding**: Use `pt-8 pb-8` (32px each) - Maintains consistent internal spacing
+  - **Total section spacing**: Results in 64px-80px gaps between sections (optimal for readability without excessive whitespace)
+  - **Avoid excessive spacing:**
+    - ❌ `mt-16 md:mt-24` - Too large (creates 96px-128px gaps)
+    - ❌ `mb-16 md:mb-24` - Too large (creates 96px-128px gaps)
+    - ❌ Double margins - Don't combine large margins on adjacent sections
+  - **Spacing pattern for section transitions:**
+    - Previous section: `mb-8 md:mb-12` (bottom margin)
+    - Next section: `mt-8 md:mt-12` (top margin) + `pt-8` (top padding)
+    - Result: 64px/80px total spacing between sections
+
+### Required Styling Classes
+- **Visual container MUST include:**
+  - `glass-effect` - Semi-transparent background with blur effect
+  - `rounded-2xl` - Rounded corners (consistent with other sections)
+  - `p-8` - Consistent padding (32px on all sides)
+  - `shadow-2xl` - Shadow effect for depth
+
+### Examples
+- ✅ **Correct pattern:**
+  ```tsx
+  return (
+    <section id="section-name" className="mt-8 md:mt-12 pt-8 pb-8 mb-8 md:mb-12">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="glass-effect rounded-2xl p-8 shadow-2xl">
+          {/* Section content */}
+        </div>
+      </div>
+    </section>
+  )
+  ```
+- ❌ **Incorrect patterns:**
+  - Missing `glass-effect` container
+  - Using `bg-white` on outer section
+  - Different padding (`p-6` instead of `p-8`)
+  - Different border radius (`rounded-xl` instead of `rounded-2xl`)
+  - Missing shadow (`shadow-2xl`)
+  - Using `max-w-4xl` or `max-w-5xl` instead of `max-w-6xl`
+  - Using `mt-16 md:mt-24` or `mb-16 md:mb-24` (excessive spacing)
+
+### Reference Sections
+- **Existing sections that follow this pattern:**
+  - `components/HowItWorksSection.tsx` - Lines 74-76
+  - `components/ContactForm.tsx` - Lines 140-141
+  - `components/FAQSection.tsx` - Lines 103-105
+- **Before creating a new homepage section:**
+  1. Review existing sections to understand the pattern
+  2. Copy the structure from an existing section
+  3. Ensure all three container layers are present
+  4. Verify `glass-effect rounded-2xl p-8 shadow-2xl` is used
+  5. Confirm `bg-white` is NOT on outer container
+
+### Homepage Section Checklist
+Before creating or modifying a homepage section, verify:
+- [ ] Outer container uses `<section>` with appropriate `id` for navigation
+- [ ] Outer container has spacing classes (`mt-8 md:mt-12 pt-8 pb-8 mb-8 md:mb-12`)
+- [ ] Outer container does NOT have `bg-white` class
+- [ ] Layout container uses `container mx-auto px-4` or `w-full max-w-* mx-auto`
+- [ ] Layout container uses `max-w-6xl` (except "Find Your Government Leaders" which uses `max-w-2xl`)
+- [ ] Visual container has `glass-effect rounded-2xl p-8 shadow-2xl` classes
+- [ ] All section content is inside the visual container
+- [ ] Section matches visual appearance of existing sections (HowItWorksSection, ContactForm, FAQSection)
+- [ ] Vertical spacing is consistent (64px-80px gaps between sections, not 96px-160px)
+
+### Code Review Checklist
+Before submitting code, verify:
+- [ ] **🎯 MANDATORY: Code is 100% type safe (zero `any` types, complete type coverage)**
+- [ ] **🎯 MANDATORY: Code is 100% secure (validation, no exposed secrets, XSS prevention)**
+- [ ] **🎯 MANDATORY: Code is 100% production ready (no debug code, proper error handling, optimized)**
+- [ ] **⚠️ CRITICAL: Searched codebase for existing functionality before creating new code**
+- [ ] **⚠️ CRITICAL: Confirmed absolute minimum code changes were made**
+- [ ] **⚠️ CRITICAL: No redundant code created (reused existing endpoints/functions/patterns)**
+- [ ] No code duplication (extracted to hooks/components/utils)
+- [ ] No `any` types (proper TypeScript types used)
+- [ ] No `console.log` or debug code
+- [ ] All errors handled gracefully
+- [ ] Performance optimizations applied (memo, callback, etc.)
+- [ ] Security checks in place (validation, XSS prevention, etc.)
+- [ ] Accessibility requirements met (keyboard navigation, ARIA attributes, focus management)
+- [ ] JSDoc comments added for exports
+- [ ] Code follows naming conventions
+- [ ] No unused imports or variables
+- [ ] Tailwind classes follow existing patterns
+- [ ] Images use Next.js `Image` component with proper attributes
+- [ ] Homepage sections follow consistent styling pattern (`glass-effect rounded-2xl p-8 shadow-2xl`, no `bg-white` on outer container)
+- [ ] Homepage sections use consistent width (`max-w-6xl` for all sections except "Find Your Government Leaders" which uses `max-w-2xl`)
+- [ ] Homepage sections use consistent vertical spacing (`mt-8 md:mt-12` and `mb-8 md:mb-12`, not `mt-16 md:mt-24` or `mb-16 md:mb-24`)

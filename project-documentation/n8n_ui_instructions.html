@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n UI Instructions - Detailed Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .nav-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+        .instruction-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .step {
+            background: white;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        .click-path {
+            background: #fff3cd;
+            padding: 0.5rem;
+            border-radius: 3px;
+            margin: 0.5rem 0;
+            font-family: monospace;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        .screenshot-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #667eea;
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            border-radius: 5px;
+            color: #666;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .tip {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #856404;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 n8n UI Instructions</h1>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Step-by-step guide for using the n8n interface</p>
+        </header>
+
+        <div class="nav-links">
+            <a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a>
+            <a href="n8n_visual_guides.html">🖼️ Visual Guides</a>
+            <a href="n8n_node_configuration.html">⚙️ Node Configuration</a>
+            <a href="n8n_troubleshooting.html">🔧 Troubleshooting</a>
+        </div>
+
+        <section id="getting-started">
+            <h2>Getting Started with n8n</h2>
+            
+            <div class="instruction-box">
+                <h3>Accessing n8n</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Open n8n in your browser</strong>
+                    <ul>
+                        <li>If self-hosted: Navigate to <code>http://localhost:5678</code> (default port)</li>
+                        <li>If cloud: Log in to <a href="https://n8n.io/" target="_blank">n8n.io</a></li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Sign in or create account</strong>
+                    <ul>
+                        <li>Click <strong>"Sign In"</strong> button in the top right corner</li>
+                        <li>Enter your credentials or create a new account</li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Navigate to Workflows</strong>
+                    <div class="click-path">Click: <strong>Workflows</strong> → (in left sidebar)</div>
+                    <p>You'll see a list of your existing workflows or an empty workspace if you're new.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="creating-workflow">
+            <h2>Creating a New Workflow</h2>
+            
+            <div class="instruction-box">
+                <h3>Initial Setup</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Create New Workflow</strong>
+                    <div class="click-path">Click: <strong>"New Workflow"</strong> button (top right, or "+" icon)</div>
+                    <p>A blank canvas will appear with a "Start" node already placed.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Name Your Workflow</strong>
+                    <div class="click-path">Click: <strong>Workflow name</strong> (top center, "Untitled Workflow") → Type: "PDF Org Chart Processor"</div>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Save Your Workflow</strong>
+                    <div class="click-path">Click: <strong>"Save"</strong> button (top right) or press <code>Ctrl+S</code> (Windows) / <code>Cmd+S</code> (Mac)</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="adding-nodes">
+            <h2>Adding Nodes to Your Workflow</h2>
+            
+            <div class="instruction-box">
+                <h3>Method 1: Using the Node Panel</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Open Node Panel</strong>
+                    <div class="click-path">Click: <strong>"+"</strong> button (left side of canvas) or press <code>Space</code> key</div>
+                    <p>A searchable panel with all available nodes will appear.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Search for Node</strong>
+                    <div class="click-path">Type in search box: <code>"Webhook"</code> or <code>"HTTP Request"</code></div>
+                    <p>Nodes matching your search will appear below.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Add Node to Canvas</strong>
+                    <div class="click-path">Click: <strong>Node name</strong> (e.g., "Webhook")</div>
+                    <p>The node will appear on your canvas. You can drag it to reposition.</p>
+                </div>
+            </div>
+
+            <div class="instruction-box">
+                <h3>Method 2: Connecting from Existing Node</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Hover over Node</strong>
+                    <div class="click-path">Hover mouse over: <strong>Output dot</strong> (right side of a node)</div>
+                    <p>The output dot will highlight.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Click and Drag</strong>
+                    <div class="click-path">Click and drag: <strong>From output dot</strong> → <strong>To empty space</strong></div>
+                    <p>A connection line will appear, and the node panel will open automatically.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Select Next Node</strong>
+                    <div class="click-path">Click: <strong>Desired node</strong> from the panel</div>
+                    <p>The new node will be connected automatically to the previous one.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="configuring-nodes">
+            <h2>Configuring Nodes</h2>
+            
+            <div class="instruction-box">
+                <h3>Opening Node Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Select Node</strong>
+                    <div class="click-path">Click: <strong>Node on canvas</strong></div>
+                    <p>The node will be highlighted, and a configuration panel will appear on the right side.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>View Configuration Panel</strong>
+                    <p>The right panel shows:
+                        <ul>
+                            <li><strong>Parameters</strong> tab: Main configuration options</li>
+                            <li><strong>Settings</strong> tab: Node-specific settings</li>
+                            <li><strong>Credentials</strong> section: For API keys and authentication</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="instruction-box">
+                <h3>Common Configuration Tasks</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Rename Node</strong>
+                    <div class="click-path">Double-click: <strong>Node name</strong> on canvas → Type new name</div>
+                    <p>Or use the "Name" field in the configuration panel.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Add Credentials</strong>
+                    <div class="click-path">Click: <strong>"Create New Credential"</strong> → Select credential type → Enter API key</div>
+                    <p>Credentials are stored securely and can be reused across workflows.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Use Expression Editor</strong>
+                    <div class="click-path">Click: <strong>"Expression"</strong> button (next to input fields) → Enter JavaScript expression</div>
+                    <p>Use <code>{{ $json.fieldName }}</code> to reference data from previous nodes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connecting-nodes">
+            <h2>Connecting Nodes</h2>
+            
+            <div class="instruction-box">
+                <h3>Manual Connection</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Select Source Node</strong>
+                    <div class="click-path">Click: <strong>Output dot</strong> (right side of source node)</div>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Drag to Target Node</strong>
+                    <div class="click-path">Drag: <strong>From output dot</strong> → <strong>To input dot</strong> (left side of target node)</div>
+                    <p>A connection line will appear between the nodes.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Verify Connection</strong>
+                    <p>The connection line should be solid. If dashed, the connection may be incomplete.</p>
+                </div>
+            </div>
+
+            <div class="instruction-box">
+                <h3>Disconnecting Nodes</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Select Connection</strong>
+                    <div class="click-path">Click: <strong>Connection line</strong> between nodes</div>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Delete Connection</strong>
+                    <div class="click-path">Press: <strong>Delete</strong> key or right-click → <strong>"Delete"</strong></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testing-workflow">
+            <h2>Testing Your Workflow</h2>
+            
+            <div class="instruction-box">
+                <h3>Manual Execution</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Execute Workflow</strong>
+                    <div class="click-path">Click: <strong>"Execute Workflow"</strong> button (top right) or press <code>Ctrl+Enter</code></div>
+                    <p>The workflow will run from the Start node.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>View Execution Results</strong>
+                    <div class="click-path">Click: <strong>Node</strong> after execution → View <strong>"Output"</strong> tab in right panel</div>
+                    <p>You'll see the data that passed through each node.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Test Individual Nodes</strong>
+                    <div class="click-path">Right-click: <strong>Node</strong> → <strong>"Execute Node"</strong></div>
+                    <p>This runs only the selected node with data from previous nodes.</p>
+                </div>
+            </div>
+
+            <div class="instruction-box">
+                <h3>Using Test Data</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Open Node</strong>
+                    <div class="click-path">Click: <strong>Node</strong> → <strong>"Test Step"</strong> tab</div>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Enter Test Data</strong>
+                    <div class="click-path">Paste or type: <strong>JSON test data</strong> in the test data field</div>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Run Test</strong>
+                    <div class="click-path">Click: <strong>"Test Step"</strong> button</div>
+                    <p>The node will execute with your test data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="saving-activating">
+            <h2>Saving and Activating Workflows</h2>
+            
+            <div class="instruction-box">
+                <h3>Saving Workflows</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Save Workflow</strong>
+                    <div class="click-path">Click: <strong>"Save"</strong> button (top right) or <code>Ctrl+S</code> / <code>Cmd+S</code></div>
+                    <p>Your workflow is saved but not active yet.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Auto-save</strong>
+                    <p>n8n auto-saves your work periodically. Look for the "Saved" indicator in the top bar.</p>
+                </div>
+            </div>
+
+            <div class="instruction-box">
+                <h3>Activating Workflows (Production Mode)</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Toggle Active Switch</strong>
+                    <div class="click-path">Click: <strong>"Active"</strong> toggle switch (top right, next to Save)</div>
+                    <p>The switch will turn green when active.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Confirm Activation</strong>
+                    <p>Active workflows will:
+                        <ul>
+                            <li>Respond to webhook triggers automatically</li>
+                            <li>Run on schedule (if using Schedule Trigger)</li>
+                            <li>Execute when manually triggered</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="tip">
+                    <strong>💡 Tip:</strong> Only activate workflows when you're ready for production. Test thoroughly first!
+                </div>
+            </div>
+        </section>
+
+        <section id="viewing-executions">
+            <h2>Viewing Workflow Executions</h2>
+            
+            <div class="instruction-box">
+                <h3>Execution History</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Open Executions</strong>
+                    <div class="click-path">Click: <strong>"Executions"</strong> tab (top of workflow canvas)</div>
+                    <p>You'll see a list of all workflow executions.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>View Execution Details</strong>
+                    <div class="click-path">Click: <strong>Execution entry</strong> in the list</div>
+                    <p>You'll see:
+                        <ul>
+                            <li>Execution status (Success/Error)</li>
+                            <li>Execution time</li>
+                            <li>Data at each node</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Re-run Execution</strong>
+                    <div class="click-path">Click: <strong>"Re-run"</strong> button (in execution details)</div>
+                    <p>This re-executes the workflow with the same input data.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="keyboard-shortcuts">
+            <h2>Keyboard Shortcuts</h2>
+            
+            <div class="instruction-box">
+                <h3>Essential Shortcuts</h3>
+                <ul>
+                    <li><code>Space</code> - Open node panel</li>
+                    <li><code>Ctrl+S</code> / <code>Cmd+S</code> - Save workflow</li>
+                    <li><code>Ctrl+Enter</code> / <code>Cmd+Enter</code> - Execute workflow</li>
+                    <li><code>Delete</code> - Delete selected node or connection</li>
+                    <li><code>Ctrl+Z</code> / <code>Cmd+Z</code> - Undo</li>
+                    <li><code>Ctrl+Y</code> / <code>Cmd+Shift+Z</code> - Redo</li>
+                    <li><code>Ctrl+F</code> / <code>Cmd+F</code> - Search nodes</li>
+                    <li><code>Esc</code> - Close panels</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="tips-tricks">
+            <h2>Tips and Tricks</h2>
+            
+            <div class="tip">
+                <strong>💡 Tip 1: Use the Expression Editor</strong>
+                <p>Click the "Expression" button next to any field to write JavaScript expressions. Use <code>{{ $json.fieldName }}</code> to access data from previous nodes.</p>
+            </div>
+
+            <div class="tip">
+                <strong>💡 Tip 2: Node Templates</strong>
+                <p>Right-click a node → "Save as Template" to reuse node configurations across workflows.</p>
+            </div>
+
+            <div class="tip">
+                <strong>💡 Tip 3: Zoom and Pan</strong>
+                <p>Use mouse wheel to zoom, and click + drag on empty canvas to pan around large workflows.</p>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ Warning: Always Test First</strong>
+                <p>Before activating a workflow, test it thoroughly with sample data. Use the "Test Step" feature to debug individual nodes.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p><a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a> | <a href="n8n_node_configuration.html">Next: Node Configuration →</a></p>
+        </footer>
+    </div>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Troubleshooting Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .nav-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+        .issue {
+            background: #f8f9fa;
+            border-left: 4px solid #dc3545;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 5px;
+        }
+        .issue h3 {
+            color: #dc3545;
+            margin-top: 0;
+        }
+        .solution {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .solution strong {
+            color: #0c5460;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #856404;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .tip {
+            background: #d4edda;
+            border-left: 4px solid #155724;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .step-list {
+            background: white;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+        .step-list ol {
+            margin-left: 2rem;
+        }
+        .step-list li {
+            margin-bottom: 0.5rem;
+        }
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .error-code {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 0.5rem;
+            border-radius: 3px;
+            font-family: monospace;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔧 n8n Troubleshooting Guide</h1>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Common issues and solutions for n8n workflows</p>
+        </header>
+
+        <div class="nav-links">
+            <a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a>
+            <a href="n8n_ui_instructions.html">📱 UI Instructions</a>
+            <a href="n8n_visual_guides.html">🖼️ Visual Guides</a>
+            <a href="n8n_node_configuration.html">⚙️ Node Configuration</a>
+        </div>
+
+        <section id="common-errors">
+            <h2>Common Error Messages and Solutions</h2>
+
+            <div class="issue">
+                <h3>❌ Error: "Invalid credentials" or "Authentication failed"</h3>
+                <p><strong>When it occurs:</strong> When calling external APIs (LlamaParse, OpenAI)</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Check that your API key is correct</li>
+                            <li>Verify the API key hasn't expired</li>
+                            <li>Ensure the credential is properly saved in n8n</li>
+                            <li>Test the credential by clicking "Test" button in credential settings</li>
+                            <li>Check API key format (e.g., "Bearer " prefix for some APIs)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Prevention:</strong> Always test credentials immediately after creating them. Use the "Test" button in the credential configuration.
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Error: "Cannot read property 'X' of undefined"</h3>
+                <p><strong>When it occurs:</strong> In Code nodes or expressions when accessing data from previous nodes</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Check the output of the previous node to see the actual data structure</li>
+                            <li>Use optional chaining: <code>{{ $json?.field?.subfield }}</code></li>
+                            <li>Add null checks in Code nodes:
+                                <pre>if ($json && $json.field) {
+  // Access $json.field
+}</pre>
+                            </li>
+                            <li>Use the Expression Editor's data preview to see available fields</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ Debug Tip:</strong> Click on the previous node and check the "Output" tab to see exactly what data is being passed.
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Error: "Request failed with status code 400/401/403/404/500"</h3>
+                <p><strong>When it occurs:</strong> HTTP Request nodes failing to connect to APIs</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li><strong>400 Bad Request:</strong> Check request body format, required fields, data types</li>
+                            <li><strong>401 Unauthorized:</strong> Verify API credentials and authentication method</li>
+                            <li><strong>403 Forbidden:</strong> Check API key permissions and rate limits</li>
+                            <li><strong>404 Not Found:</strong> Verify the API endpoint URL is correct</li>
+                            <li><strong>500 Server Error:</strong> API service issue - check API status page, retry later</li>
+                        </ol>
+                    </div>
+                    <p><strong>Additional checks:</strong></p>
+                    <ul>
+                        <li>Review the "Response" tab in the HTTP Request node to see error details</li>
+                        <li>Check API documentation for correct request format</li>
+                        <li>Verify headers are set correctly</li>
+                        <li>Test the API endpoint with a tool like Postman or curl</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Error: "Workflow execution timed out"</h3>
+                <p><strong>When it occurs:</strong> Workflow takes too long to execute</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Break workflow into smaller chunks</li>
+                            <li>Optimize Code nodes (avoid nested loops on large datasets)</li>
+                            <li>Use "Wait" nodes strategically instead of polling in loops</li>
+                            <li>Check for infinite loops in your code</li>
+                            <li>Increase timeout settings if available (self-hosted n8n)</li>
+                            <li>Process data in batches using "Split In Batches" node</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Error: "File not found" or "Permission denied"</h3>
+                <p><strong>When it occurs:</strong> Write Binary File node or file system operations</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Verify the directory path exists</li>
+                            <li>Check file system permissions (read/write access)</li>
+                            <li>Use absolute paths instead of relative paths</li>
+                            <li>For cloud n8n, use cloud storage (Google Drive, S3) instead of local file system</li>
+                            <li>Create the directory structure before running the workflow</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Error: "Webhook URL not accessible"</h3>
+                <p><strong>When it occurs:</strong> Webhook node not receiving requests</p>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Ensure the workflow is activated (Active toggle is ON)</li>
+                            <li>Verify the webhook URL is correct and copied completely</li>
+                            <li>Check if n8n instance is accessible from the internet (for external webhooks)</li>
+                            <li>For self-hosted n8n, configure port forwarding or use ngrok for testing</li>
+                            <li>Check firewall settings</li>
+                            <li>Verify the HTTP method matches (POST, GET, etc.)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow-issues">
+            <h2>Workflow-Specific Issues</h2>
+
+            <div class="issue">
+                <h3>❌ LlamaParse API: "Parsing failed" or "Invalid file format"</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Verify the PDF file is not corrupted</li>
+                        <li>Check file size limits (LlamaParse has size restrictions)</li>
+                        <li>Ensure the file is actually a PDF (not just renamed with .pdf extension)</li>
+                        <li>Try a different PDF file to isolate the issue</li>
+                        <li>Check LlamaParse API status and documentation for current limits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ OpenAI: "Rate limit exceeded" or "Insufficient quota"</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Check your OpenAI account billing and quota</li>
+                        <li>Add rate limiting/delays between API calls</li>
+                        <li>Use "Wait" node to add delays</li>
+                        <li>Consider using gpt-3.5-turbo for cost savings (if acceptable quality)</li>
+                        <li>Implement retry logic with exponential backoff</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Code Node: "SyntaxError" or "ReferenceError"</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Check JavaScript syntax (missing brackets, quotes, etc.)</li>
+                            <li>Verify variable names are correct</li>
+                            <li>Use the "Test Step" feature to debug</li>
+                            <li>Check console/execution logs for detailed error messages</li>
+                            <li>Validate JSON parsing with try-catch blocks:
+                                <pre>try {
+  const data = JSON.parse($json.response);
+} catch (error) {
+  return { json: { error: error.message } };
+}</pre>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ JSON Output: "Invalid JSON structure" or missing fields</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Validate JSON structure before saving</li>
+                        <li>Add data validation in Code nodes</li>
+                        <li>Check OpenAI response format matches expected schema</li>
+                        <li>Use JSON schema validation in OpenAI node</li>
+                        <li>Add fallback values for missing fields:
+                            <pre>const staff = $json.staff || [];
+const departments = $json.departments || [];</pre>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="debugging-tips">
+            <h2>Debugging Tips and Techniques</h2>
+
+            <div class="tip">
+                <strong>🔍 Tip 1: Use Execution History</strong>
+                <p>Always check the "Executions" tab to see what data passed through each node. This helps identify where the workflow failed.</p>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Tip 2: Test Individual Nodes</strong>
+                <p>Right-click any node and select "Execute Node" to test it in isolation. This helps identify which node is causing issues.</p>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Tip 3: Add Debug Nodes</strong>
+                <p>Add temporary Code nodes that log data:
+                    <pre>// Debug node
+console.log('Debug data:', JSON.stringify($json, null, 2));
+return $input.all();</pre>
+                </p>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Tip 4: Use Expression Editor Preview</strong>
+                <p>When writing expressions, use the preview feature to see what data is available and test your expressions before saving.</p>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Tip 5: Check Node Output</strong>
+                <p>Click on each node after execution and review the "Output" tab. Compare expected vs actual data structure.</p>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 Tip 6: Enable Verbose Logging</strong>
+                <p>For self-hosted n8n, enable verbose logging in settings to see detailed execution information.</p>
+            </div>
+        </section>
+
+        <section id="performance-issues">
+            <h2>Performance Issues</h2>
+
+            <div class="issue">
+                <h3>🐌 Workflow runs very slowly</h3>
+                
+                <div class="solution">
+                    <strong>Optimization Strategies:</strong>
+                    <ul>
+                        <li><strong>Batch Processing:</strong> Use "Split In Batches" to process data in chunks</li>
+                        <li><strong>Parallel Execution:</strong> Use "Merge" node to run multiple branches in parallel</li>
+                        <li><strong>Cache Results:</strong> Store intermediate results to avoid re-processing</li>
+                        <li><strong>Optimize Code:</strong> Avoid nested loops, use efficient algorithms</li>
+                        <li><strong>Reduce API Calls:</strong> Batch API requests when possible</li>
+                        <li><strong>Use Faster Models:</strong> Consider gpt-3.5-turbo instead of gpt-4 for faster responses</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>🐌 Large PDF files take too long to process</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Process PDFs page by page using page ranges</li>
+                        <li>Split large PDFs into smaller chunks</li>
+                        <li>Use "Split In Batches" node for multi-page processing</li>
+                        <li>Consider processing during off-peak hours</li>
+                        <li>Implement async processing with webhooks for status updates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="connection-issues">
+            <h2>Connection and Network Issues</h2>
+
+            <div class="issue">
+                <h3>❌ Cannot connect to external APIs</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <div class="step-list">
+                        <ol>
+                            <li>Check internet connectivity</li>
+                            <li>Verify API endpoints are accessible</li>
+                            <li>Check firewall/proxy settings (for self-hosted n8n)</li>
+                            <li>Test API endpoints with curl or Postman</li>
+                            <li>Check if API requires specific IP whitelisting</li>
+                            <li>Verify SSL certificates are valid</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Self-hosted n8n not accessible</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Check if n8n process is running</li>
+                        <li>Verify port 5678 (default) is open and not blocked</li>
+                        <li>Check firewall rules</li>
+                        <li>Verify N8N_HOST and N8N_PORT environment variables</li>
+                        <li>Check Docker container status (if using Docker)</li>
+                        <li>Review n8n logs for errors</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="data-issues">
+            <h2>Data Quality Issues</h2>
+
+            <div class="issue">
+                <h3>❌ Extracted data is incomplete or inaccurate</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li><strong>Improve Prompts:</strong> Refine OpenAI prompts with more specific instructions</li>
+                        <li><strong>Use JSON Schema:</strong> Define expected output structure in OpenAI node</li>
+                        <li><strong>Post-Processing:</strong> Add validation and cleaning in Code nodes</li>
+                        <li><strong>Test with Samples:</strong> Test with various PDF formats to identify patterns</li>
+                        <li><strong>Manual Review:</strong> Review sample outputs and adjust extraction logic</li>
+                        <li><strong>Use Better Models:</strong> Try gpt-4 instead of gpt-3.5 for better accuracy</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="issue">
+                <h3>❌ Relationships are not correctly identified</h3>
+                
+                <div class="solution">
+                    <strong>Solution:</strong>
+                    <ul>
+                        <li>Enhance OpenAI prompt to specifically request relationship extraction</li>
+                        <li>Add validation logic to check relationship integrity</li>
+                        <li>Use fuzzy matching for name variations</li>
+                        <li>Implement relationship validation in Code nodes</li>
+                        <li>Add manual correction workflow for edge cases</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="getting-help">
+            <h2>Getting Additional Help</h2>
+
+            <div class="tip">
+                <strong>📚 Resources:</strong>
+                <ul>
+                    <li><a href="https://docs.n8n.io/" target="_blank">n8n Documentation</a></li>
+                    <li><a href="https://community.n8n.io/" target="_blank">n8n Community Forum</a></li>
+                    <li><a href="https://n8n.io/discord" target="_blank">n8n Discord</a></li>
+                    <li><a href="https://github.com/n8n-io/n8n/issues" target="_blank">GitHub Issues</a></li>
+                </ul>
+            </div>
+
+            <div class="tip">
+                <strong>🔍 When Reporting Issues:</strong>
+                <ul>
+                    <li>Include the full error message</li>
+                    <li>Share the workflow JSON (export workflow)</li>
+                    <li>Describe what you expected vs what happened</li>
+                    <li>Include n8n version and environment (cloud/self-hosted)</li>
+                    <li>Share relevant node configurations (remove sensitive data)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="prevention-checklist">
+            <h2>Prevention Checklist</h2>
+
+            <div class="step-list">
+                <h3>Before Running Workflow:</h3>
+                <ol>
+                    <li>✅ Test all credentials</li>
+                    <li>✅ Validate API endpoints are accessible</li>
+                    <li>✅ Test with sample data</li>
+                    <li>✅ Check file paths and permissions</li>
+                    <li>✅ Verify node connections are correct</li>
+                    <li>✅ Review error handling nodes</li>
+                    <li>✅ Check rate limits and quotas</li>
+                    <li>✅ Validate JSON structures</li>
+                </ol>
+            </div>
+
+            <div class="step-list">
+                <h3>Regular Maintenance:</h3>
+                <ol>
+                    <li>✅ Monitor execution history for errors</li>
+                    <li>✅ Review and update API keys before expiration</li>
+                    <li>✅ Check API documentation for changes</li>
+                    <li>✅ Monitor costs and usage</li>
+                    <li>✅ Review and optimize slow workflows</li>
+                    <li>✅ Update n8n to latest version</li>
+                </ol>
+            </div>
+        </section>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p><a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a> | <a href="n8n_node_configuration.html">← Node Configuration</a></p>
+        </footer>
+    </div>
+</body>
+</html>

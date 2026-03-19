@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Workflow Plan: Processing PDF Organizational Charts to JSON</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        h4 {
+            color: #555;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .nav-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .workflow-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .json-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .phase {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .step {
+            margin-left: 1rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>n8n Workflow Plan: Processing PDF Organizational Charts to JSON</h1>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Comprehensive guide for automating organizational chart processing</p>
+        </header>
+
+        <div class="nav-links">
+            <strong>Quick Navigation:</strong>
+            <a href="n8n_ui_instructions.html">📱 UI Instructions</a>
+            <a href="n8n_visual_guides.html">🖼️ Visual Guides</a>
+            <a href="n8n_node_configuration.html">⚙️ Node Configuration</a>
+            <a href="n8n_troubleshooting.html">🔧 Troubleshooting</a>
+        </div>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>This plan outlines a workflow using <a href="https://n8n.io/" target="_blank">n8n</a> to process PDF organizational charts, extract staff information and reporting relationships, and generate structured JSON files. The workflow utilizes <a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a> (specifically LlamaParse, which is part of the LlamaIndex platform) for PDF parsing and text extraction. The plan is based on workflow templates from <a href="https://n8n.io/creators/lowcodingdev/" target="_blank">n8n creator Mark Shcherbakov (@lowcodingdev)</a>, particularly the "Parse PDF with LlamaParse" template.</p>
+        </section>
+
+        <section id="reference-templates">
+            <h2>Reference Workflow Templates</h2>
+            <p>Based on the n8n.io templates reviewed, the following are most relevant:</p>
+            <ol>
+                <li><strong>Parse PDF with LlamaParse and save to Airtable</strong> (Template ID: 10634)
+                    <ul>
+                        <li>Uses LlamaParse from <a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a> for PDF text extraction</li>
+                        <li>Demonstrates PDF parsing capabilities</li>
+                        <li>Shows integration with data storage</li>
+                    </ul>
+                </li>
+                <li><strong>AI agent to chat with files in Supabase Storage and Google Drive</strong> (Template ID: 8534)
+                    <ul>
+                        <li>Shows file processing workflows</li>
+                        <li>Demonstrates AI integration for document understanding</li>
+                    </ul>
+                </li>
+                <li><strong>Two-stage document retrieval chatbot with OpenAI and Supabase vector search</strong> (Template ID: 819)
+                    <ul>
+                        <li>Shows advanced document processing</li>
+                        <li>Demonstrates structured data extraction</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="workflow-architecture">
+            <h2>Workflow Architecture</h2>
+
+            <div class="phase">
+                <h3>Phase 1: PDF Input and Parsing</h3>
+                <div class="step">
+                    <h4>Step 1.1: File Input</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Webhook or File System</li>
+                        <li><strong>Purpose</strong>: Accept PDF files (via webhook upload or file system monitoring)</li>
+                        <li><strong>Configuration</strong>:
+                            <ul>
+                                <li>Accept PDF files from specified directory: <code>public/pdfs/California/state/cdt/</code></li>
+                                <li>Support multiple file formats if needed</li>
+                                <li>Validate file type and size</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 1.2: PDF Text Extraction</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: HTTP Request (LlamaParse API) or PDF Parser</li>
+                        <li><strong>Service</strong>: LlamaParse from <a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a> (as demonstrated in template 10634)</li>
+                        <li><strong>Purpose</strong>: Extract text content from PDF organizational charts</li>
+                        <li><strong>Configuration</strong>:
+                            <ul>
+                                <li>API endpoint: LlamaParse API</li>
+                                <li>Parse mode: "text" or "markdown" for structured extraction</li>
+                                <li>Handle multi-page documents</li>
+                                <li>Preserve formatting and structure</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Alternative Options</strong>:</p>
+                    <ul>
+                        <li><strong>PyPDF2/pdfplumber</strong>: If using Python Code node</li>
+                        <li><strong>Adobe PDF Services API</strong>: For enterprise-grade extraction</li>
+                        <li><strong>Tesseract OCR</strong>: If PDFs are image-based</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 2: Text Processing and Structure Recognition</h3>
+                <div class="step">
+                    <h4>Step 2.1: Text Cleaning and Normalization</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Code (JavaScript) or Function</li>
+                        <li><strong>Purpose</strong>: Clean extracted text, normalize whitespace, remove artifacts</li>
+                        <li><strong>Operations</strong>:
+                            <ul>
+                                <li>Remove page headers/footers</li>
+                                <li>Normalize line breaks</li>
+                                <li>Remove excessive whitespace</li>
+                                <li>Handle special characters</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 2.2: Organizational Structure Detection</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: OpenAI or Code</li>
+                        <li><strong>Purpose</strong>: Identify organizational hierarchy patterns</li>
+                        <li><strong>AI Prompt Strategy</strong>:
+                            <pre><code>Analyze the following organizational chart text and identify:
+1. Top-level executives/directors
+2. Department/division names
+3. Manager-subordinate relationships
+4. Reporting lines and hierarchy levels
+5. Position titles and names
+
+Extract this information in a structured format.</code></pre>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 2.3: Entity Extraction</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: OpenAI (with structured output) or Code</li>
+                        <li><strong>Purpose</strong>: Extract specific entities (names, titles, departments)</li>
+                        <li><strong>Extraction Targets</strong>:
+                            <ul>
+                                <li>Employee names</li>
+                                <li>Job titles/positions</li>
+                                <li>Department/division names</li>
+                                <li>Reporting relationships</li>
+                                <li>Organizational levels</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 3: Relationship Mapping</h3>
+                <div class="step">
+                    <h4>Step 3.1: Relationship Identification</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Code (JavaScript) or Function</li>
+                        <li><strong>Purpose</strong>: Map reporting relationships from extracted data</li>
+                        <li><strong>Logic</strong>:
+                            <ul>
+                                <li>Identify manager-subordinate pairs</li>
+                                <li>Map department hierarchies</li>
+                                <li>Create relationship graph</li>
+                                <li>Handle multiple reporting lines if present</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 3.2: Hierarchy Construction</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Code (JavaScript)</li>
+                        <li><strong>Purpose</strong>: Build hierarchical tree structure</li>
+                        <li><strong>Algorithm</strong>:
+                            <ul>
+                                <li>Start from top-level positions</li>
+                                <li>Recursively build down the hierarchy</li>
+                                <li>Handle cross-department relationships</li>
+                                <li>Validate structure integrity</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 4: JSON Generation</h3>
+                <div class="step">
+                    <h4>Step 4.1: Data Structure Assembly</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Code (JavaScript)</li>
+                        <li><strong>Purpose</strong>: Assemble extracted data into JSON structure</li>
+                    </ul>
+                    <p><strong>JSON Schema</strong>:</p>
+                    <pre><code>{
+  "document": {
+    "title": "CDT Organizational Chart",
+    "source": "California Department of Technology",
+    "extractionDate": "ISO 8601 date",
+    "totalPages": number
+  },
+  "organizationalStructure": {
+    "topLevel": {
+      "position": "string",
+      "name": "string",
+      "department": "string"
+    },
+    "departments": [...],
+    "reportingRelationships": [...]
+  },
+  "staff": [...]
+}</code></pre>
+                </div>
+
+                <div class="step">
+                    <h4>Step 4.2: JSON File Generation</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Write Binary File or HTTP Request</li>
+                        <li><strong>Purpose</strong>: Save JSON to file system</li>
+                        <li><strong>Configuration</strong>:
+                            <ul>
+                                <li>Output directory: <code>public/pdfs/California/state/cdt/json/</code></li>
+                                <li>File naming: <code>{original_filename}_org_chart.json</code></li>
+                                <li>Format: Pretty-printed JSON with indentation</li>
+                                <li>Encoding: UTF-8</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Phase 5: Validation and Error Handling</h3>
+                <div class="step">
+                    <h4>Step 5.1: Data Validation</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Code (JavaScript) or If node</li>
+                        <li><strong>Purpose</strong>: Validate extracted data quality</li>
+                        <li><strong>Checks</strong>:
+                            <ul>
+                                <li>Required fields present</li>
+                                <li>Relationship integrity</li>
+                                <li>No orphaned positions</li>
+                                <li>Valid JSON structure</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <h4>Step 5.2: Error Handling</h4>
+                    <ul>
+                        <li><strong>Node Type</strong>: Error Trigger or Try-Catch</li>
+                        <li><strong>Purpose</strong>: Handle processing failures gracefully</li>
+                        <li><strong>Actions</strong>:
+                            <ul>
+                                <li>Log errors with context</li>
+                                <li>Retry failed operations</li>
+                                <li>Generate error reports</li>
+                                <li>Notify administrators</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="detailed-workflows">
+            <h2>Detailed n8n Workflow Steps</h2>
+
+            <div class="workflow-box">
+                <h3>Workflow 1: Basic PDF to JSON Conversion</h3>
+                <pre><code>1. Webhook (POST) - Receive PDF file
+   ↓
+2. HTTP Request - Call LlamaParse API
+   - Method: POST
+   - URL: https://api.llamaindex.ai/api/parsing/upload
+   - Body: PDF file binary
+   ↓
+3. Wait - Poll for parsing completion
+   ↓
+4. HTTP Request - Get parsed text
+   - Method: GET
+   - URL: {parsing_result_url}
+   ↓
+5. Code (JavaScript) - Extract organizational data
+   - Use regex/string parsing
+   - Identify names, titles, relationships
+   ↓
+6. Code (JavaScript) - Build JSON structure
+   ↓
+7. Write Binary File - Save JSON
+   - Path: public/pdfs/California/state/cdt/json/</code></pre>
+            </div>
+
+            <div class="workflow-box">
+                <h3>Workflow 2: AI-Enhanced Extraction (Recommended)</h3>
+                <pre><code>1. Webhook (POST) - Receive PDF file
+   ↓
+2. HTTP Request - Call LlamaParse API
+   ↓
+3. Wait - Poll for parsing completion
+   ↓
+4. HTTP Request - Get parsed text
+   ↓
+5. OpenAI - Extract organizational structure
+   - Model: gpt-4-turbo or gpt-4o
+   - System Prompt: "You are an expert at analyzing organizational charts..."
+   - User Prompt: "Extract all staff, positions, and reporting relationships..."
+   - Response Format: JSON schema
+   ↓
+6. Code (JavaScript) - Parse OpenAI response
+   ↓
+7. Code (JavaScript) - Build relationship graph
+   ↓
+8. Code (JavaScript) - Generate final JSON
+   ↓
+9. Write Binary File - Save JSON</code></pre>
+            </div>
+
+            <div class="workflow-box">
+                <h3>Workflow 3: Multi-Page Processing</h3>
+                <pre><code>1. Webhook (POST) - Receive PDF file
+   ↓
+2. HTTP Request - Call LlamaParse API (with page range)
+   ↓
+3. Split In Batches - Process each page separately
+   ↓
+4. For Each Page:
+   - HTTP Request - Get page text
+   - OpenAI - Extract page data
+   - Code - Structure page data
+   ↓
+5. Code (JavaScript) - Merge page data
+   ↓
+6. Code (JavaScript) - Generate final JSON
+   ↓
+7. Write Binary File - Save JSON</code></pre>
+            </div>
+        </section>
+
+        <section id="required-nodes">
+            <h2>Required n8n Nodes and Integrations</h2>
+            <h3>Core Nodes:</h3>
+            <ol>
+                <li><strong>Webhook</strong> - Receive PDF uploads</li>
+                <li><strong>HTTP Request</strong> - Call external APIs (LlamaParse, OpenAI)</li>
+                <li><strong>Code (JavaScript)</strong> - Custom data processing</li>
+                <li><strong>Write Binary File</strong> - Save JSON files</li>
+                <li><strong>If</strong> - Conditional logic</li>
+                <li><strong>Wait</strong> - Polling for async operations</li>
+                <li><strong>Split In Batches</strong> - Process multiple pages</li>
+            </ol>
+
+            <h3>External Services:</h3>
+            <ol>
+                <li><strong>LlamaParse API</strong> - PDF text extraction (part of <a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a>)
+                    <ul>
+                        <li>Sign up at: <a href="https://www.llamaindex.ai/" target="_blank">https://www.llamaindex.ai/</a></li>
+                        <li>API documentation: <a href="https://www.llamaindex.ai/" target="_blank">https://www.llamaindex.ai/</a></li>
+                    </ul>
+                </li>
+                <li><strong>OpenAI API</strong> - AI-powered extraction
+                    <ul>
+                        <li>Model: gpt-4-turbo or gpt-4o for best results</li>
+                        <li>Structured outputs for consistent JSON</li>
+                    </ul>
+                </li>
+                <li><strong>Alternative: Supabase</strong> - If storing intermediate data
+                    <ul>
+                        <li>Vector search for document retrieval</li>
+                        <li>Database for relationship storage</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="implementation">
+            <h2>Implementation Steps</h2>
+            <ol>
+                <li><strong>Step 1: Setup n8n Environment</strong>
+                    <ul>
+                        <li>Install n8n (self-hosted or cloud)</li>
+                        <li>Configure API credentials:
+                            <ul>
+                                <li>LlamaParse API key</li>
+                                <li>OpenAI API key</li>
+                            </ul>
+                        </li>
+                        <li>Set up file system access for output directory</li>
+                    </ul>
+                </li>
+                <li><strong>Step 2: Create Base Workflow</strong>
+                    <ul>
+                        <li>Start with Workflow 1 (Basic PDF to JSON)</li>
+                        <li>Test with sample PDF</li>
+                        <li>Validate JSON output structure</li>
+                    </ul>
+                </li>
+                <li><strong>Step 3: Enhance with AI</strong>
+                    <ul>
+                        <li>Add OpenAI node for better extraction</li>
+                        <li>Refine prompts for organizational chart recognition</li>
+                        <li>Test with various chart formats</li>
+                    </ul>
+                </li>
+                <li><strong>Step 4: Add Multi-Page Support</strong>
+                    <ul>
+                        <li>Implement page-by-page processing</li>
+                        <li>Add merge logic for cross-page relationships</li>
+                        <li>Handle large documents</li>
+                    </ul>
+                </li>
+                <li><strong>Step 5: Error Handling and Validation</strong>
+                    <ul>
+                        <li>Add validation checks</li>
+                        <li>Implement error recovery</li>
+                        <li>Add logging and monitoring</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><strong>For detailed UI instructions, see:</strong> <a href="n8n_ui_instructions.html">UI Instructions Guide</a></p>
+        </section>
+
+        <section id="json-structure">
+            <h2>JSON Output Structure</h2>
+            <div class="json-block">
+                <pre><code>{
+  "metadata": {
+    "sourceFile": "CDT_Organizational_Chart.pdf",
+    "extractionDate": "2025-01-15T10:30:00Z",
+    "extractionMethod": "n8n + LlamaIndex (LlamaParse) + OpenAI",
+    "totalPages": 35,
+    "pagesProcessed": [1, 2, 3]
+  },
+  "organization": {
+    "name": "California Department of Technology",
+    "acronym": "CDT",
+    "topLevelExecutive": {
+      "name": "Executive Name",
+      "title": "Director",
+      "department": "CDT"
+    }
+  },
+  "departments": [
+    {
+      "id": "dept-001",
+      "name": "Department Name",
+      "director": {
+        "name": "Director Name",
+        "title": "Director Title"
+      },
+      "parentDepartment": null,
+      "subDepartments": ["dept-002", "dept-003"],
+      "staffCount": 25
+    }
+  ],
+  "staff": [
+    {
+      "id": "staff-001",
+      "name": "John Doe",
+      "title": "Manager",
+      "department": "dept-001",
+      "reportsTo": "staff-002",
+      "level": 2,
+      "email": "john.doe@state.ca.gov",
+      "phone": null
+    }
+  ],
+  "reportingRelationships": [
+    {
+      "manager": {
+        "id": "staff-002",
+        "name": "Jane Smith",
+        "title": "Senior Manager"
+      },
+      "subordinates": [
+        {
+          "id": "staff-001",
+          "name": "John Doe",
+          "title": "Manager"
+        }
+      ]
+    }
+  ],
+  "hierarchy": {
+    "root": {
+      "id": "staff-root",
+      "name": "Top Executive",
+      "title": "Director",
+      "children": [...]
+    }
+  }
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="testing">
+            <h2>Testing Strategy</h2>
+            <h3>Test Cases:</h3>
+            <ol>
+                <li><strong>Single-page chart</strong> - Simple hierarchy</li>
+                <li><strong>Multi-page chart</strong> - Complex structure across pages</li>
+                <li><strong>Image-based PDF</strong> - Requires OCR</li>
+                <li><strong>Various formats</strong> - Different chart layouts</li>
+                <li><strong>Edge cases</strong>:
+                    <ul>
+                        <li>Missing information</li>
+                        <li>Ambiguous relationships</li>
+                        <li>Cross-department reporting</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Validation:</h3>
+            <ul>
+                <li>JSON schema validation</li>
+                <li>Relationship integrity checks</li>
+                <li>Completeness verification</li>
+                <li>Manual review of sample outputs</li>
+            </ul>
+        </section>
+
+        <section id="optimization">
+            <h2>Optimization Recommendations</h2>
+            <ol>
+                <li><strong>Caching</strong>: Cache parsed PDF text to avoid re-parsing</li>
+                <li><strong>Batch Processing</strong>: Process multiple PDFs in parallel</li>
+                <li><strong>Incremental Updates</strong>: Only process changed pages</li>
+                <li><strong>Error Recovery</strong>: Resume from last successful page</li>
+                <li><strong>Performance</strong>: Use streaming for large files</li>
+            </ol>
+        </section>
+
+        <section id="costs">
+            <h2>Cost Considerations</h2>
+            <h3>LlamaParse:</h3>
+            <ul>
+                <li>Free tier available</li>
+                <li>Pay-per-page for production use</li>
+                <li>Estimate: $0.003-0.01 per page</li>
+            </ul>
+            <h3>OpenAI:</h3>
+            <ul>
+                <li>GPT-4 Turbo: ~$0.01-0.03 per 1K tokens</li>
+                <li>Estimate: $0.10-0.50 per organizational chart</li>
+                <li>Use gpt-3.5-turbo for cost savings if acceptable</li>
+            </ul>
+            <h3>n8n:</h3>
+            <ul>
+                <li>Self-hosted: Free (open source)</li>
+                <li>Cloud: Pay-per-execution or subscription</li>
+            </ul>
+        </section>
+
+        <section id="security">
+            <h2>Security Considerations</h2>
+            <ol>
+                <li><strong>API Keys</strong>: Store securely in n8n credentials</li>
+                <li><strong>File Access</strong>: Restrict file system permissions</li>
+                <li><strong>Data Privacy</strong>: Handle PII (names, emails) appropriately</li>
+                <li><strong>Access Control</strong>: Secure webhook endpoints</li>
+                <li><strong>Audit Logging</strong>: Track all processing activities</li>
+            </ol>
+        </section>
+
+        <section id="maintenance">
+            <h2>Maintenance and Updates</h2>
+            <ol>
+                <li><strong>Monitor API Changes</strong>: LlamaParse and OpenAI may update APIs</li>
+                <li><strong>Refine Prompts</strong>: Continuously improve extraction accuracy</li>
+                <li><strong>Handle New Formats</strong>: Adapt to different chart layouts</li>
+                <li><strong>Performance Monitoring</strong>: Track processing times and costs</li>
+                <li><strong>Error Analysis</strong>: Review failed extractions for improvements</li>
+            </ol>
+        </section>
+
+        <section id="next-steps">
+            <h2>Next Steps</h2>
+            <ol>
+                <li><strong>Set up n8n instance</strong> (self-hosted or cloud)</li>
+                <li><strong>Obtain API keys</strong> for LlamaParse and OpenAI</li>
+                <li><strong>Create initial workflow</strong> using Workflow 1 template</li>
+                <li><strong>Test with sample PDF</strong> from <code>public/pdfs/California/state/cdt/</code></li>
+                <li><strong>Iterate and refine</strong> based on results</li>
+                <li><strong>Scale to production</strong> with error handling and monitoring</li>
+            </ol>
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li><a href="https://n8n.io/" target="_blank">n8n</a> - Workflow automation platform</li>
+                <li><a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a> - Data framework and LlamaParse service</li>
+                <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI API Documentation</a></li>
+                <li><a href="https://n8n.io/workflows/" target="_blank">n8n Workflow Templates</a></li>
+                <li><a href="https://n8n.io/creators/lowcodingdev/" target="_blank">Mark Shcherbakov's Templates</a></li>
+            </ul>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This plan provides a comprehensive approach to processing PDF organizational charts using <a href="https://n8n.io/" target="_blank">n8n</a> workflows. The recommended approach uses LlamaParse from <a href="https://www.llamaindex.ai/" target="_blank">LlamaIndex</a> for reliable PDF text extraction combined with OpenAI for intelligent structure recognition, resulting in accurate JSON representations of organizational hierarchies.</p>
+            <p>The workflow can be implemented incrementally, starting with basic extraction and gradually adding AI enhancements and multi-page support as needed.</p>
+        </section>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p>For detailed implementation help, refer to the <a href="n8n_ui_instructions.html">UI Instructions</a>, <a href="n8n_node_configuration.html">Node Configuration</a>, and <a href="n8n_troubleshooting.html">Troubleshooting</a> guides.</p>
+        </footer>
+    </div>
+</body>
+</html>

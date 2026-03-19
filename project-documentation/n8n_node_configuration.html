@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Node Configuration - Step-by-Step Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .nav-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+        .node-guide {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        .step {
+            background: white;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+        code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+        .config-field {
+            background: #fff3cd;
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            border-left: 3px solid #ffc107;
+        }
+        .config-field strong {
+            color: #856404;
+        }
+        .tip {
+            background: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #856404;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .example {
+            background: #e7f3ff;
+            border-left: 4px solid #0066cc;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ n8n Node Configuration Guide</h1>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Detailed step-by-step configuration for each node type</p>
+        </header>
+
+        <div class="nav-links">
+            <a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a>
+            <a href="n8n_ui_instructions.html">📱 UI Instructions</a>
+            <a href="n8n_visual_guides.html">🖼️ Visual Guides</a>
+            <a href="n8n_troubleshooting.html">🔧 Troubleshooting</a>
+        </div>
+
+        <section id="webhook-node">
+            <h2>1. Webhook Node Configuration</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Receives PDF files via HTTP POST request. This is the entry point for your workflow.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add Webhook Node</strong>
+                    <ul>
+                        <li>Press <code>Space</code> or click "+" button</li>
+                        <li>Search for "Webhook"</li>
+                        <li>Click to add to canvas</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure HTTP Method</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> HTTP Method<br>
+                        <strong>Value:</strong> POST<br>
+                        <strong>Location:</strong> Parameters tab → HTTP Method dropdown
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Set Path</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Path<br>
+                        <strong>Value:</strong> <code>pdf-upload</code><br>
+                        <strong>Location:</strong> Parameters tab → Path field
+                    </div>
+                    <p>This creates the endpoint: <code>https://your-n8n-instance.com/webhook/pdf-upload</code></p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Configure Response</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Response Mode<br>
+                        <strong>Value:</strong> Last Node<br>
+                        <strong>Location:</strong> Parameters tab → Response Mode dropdown
+                    </div>
+                    <p>This means the response will come from the last node in your workflow.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <strong>Save and Get Webhook URL</strong>
+                    <ul>
+                        <li>Click "Save" button</li>
+                        <li>Activate workflow (toggle "Active" switch)</li>
+                        <li>Copy the Webhook URL displayed in the node</li>
+                    </ul>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Tip:</strong> The webhook URL is only available after saving and activating the workflow. Keep this URL secure as it can trigger your workflow.
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example Configuration:</strong>
+                    <pre>HTTP Method: POST
+Path: pdf-upload
+Response Mode: Last Node
+Response Code: 200</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="http-request-node">
+            <h2>2. HTTP Request Node (LlamaParse API)</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Calls the LlamaParse API to extract text from the uploaded PDF file.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add HTTP Request Node</strong>
+                    <ul>
+                        <li>Connect from Webhook node output</li>
+                        <li>Search for "HTTP Request"</li>
+                        <li>Add to workflow</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure Method and URL</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Method<br>
+                        <strong>Value:</strong> POST<br>
+                        <strong>Field:</strong> URL<br>
+                        <strong>Value:</strong> <code>https://api.llamaindex.ai/api/parsing/upload</code>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Set Up Authentication</strong>
+                    <ul>
+                        <li>Click "Authentication" dropdown</li>
+                        <li>Select "Generic Credential Type"</li>
+                        <li>Click "Create New Credential"</li>
+                        <li>Name: "LlamaParse API Key"</li>
+                        <li>Add Header:
+                            <pre>Name: Authorization
+Value: Bearer YOUR_API_KEY</pre>
+                        </li>
+                        <li>Click "Save"</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Configure Request Body</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Body Content Type<br>
+                        <strong>Value:</strong> Binary Data<br>
+                        <strong>Field:</strong> Binary Data<br>
+                        <strong>Value:</strong> <code>{{ $binary.data }}</code>
+                    </div>
+                    <p>This passes the PDF file from the webhook to LlamaParse.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <strong>Add Headers (if needed)</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Add Header<br>
+                        <strong>Name:</strong> Content-Type<br>
+                        <strong>Value:</strong> application/pdf
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> Make sure you have a valid LlamaParse API key. Sign up at <a href="https://www.llamaindex.ai/" target="_blank">llamaindex.ai</a> to get your API key.
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example Configuration:</strong>
+                    <pre>Method: POST
+URL: https://api.llamaindex.ai/api/parsing/upload
+Authentication: Bearer Token
+Body: Binary Data from Webhook
+Headers: Content-Type: application/pdf</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="wait-node">
+            <h2>3. Wait Node Configuration</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Waits for LlamaParse to finish processing the PDF before retrieving the results.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add Wait Node</strong>
+                    <ul>
+                        <li>Connect after HTTP Request node</li>
+                        <li>Search for "Wait"</li>
+                        <li>Add to workflow</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure Wait Type</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Resume<br>
+                        <strong>Value:</strong> After Time Interval<br>
+                        <strong>Field:</strong> Amount<br>
+                        <strong>Value:</strong> <code>5</code><br>
+                        <strong>Field:</strong> Unit<br>
+                        <strong>Value:</strong> Seconds
+                    </div>
+                    <p>This waits 5 seconds before checking if parsing is complete. Adjust based on PDF size.</p>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Alternative:</strong> For more reliable polling, use a Loop node that checks the parsing status and waits until complete.
+                </div>
+            </div>
+        </section>
+
+        <section id="openai-node">
+            <h2>4. OpenAI Node Configuration</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Uses AI to extract organizational structure from the parsed PDF text.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add OpenAI Node</strong>
+                    <ul>
+                        <li>Connect after getting parsed text from LlamaParse</li>
+                        <li>Search for "OpenAI"</li>
+                        <li>Select "OpenAI" node</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Set Up Credentials</strong>
+                    <ul>
+                        <li>Click "Credential to connect with" dropdown</li>
+                        <li>Click "Create New Credential"</li>
+                        <li>Select "OpenAI API"</li>
+                        <li>Enter your OpenAI API Key</li>
+                        <li>Click "Save"</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Configure Operation</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Operation<br>
+                        <strong>Value:</strong> Chat<br>
+                        <strong>Location:</strong> Parameters tab
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Select Model</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Model<br>
+                        <strong>Value:</strong> gpt-4-turbo-preview or gpt-4o<br>
+                        <strong>Location:</strong> Parameters tab → Model dropdown
+                    </div>
+                    <p>gpt-4-turbo provides better extraction accuracy for complex organizational charts.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">5</span>
+                    <strong>Configure System Prompt</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Add Message → System Message<br>
+                        <strong>Value:</strong>
+                        <pre>You are an expert at analyzing organizational charts. Extract all staff members, their positions, departments, and reporting relationships. Return the data in a structured JSON format.</pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">6</span>
+                    <strong>Configure User Prompt</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Add Message → User Message<br>
+                        <strong>Value:</strong> <code>{{ $json.body.text }}</code>
+                    </div>
+                    <p>This passes the parsed text from LlamaParse to OpenAI.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">7</span>
+                    <strong>Set Response Format</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Response Format<br>
+                        <strong>Value:</strong> JSON Object<br>
+                        <strong>Field:</strong> JSON Schema (optional)<br>
+                        <strong>Value:</strong> Define your expected JSON structure
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">8</span>
+                    <strong>Configure Temperature</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Temperature<br>
+                        <strong>Value:</strong> <code>0.2</code>
+                    </div>
+                    <p>Lower temperature (0.2) ensures more consistent, structured output.</p>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example System Prompt:</strong>
+                    <pre>You are an expert at analyzing organizational charts. Extract the following information:
+1. All employee names
+2. Job titles/positions
+3. Department names
+4. Reporting relationships (who reports to whom)
+5. Organizational hierarchy levels
+
+Return the data as a JSON object with this structure:
+{
+  "staff": [
+    {
+      "name": "string",
+      "title": "string",
+      "department": "string",
+      "reportsTo": "string",
+      "level": number
+    }
+  ],
+  "departments": [...],
+  "reportingRelationships": [...]
+}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="code-node">
+            <h2>5. Code Node (JavaScript) Configuration</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Processes and transforms data using custom JavaScript code. Used for parsing responses, building relationships, and generating JSON.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add Code Node</strong>
+                    <ul>
+                        <li>Search for "Code"</li>
+                        <li>Select "Code" node</li>
+                        <li>Add to workflow</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Select Language</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Language<br>
+                        <strong>Value:</strong> JavaScript<br>
+                        <strong>Location:</strong> Parameters tab
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Write Your Code</strong>
+                    <p>In the code editor, write your JavaScript. Available variables:</p>
+                    <ul>
+                        <li><code>$input</code> - All input data</li>
+                        <li><code>$json</code> - JSON data from previous node</li>
+                        <li><code>$binary</code> - Binary data from previous node</li>
+                        <li><code>$node</code> - Data from specific node by name</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example: Parse OpenAI Response</strong>
+                    <pre>// Get the OpenAI response
+const openaiResponse = $json.message.content;
+
+// Parse the JSON string
+let orgData;
+try {
+  orgData = JSON.parse(openaiResponse);
+} catch (error) {
+  // If response is not valid JSON, try to extract it
+  const jsonMatch = openaiResponse.match(/\{[\s\S]*\}/);
+  if (jsonMatch) {
+    orgData = JSON.parse(jsonMatch[0]);
+  } else {
+    throw new Error('No valid JSON found in response');
+  }
+}
+
+// Return the parsed data
+return {
+  json: orgData
+};</pre>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example: Build Relationship Graph</strong>
+                    <pre>// Get staff data from previous node
+const staff = $json.staff || [];
+
+// Build reporting relationships
+const relationships = [];
+const staffMap = new Map();
+
+// Create staff map for quick lookup
+staff.forEach(person => {
+  staffMap.set(person.name, person);
+});
+
+// Build relationships
+staff.forEach(person => {
+  if (person.reportsTo) {
+    const manager = staffMap.get(person.reportsTo);
+    if (manager) {
+      relationships.push({
+        manager: {
+          name: manager.name,
+          title: manager.title,
+          department: manager.department
+        },
+        subordinate: {
+          name: person.name,
+          title: person.title,
+          department: person.department
+        }
+      });
+    }
+  }
+});
+
+return {
+  json: {
+    relationships: relationships,
+    staff: staff
+  }
+};</pre>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example: Generate Final JSON Structure</strong>
+                    <pre>// Get all data from previous nodes
+const orgData = $json;
+const sourceFile = $node['HTTP Request'].json.filename || 'unknown.pdf';
+const extractionDate = new Date().toISOString();
+
+// Build final JSON structure
+const finalJson = {
+  metadata: {
+    sourceFile: sourceFile,
+    extractionDate: extractionDate,
+    extractionMethod: "n8n + LlamaIndex (LlamaParse) + OpenAI"
+  },
+  organization: {
+    name: orgData.organization?.name || "Unknown Organization",
+    acronym: orgData.organization?.acronym || ""
+  },
+  departments: orgData.departments || [],
+  staff: orgData.staff || [],
+  reportingRelationships: orgData.relationships || [],
+  hierarchy: buildHierarchy(orgData.staff || [])
+};
+
+// Helper function to build hierarchy tree
+function buildHierarchy(staff) {
+  // Implementation here
+  return { root: {} };
+}
+
+return {
+  json: finalJson
+};</pre>
+                </div>
+
+                <div class="tip">
+                    <strong>💡 Tip:</strong> Use the "Test Step" feature to debug your code. You can see the input data and test your code before running the full workflow.
+                </div>
+            </div>
+        </section>
+
+        <section id="write-binary-file-node">
+            <h2>6. Write Binary File Node Configuration</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Saves the generated JSON to a file on the file system.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add Write Binary File Node</strong>
+                    <ul>
+                        <li>Search for "Write Binary File"</li>
+                        <li>Add to end of workflow</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure File Path</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> File Name<br>
+                        <strong>Value:</strong> <code>{{ $json.metadata.sourceFile.replace('.pdf', '_org_chart.json') }}</code><br>
+                        <strong>Location:</strong> Parameters tab
+                    </div>
+                    <p>This creates a filename based on the original PDF name.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Set File Data</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Data<br>
+                        <strong>Value:</strong> <code>{{ JSON.stringify($json, null, 2) }}</code>
+                    </div>
+                    <p>This converts the JSON object to a formatted string.</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <strong>Set File Path</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> File Path (if available)<br>
+                        <strong>Value:</strong> <code>public/pdfs/California/state/cdt/json/</code>
+                    </div>
+                    <p>Make sure this directory exists and n8n has write permissions.</p>
+                </div>
+
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> For self-hosted n8n, ensure the file system path is accessible. For cloud n8n, you may need to use a different storage solution (e.g., Google Drive, S3).
+                </div>
+
+                <div class="example">
+                    <strong>📋 Alternative: Using HTTP Request to Save</strong>
+                    <p>If Write Binary File isn't available, you can use an HTTP Request node to POST the JSON to your own API endpoint that saves the file.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="if-node">
+            <h2>7. If Node (Conditional Logic)</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Adds conditional logic to your workflow, allowing different paths based on conditions.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add If Node</strong>
+                    <ul>
+                        <li>Search for "If"</li>
+                        <li>Add where you need conditional logic</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure Condition</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Condition<br>
+                        <strong>Value 1:</strong> <code>{{ $json.staff.length }}</code><br>
+                        <strong>Operation:</strong> Larger<br>
+                        <strong>Value 2:</strong> <code>0</code>
+                    </div>
+                    <p>This checks if staff data was extracted (length > 0).</p>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Connect Output Paths</strong>
+                    <ul>
+                        <li>True path: Connect to success handling</li>
+                        <li>False path: Connect to error handling</li>
+                    </ul>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example Conditions:</strong>
+                    <pre>// Check if parsing was successful
+{{ $json.status }} === 'completed'
+
+// Check if staff data exists
+{{ $json.staff && $json.staff.length > 0 }}
+
+// Check for errors
+{{ $json.error === undefined }}</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="error-trigger-node">
+            <h2>8. Error Trigger Node</h2>
+            
+            <div class="node-guide">
+                <h3>Purpose</h3>
+                <p>Catches errors from any node in the workflow and handles them gracefully.</p>
+
+                <h3>Step-by-Step Configuration</h3>
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <strong>Add Error Trigger</strong>
+                    <ul>
+                        <li>Search for "Error Trigger"</li>
+                        <li>Add to workflow</li>
+                    </ul>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <strong>Configure Error Handling</strong>
+                    <div class="config-field">
+                        <strong>Field:</strong> Error Types<br>
+                        <strong>Value:</strong> All (or select specific error types)
+                    </div>
+                </div>
+
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <strong>Add Error Handling Actions</strong>
+                    <p>Connect nodes to handle errors:
+                        <ul>
+                            <li>Log error to file</li>
+                            <li>Send notification email</li>
+                            <li>Save error details to database</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="example">
+                    <strong>📋 Example: Log Error</strong>
+                    <pre>// In a Code node after Error Trigger
+const error = $json.error;
+const timestamp = new Date().toISOString();
+
+return {
+  json: {
+    timestamp: timestamp,
+    error: error.message,
+    stack: error.stack,
+    node: error.node,
+    workflow: error.workflow
+  }
+};</pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="best-practices">
+            <h2>Best Practices</h2>
+            
+            <div class="tip">
+                <strong>✅ Naming Nodes</strong>
+                <p>Always give your nodes descriptive names (e.g., "LlamaParse Upload", "Extract Org Structure", "Save JSON File"). This makes debugging easier.</p>
+            </div>
+
+            <div class="tip">
+                <strong>✅ Testing Incrementally</strong>
+                <p>Test each node individually before connecting to the next. Use "Execute Node" to test with sample data.</p>
+            </div>
+
+            <div class="tip">
+                <strong>✅ Using Expressions</strong>
+                <p>Click the "Expression" button (fx icon) next to any field to write JavaScript expressions that reference data from previous nodes.</p>
+            </div>
+
+            <div class="warning">
+                <strong>⚠️ API Keys Security</strong>
+                <p>Never hardcode API keys in nodes. Always use n8n's credential system to store sensitive information securely.</p>
+            </div>
+
+            <div class="tip">
+                <strong>✅ Error Handling</strong>
+                <p>Always add error handling nodes to catch and log errors. This helps with debugging and monitoring.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p><a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a> | <a href="n8n_troubleshooting.html">Next: Troubleshooting →</a></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Visual Guides - Screenshots and Diagrams</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            margin: -2rem -2rem 2rem -2rem;
+            border-radius: 0 0 10px 10px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #667eea;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        h3 {
+            color: #764ba2;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .nav-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        .nav-links a {
+            display: inline-block;
+            margin: 0.5rem 1rem 0.5rem 0;
+            padding: 0.5rem 1rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: #764ba2;
+        }
+        .screenshot-placeholder {
+            background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+            border: 3px dashed #667eea;
+            padding: 3rem;
+            text-align: center;
+            margin: 2rem 0;
+            border-radius: 10px;
+            color: #666;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .screenshot-placeholder::before {
+            content: "📷";
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .screenshot-placeholder img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .caption {
+            background: #f8f9fa;
+            padding: 0.5rem 1rem;
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            border-radius: 0 0 5px 5px;
+            font-style: italic;
+            color: #666;
+            text-align: center;
+        }
+        .workflow-diagram {
+            background: #f8f9fa;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+        }
+        .node-box {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: inline-block;
+            min-width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .arrow {
+            font-size: 2rem;
+            color: #667eea;
+            margin: 0 1rem;
+        }
+        .diagram-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .annotation {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        .annotation strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖼️ n8n Visual Guides</h1>
+            <p style="opacity: 0.9; margin-top: 0.5rem;">Screenshots, diagrams, and visual references for n8n workflows</p>
+        </header>
+
+        <div class="nav-links">
+            <a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a>
+            <a href="n8n_ui_instructions.html">📱 UI Instructions</a>
+            <a href="n8n_node_configuration.html">⚙️ Node Configuration</a>
+            <a href="n8n_troubleshooting.html">🔧 Troubleshooting</a>
+        </div>
+
+        <section id="interface-overview">
+            <h2>n8n Interface Overview</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 1: n8n Main Interface</strong></p>
+                <p style="margin-top: 1rem;">Screenshot showing:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Left sidebar with Workflows, Executions, Settings</li>
+                    <li>Main canvas area for workflow design</li>
+                    <li>Right panel for node configuration</li>
+                    <li>Top toolbar with Save, Execute, and Active toggle</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Take screenshot of n8n interface</em></p>
+            </div>
+            <div class="caption">Figure 1: Main n8n interface layout showing key areas</div>
+        </section>
+
+        <section id="workflow-canvas">
+            <h2>Workflow Canvas</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 2: Empty Workflow Canvas</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Start node in center</li>
+                    <li>Grid background for alignment</li>
+                    <li>"+" button on left to add nodes</li>
+                    <li>Zoom controls</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of blank workflow</em></p>
+            </div>
+            <div class="caption">Figure 2: Starting point for creating a new workflow</div>
+        </section>
+
+        <section id="node-panel">
+            <h2>Node Selection Panel</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 3: Node Panel</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Search bar at top</li>
+                    <li>Categories: Triggers, Actions, Core Nodes</li>
+                    <li>List of available nodes</li>
+                    <li>Node descriptions on hover</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of node panel with search</em></p>
+            </div>
+            <div class="caption">Figure 3: Node selection panel opened with Space key or "+" button</div>
+        </section>
+
+        <section id="workflow-diagram">
+            <h2>Complete Workflow Diagram</h2>
+            
+            <div class="workflow-diagram">
+                <h3>Workflow 2: AI-Enhanced Extraction (Visual Flow)</h3>
+                <div class="diagram-row">
+                    <div class="node-box">
+                        <strong>Webhook</strong><br>
+                        <small>POST /pdf-upload</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>HTTP Request</strong><br>
+                        <small>LlamaParse API</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>Wait</strong><br>
+                        <small>Poll for completion</small>
+                    </div>
+                </div>
+                <div class="diagram-row">
+                    <div class="node-box">
+                        <strong>HTTP Request</strong><br>
+                        <small>Get parsed text</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>OpenAI</strong><br>
+                        <small>Extract structure</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>Code</strong><br>
+                        <small>Parse response</small>
+                    </div>
+                </div>
+                <div class="diagram-row">
+                    <div class="node-box">
+                        <strong>Code</strong><br>
+                        <small>Build graph</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>Code</strong><br>
+                        <small>Generate JSON</small>
+                    </div>
+                    <span class="arrow">→</span>
+                    <div class="node-box">
+                        <strong>Write Binary File</strong><br>
+                        <small>Save output</small>
+                    </div>
+                </div>
+            </div>
+            <div class="caption">Figure 4: Complete workflow flow diagram</div>
+        </section>
+
+        <section id="node-configuration">
+            <h2>Node Configuration Examples</h2>
+            
+            <h3>Webhook Node Configuration</h3>
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 5: Webhook Node Settings</strong></p>
+                <p style="margin-top: 1rem;">Shows configuration panel with:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>HTTP Method: POST</li>
+                    <li>Path: /pdf-upload</li>
+                    <li>Response Mode: Last Node</li>
+                    <li>Webhook URL displayed</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of Webhook node configuration</em></p>
+            </div>
+            <div class="caption">Figure 5: Webhook node configuration for receiving PDF files</div>
+
+            <h3>HTTP Request Node Configuration</h3>
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 6: HTTP Request Node (LlamaParse)</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Method: POST</li>
+                    <li>URL: https://api.llamaindex.ai/api/parsing/upload</li>
+                    <li>Authentication: API Key</li>
+                    <li>Body: Binary Data (PDF file)</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of HTTP Request node</em></p>
+            </div>
+            <div class="caption">Figure 6: HTTP Request node configured for LlamaParse API</div>
+
+            <h3>OpenAI Node Configuration</h3>
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 7: OpenAI Node Settings</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Model: gpt-4-turbo</li>
+                    <li>System Prompt field</li>
+                    <li>User Prompt field</li>
+                    <li>Response Format: JSON</li>
+                    <li>Temperature setting</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of OpenAI node configuration</em></p>
+            </div>
+            <div class="caption">Figure 7: OpenAI node configured for organizational chart extraction</div>
+
+            <h3>Code Node Configuration</h3>
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 8: Code Node (JavaScript)</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Code editor with syntax highlighting</li>
+                    <li>Input data preview</li>
+                    <li>Return statement example</li>
+                    <li>Available variables ($json, $input, etc.)</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of Code node editor</em></p>
+            </div>
+            <div class="caption">Figure 8: Code node with JavaScript for data processing</div>
+        </section>
+
+        <section id="expression-editor">
+            <h2>Expression Editor</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 9: Expression Editor</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Expression input field</li>
+                    <li>Available data preview</li>
+                    <li>Autocomplete suggestions</li>
+                    <li>Expression result preview</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of expression editor with example</em></p>
+            </div>
+            <div class="caption">Figure 9: Using the expression editor to reference previous node data</div>
+            
+            <div class="annotation">
+                <strong>💡 Example Expression:</strong>
+                <pre style="background: white; padding: 0.5rem; margin-top: 0.5rem; border-radius: 3px;">{{ $json.body.text }}</pre>
+                <p style="margin-top: 0.5rem;">This expression accesses the "text" field from the "body" object in the previous node's output.</p>
+            </div>
+        </section>
+
+        <section id="execution-view">
+            <h2>Execution View</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 10: Workflow Execution</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Execution status (Success/Error) on each node</li>
+                    <li>Green checkmarks for successful nodes</li>
+                    <li>Red X marks for failed nodes</li>
+                    <li>Execution time displayed</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of workflow after execution</em></p>
+            </div>
+            <div class="caption">Figure 10: Workflow canvas showing execution results</div>
+
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 11: Node Output Data</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Output tab in right panel</li>
+                    <li>JSON data structure</li>
+                    <li>Expandable/collapsible objects</li>
+                    <li>Data preview with syntax highlighting</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of node output panel</em></p>
+            </div>
+            <div class="caption">Figure 11: Viewing output data from a node after execution</div>
+        </section>
+
+        <section id="error-handling">
+            <h2>Error Handling Visual Guide</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 12: Error Node Display</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Red error indicator on node</li>
+                    <li>Error message in tooltip</li>
+                    <li>Error details in right panel</li>
+                    <li>Stack trace for debugging</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of error display</em></p>
+            </div>
+            <div class="caption">Figure 12: How errors are displayed in n8n workflows</div>
+        </section>
+
+        <section id="credentials">
+            <h2>Credentials Management</h2>
+            
+            <div class="screenshot-placeholder">
+                <p><strong>Figure 13: Credentials Setup</strong></p>
+                <p style="margin-top: 1rem;">Shows:</p>
+                <ul style="text-align: left; margin-top: 1rem;">
+                    <li>Credentials dropdown in node</li>
+                    <li>"Create New Credential" button</li>
+                    <li>Credential type selection</li>
+                    <li>API key input field</li>
+                    <li>Test connection button</li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9em; color: #999;">📝 <em>To add: Screenshot of credentials setup</em></p>
+            </div>
+            <div class="caption">Figure 13: Setting up API credentials for external services</div>
+        </section>
+
+        <section id="workflow-comparison">
+            <h2>Workflow Comparison</h2>
+            
+            <h3>Basic vs AI-Enhanced Workflow</h3>
+            <div class="workflow-diagram">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div>
+                        <h4>Basic Workflow</h4>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Webhook</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">HTTP Request</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Code (Extract)</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Write File</div>
+                    </div>
+                    <div>
+                        <h4>AI-Enhanced Workflow</h4>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Webhook</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">HTTP Request</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">OpenAI</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Code (Process)</div>
+                        <div class="arrow" style="display: block; text-align: center;">↓</div>
+                        <div class="node-box" style="display: block; margin: 0.5rem 0;">Write File</div>
+                    </div>
+                </div>
+            </div>
+            <div class="caption">Figure 14: Comparison of basic and AI-enhanced workflow structures</div>
+        </section>
+
+        <section id="adding-screenshots">
+            <h2>How to Add Your Own Screenshots</h2>
+            
+            <div class="annotation">
+                <strong>📸 Instructions for Adding Screenshots:</strong>
+                <ol style="margin-left: 2rem; margin-top: 1rem;">
+                    <li>Take screenshots of your n8n interface at each step</li>
+                    <li>Save images as PNG or JPG format</li>
+                    <li>Name files descriptively (e.g., "webhook-config.png")</li>
+                    <li>Place images in the same directory as this HTML file</li>
+                    <li>Replace the screenshot placeholders with:
+                        <pre style="background: white; padding: 0.5rem; margin-top: 0.5rem; border-radius: 3px;">&lt;img src="your-screenshot.png" alt="Description"&gt;</pre>
+                    </li>
+                    <li>Update the placeholder divs to use actual images</li>
+                </ol>
+            </div>
+        </section>
+
+        <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; color: #666;">
+            <p><a href="n8n_org_chart_processing_plan.html">← Back to Main Plan</a> | <a href="n8n_node_configuration.html">Next: Node Configuration →</a></p>
+        </footer>
+    </div>
+</body>
+</html>
