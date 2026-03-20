@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user_id": null,
+    "realty_agency": "Sunset Realty Group",
+    "specialization": "Residential HOA Communities",
+    "location_id": 1
+  },
+  {
+    "id": 2,
+    "user_id": null,
+    "realty_agency": "Oakwood Properties",
+    "specialization": "Luxury Homes and Estates",
+    "location_id": 2
+  },
+  {
+    "id": 3,
+    "user_id": null,
+    "realty_agency": "Riverside Real Estate",
+    "specialization": "Family Communities",
+    "location_id": 3
+  },
+  {
+    "id": 4,
+    "user_id": null,
+    "realty_agency": "Meadowbrook Realty",
+    "specialization": "New Construction",
+    "location_id": 4
+  },
+  {
+    "id": 5,
+    "user_id": null,
+    "realty_agency": "Pinecrest Associates",
+    "specialization": "Residential Sales",
+    "location_id": 5
+  }
+]
+

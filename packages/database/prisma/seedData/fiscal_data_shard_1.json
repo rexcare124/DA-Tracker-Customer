@@ -1,0 +1,474 @@
+[
+  {
+    "acfrReportId": 67,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "25000000.00",
+    "description": "General fund unrestricted balance for fiscal year 2023",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 68,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "150000000.00",
+    "description": "Total general fund expenditures for fiscal year 2023",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 69,
+    "fiscalDataTypeId": 3,
+    "fundTypeId": 1,
+    "amount": "5000000.00",
+    "description": "Transfers from general fund to other funds",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 70,
+    "fiscalDataTypeId": 4,
+    "fundTypeId": 1,
+    "amount": "75000000.00",
+    "description": "Non-retirement long-term obligations",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 71,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "200000000.00",
+    "description": "Total government-wide revenues",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 72,
+    "fiscalDataTypeId": 6,
+    "fundTypeId": 1,
+    "amount": "15000000.00",
+    "description": "General fund cash and equivalents",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 73,
+    "fiscalDataTypeId": 7,
+    "fundTypeId": 1,
+    "amount": "10000000.00",
+    "description": "General fund investments",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 74,
+    "fiscalDataTypeId": 8,
+    "fundTypeId": 1,
+    "amount": "20000000.00",
+    "description": "General fund liabilities",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 75,
+    "fiscalDataTypeId": 9,
+    "fundTypeId": 1,
+    "amount": "120000000.00",
+    "description": "General fund revenues",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 76,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "45000000.00",
+    "description": "Government-wide unrestricted net position",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 77,
+    "fiscalDataTypeId": 91,
+    "fundTypeId": 91,
+    "amount": "80000000.00",
+    "description": "Property tax revenue",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 67,
+    "fiscalDataTypeId": 92,
+    "fundTypeId": 92,
+    "amount": "25000000.00",
+    "description": "Sales tax revenue",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 68,
+    "fiscalDataTypeId": 93,
+    "fundTypeId": 93,
+    "amount": "15000000.00",
+    "description": "Income tax revenue",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 69,
+    "fiscalDataTypeId": 94,
+    "fundTypeId": 94,
+    "amount": "5000000.00",
+    "description": "Federal grants",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 70,
+    "fiscalDataTypeId": 95,
+    "fundTypeId": 95,
+    "amount": "10000000.00",
+    "description": "State grants",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 71,
+    "fiscalDataTypeId": 96,
+    "fundTypeId": 96,
+    "amount": "15000000.00",
+    "description": "Fees and charges",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 72,
+    "fiscalDataTypeId": 97,
+    "fundTypeId": 97,
+    "amount": "90000000.00",
+    "description": "Personnel services",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 73,
+    "fiscalDataTypeId": 98,
+    "fundTypeId": 98,
+    "amount": "40000000.00",
+    "description": "Operating expenses",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 74,
+    "fiscalDataTypeId": 99,
+    "fundTypeId": 99,
+    "amount": "15000000.00",
+    "description": "Capital outlay",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 75,
+    "fiscalDataTypeId": 100,
+    "fundTypeId": 100,
+    "amount": "5000000.00",
+    "description": "Debt service",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 76,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "22000000.00",
+    "description": "General fund unrestricted balance for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 77,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "140000000.00",
+    "description": "Total general fund expenditures for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 67,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "185000000.00",
+    "description": "Total government-wide revenues for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 68,
+    "fiscalDataTypeId": 9,
+    "fundTypeId": 1,
+    "amount": "110000000.00",
+    "description": "General fund revenues for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 69,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "42000000.00",
+    "description": "Government-wide unrestricted net position for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 70,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "45000000.00",
+    "description": "County general fund unrestricted balance",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 71,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "300000000.00",
+    "description": "County total general fund expenditures",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 72,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "400000000.00",
+    "description": "County total government-wide revenues",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 73,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "80000000.00",
+    "description": "County government-wide unrestricted net position",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 74,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "42000000.00",
+    "description": "County general fund unrestricted balance for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 75,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "285000000.00",
+    "description": "County total general fund expenditures for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 76,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "380000000.00",
+    "description": "County total government-wide revenues for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 77,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "15000000.00",
+    "description": "School district general fund unrestricted balance",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 67,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "120000000.00",
+    "description": "School district total general fund expenditures",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 68,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "150000000.00",
+    "description": "School district total government-wide revenues",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 69,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "25000000.00",
+    "description": "School district government-wide unrestricted net position",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 70,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "14000000.00",
+    "description": "School district general fund unrestricted balance for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 71,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "115000000.00",
+    "description": "School district total general fund expenditures for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 72,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "145000000.00",
+    "description": "School district total government-wide revenues for fiscal year 2022",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 9,
+    "fundTypeId": 1,
+    "amount": "100000000.00",
+    "description": "General fund revenues for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 9,
+    "fundTypeId": 1,
+    "amount": "95000000.00",
+    "description": "General fund revenues for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "180000000.00",
+    "description": "Total revenues for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 5,
+    "fundTypeId": 1,
+    "amount": "170000000.00",
+    "description": "Total revenues for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "20000000.00",
+    "description": "General fund unrestricted balance for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 1,
+    "fundTypeId": 1,
+    "amount": "18000000.00",
+    "description": "General fund unrestricted balance for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "130000000.00",
+    "description": "Total general fund expenditures for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 2,
+    "fundTypeId": 1,
+    "amount": "120000000.00",
+    "description": "Total general fund expenditures for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 3,
+    "fundTypeId": 1,
+    "amount": "4500000.00",
+    "description": "Transfers to other funds for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 3,
+    "fundTypeId": 1,
+    "amount": "4000000.00",
+    "description": "Transfers to other funds for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 4,
+    "fundTypeId": 1,
+    "amount": "70000000.00",
+    "description": "Non-retirement long-term obligations for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 4,
+    "fundTypeId": 1,
+    "amount": "65000000.00",
+    "description": "Non-retirement long-term obligations for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 6,
+    "fundTypeId": 1,
+    "amount": "14000000.00",
+    "description": "General fund cash and equivalents for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 6,
+    "fundTypeId": 1,
+    "amount": "13000000.00",
+    "description": "General fund cash and equivalents for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 7,
+    "fundTypeId": 1,
+    "amount": "9000000.00",
+    "description": "General fund investments for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 7,
+    "fundTypeId": 1,
+    "amount": "8000000.00",
+    "description": "General fund investments for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 8,
+    "fundTypeId": 1,
+    "amount": "18000000.00",
+    "description": "General fund liabilities for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 8,
+    "fundTypeId": 1,
+    "amount": "17000000.00",
+    "description": "General fund liabilities for fiscal year 2020",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 13,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "40000000.00",
+    "description": "Unrestricted net position for fiscal year 2021",
+    "stateRegionId": 1
+  },
+  {
+    "acfrReportId": 14,
+    "fiscalDataTypeId": 10,
+    "fundTypeId": 1,
+    "amount": "38000000.00",
+    "description": "Unrestricted net position for fiscal year 2020",
+    "stateRegionId": 1
+  }
+]

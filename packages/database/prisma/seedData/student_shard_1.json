@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "studentId": 1,
+    "personId": 1,
+    "schoolId": 1,
+    "currentGradeLevel": "12",
+    "enrollmentDate": "2020-08-15T00:00:00.000Z",
+    "graduationDate": "2024-06-15T00:00:00.000Z",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "studentId": 2,
+    "personId": 2,
+    "schoolId": 1,
+    "currentGradeLevel": "11",
+    "enrollmentDate": "2021-08-15T00:00:00.000Z",
+    "graduationDate": null,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "studentId": 3,
+    "personId": 3,
+    "schoolId": 2,
+    "currentGradeLevel": "5",
+    "enrollmentDate": "2022-08-15T00:00:00.000Z",
+    "graduationDate": null,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "studentId": 4,
+    "personId": 4,
+    "schoolId": 3,
+    "currentGradeLevel": "8",
+    "enrollmentDate": "2021-08-15T00:00:00.000Z",
+    "graduationDate": null,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "studentId": 5,
+    "personId": 5,
+    "schoolId": 4,
+    "currentGradeLevel": "10",
+    "enrollmentDate": "2020-08-15T00:00:00.000Z",
+    "graduationDate": null,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

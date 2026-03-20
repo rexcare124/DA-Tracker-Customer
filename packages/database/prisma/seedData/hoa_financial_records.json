@@ -1,0 +1,51 @@
+[
+  {
+    "hoa_id": 1,
+    "record_type": "independent_audit",
+    "effective_date": "2024-01-15T00:00:00Z",
+    "description": "Annual independent audit for fiscal year 2023",
+    "document_url": "https://www.sunsethillshoa.org/financials/2023-audit.pdf"
+  },
+  {
+    "hoa_id": 1,
+    "record_type": "financial_statement",
+    "effective_date": "2023-12-31T00:00:00Z",
+    "description": "Year-end financial statement for 2023",
+    "document_url": "https://www.sunsethillshoa.org/financials/2023-statement.pdf"
+  },
+  {
+    "hoa_id": 1,
+    "record_type": "budget",
+    "effective_date": "2024-01-01T00:00:00Z",
+    "description": "Annual operating budget for fiscal year 2024",
+    "document_url": "https://www.sunsethillshoa.org/financials/2024-budget.pdf"
+  },
+  {
+    "hoa_id": 2,
+    "record_type": "independent_audit",
+    "effective_date": "2024-01-20T00:00:00Z",
+    "description": "Annual independent audit for fiscal year 2023",
+    "document_url": "https://www.oakwoodestateshoa.com/financials/2023-audit.pdf"
+  },
+  {
+    "hoa_id": 2,
+    "record_type": "quarterly_report",
+    "effective_date": "2024-03-31T00:00:00Z",
+    "description": "Q1 2024 financial report",
+    "document_url": "https://www.oakwoodestateshoa.com/financials/q1-2024.pdf"
+  },
+  {
+    "hoa_id": 3,
+    "record_type": "financial_statement",
+    "effective_date": "2023-12-31T00:00:00Z",
+    "description": "Year-end financial statement for 2023",
+    "document_url": "https://www.riversidecommons.org/financials/2023-statement.pdf"
+  },
+  {
+    "hoa_id": 4,
+    "record_type": "independent_audit",
+    "effective_date": "2024-02-01T00:00:00Z",
+    "description": "Annual independent audit for fiscal year 2023",
+    "document_url": "https://www.meadowbrookvillagehoa.org/financials/2023-audit.pdf"
+  }
+]

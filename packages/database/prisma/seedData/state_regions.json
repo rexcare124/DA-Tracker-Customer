@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "region_name": "West Coast",
+    "region_code": "WC",
+    "description": "California, Oregon, Washington",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "region_name": "Southwest",
+    "region_code": "SW",
+    "description": "Texas, Arizona, New Mexico, Nevada",
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "region_name": "Southeast",
+    "region_code": "SE",
+    "description": "Florida, Georgia, Alabama, South Carolina",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "region_name": "Northeast",
+    "region_code": "NE",
+    "description": "New York, Pennsylvania, Massachusetts, Connecticut",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "region_name": "Midwest",
+    "region_code": "MW",
+    "description": "Illinois, Ohio, Michigan, Indiana",
+    "is_active": true
+  }
+]

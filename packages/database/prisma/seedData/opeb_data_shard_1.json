@@ -1,0 +1,112 @@
+[
+  {
+    "governmentEntityId": 1,
+    "acfrReportId": 67,
+    "totalOPEBLiability": "25000000.00",
+    "opebFiduciaryNetPosition": "5000000.00",
+    "netOPEBLiability": "20000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 73
+  },
+  {
+    "governmentEntityId": 1,
+    "acfrReportId": 68,
+    "totalOPEBLiability": "24000000.00",
+    "opebFiduciaryNetPosition": "4800000.00",
+    "netOPEBLiability": "19200000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 74
+  },
+  {
+    "governmentEntityId": 2,
+    "acfrReportId": 69,
+    "totalOPEBLiability": "50000000.00",
+    "opebFiduciaryNetPosition": "10000000.00",
+    "netOPEBLiability": "40000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 75
+  },
+  {
+    "governmentEntityId": 2,
+    "acfrReportId": 70,
+    "totalOPEBLiability": "48000000.00",
+    "opebFiduciaryNetPosition": "9600000.00",
+    "netOPEBLiability": "38400000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 76
+  },
+  {
+    "governmentEntityId": 3,
+    "acfrReportId": 71,
+    "totalOPEBLiability": "30000000.00",
+    "opebFiduciaryNetPosition": "6000000.00",
+    "netOPEBLiability": "24000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 77
+  },
+  {
+    "governmentEntityId": 3,
+    "acfrReportId": 72,
+    "totalOPEBLiability": "29000000.00",
+    "opebFiduciaryNetPosition": "5800000.00",
+    "netOPEBLiability": "23200000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 1,
+    "pensionPlanId": 78
+  },
+  {
+    "governmentEntityId": 4,
+    "acfrReportId": 73,
+    "totalOPEBLiability": "8000000.00",
+    "opebFiduciaryNetPosition": "1600000.00",
+    "netOPEBLiability": "6400000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 2,
+    "pensionPlanId": 79
+  },
+  {
+    "governmentEntityId": 5,
+    "acfrReportId": 74,
+    "totalOPEBLiability": "15000000.00",
+    "opebFiduciaryNetPosition": "3000000.00",
+    "netOPEBLiability": "12000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 2,
+    "pensionPlanId": 80
+  },
+  {
+    "governmentEntityId": 6,
+    "acfrReportId": 75,
+    "totalOPEBLiability": "40000000.00",
+    "opebFiduciaryNetPosition": "8000000.00",
+    "netOPEBLiability": "32000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 3,
+    "pensionPlanId": 81
+  },
+  {
+    "governmentEntityId": 7,
+    "acfrReportId": 76,
+    "totalOPEBLiability": "12000000.00",
+    "opebFiduciaryNetPosition": "2400000.00",
+    "netOPEBLiability": "9600000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 3,
+    "pensionPlanId": 82
+  },
+  {
+    "governmentEntityId": 8,
+    "acfrReportId": 77,
+    "totalOPEBLiability": "10000000.00",
+    "opebFiduciaryNetPosition": "2000000.00",
+    "netOPEBLiability": "8000000.00",
+    "opebFundingRatio": "0.2000",
+    "stateRegionId": 4,
+    "pensionPlanId": 83
+  }
+]

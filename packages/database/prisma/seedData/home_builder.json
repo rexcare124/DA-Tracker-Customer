@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Sunset Development Group",
+    "website": "https://www.sunsetdevelopment.com",
+    "date_formed": "1990-01-15T00:00:00Z",
+    "location_id": 1
+  },
+  {
+    "id": 2,
+    "name": "Oakwood Construction Company",
+    "website": "https://www.oakwoodconstruction.com",
+    "date_formed": "1995-03-10T00:00:00Z",
+    "location_id": 2
+  },
+  {
+    "id": 3,
+    "name": "Riverside Builders Inc.",
+    "website": "https://www.riversidebuilders.com",
+    "date_formed": "1985-06-20T00:00:00Z",
+    "location_id": 3
+  },
+  {
+    "id": 4,
+    "name": "Meadowbrook Homes",
+    "website": "https://www.meadowbrookhomes.com",
+    "date_formed": "2000-09-05T00:00:00Z",
+    "location_id": 4
+  },
+  {
+    "id": 5,
+    "name": "Pinecrest Development",
+    "website": "https://www.pinecrestdev.com",
+    "date_formed": "1988-11-12T00:00:00Z",
+    "location_id": 5
+  }
+]
+

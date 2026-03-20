@@ -1,0 +1,7 @@
+[
+  { "id": 1, "priorityName": "Low", "level": 1, "description": "Low priority item", "color": "#28a745" },
+  { "id": 2, "priorityName": "Medium", "level": 2, "description": "Medium priority item", "color": "#ffc107" },
+  { "id": 3, "priorityName": "High", "level": 3, "description": "High priority item", "color": "#fd7e14" },
+  { "id": 4, "priorityName": "Critical", "level": 4, "description": "Critical priority item requiring immediate attention", "color": "#dc3545" },
+  { "id": 5, "priorityName": "Emergency", "level": 5, "description": "Emergency situation requiring immediate response", "color": "#6f42c1" }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "crime_id": 1,
+    "crime_name": "Petty Theft",
+    "description": "Theft of property valued under $950",
+    "classification_id": 1,
+    "severity_level": "Misdemeanor",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "crime_id": 2,
+    "crime_name": "Simple Assault",
+    "description": "Unlawful attempt to commit violent injury on another person",
+    "classification_id": 1,
+    "severity_level": "Misdemeanor",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "crime_id": 3,
+    "crime_name": "Vandalism",
+    "description": "Malicious destruction of property",
+    "classification_id": 1,
+    "severity_level": "Misdemeanor",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "crime_id": 4,
+    "crime_name": "Robbery",
+    "description": "Taking of property from person by force or fear",
+    "classification_id": 2,
+    "severity_level": "Felony",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "crime_id": 5,
+    "crime_name": "Burglary",
+    "description": "Unlawful entry with intent to commit theft or felony",
+    "classification_id": 2,
+    "severity_level": "Felony",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

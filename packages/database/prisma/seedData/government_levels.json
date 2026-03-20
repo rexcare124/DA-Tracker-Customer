@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "level_name": "Federal",
+    "hierarchy_order": 1,
+    "description": "Federal government agencies and departments"
+  },
+  {
+    "id": 2,
+    "level_name": "State",
+    "hierarchy_order": 2,
+    "description": "State government agencies and departments"
+  },
+  {
+    "id": 3,
+    "level_name": "County",
+    "hierarchy_order": 3,
+    "description": "County government agencies and departments"
+  },
+  {
+    "id": 4,
+    "level_name": "City",
+    "hierarchy_order": 4,
+    "description": "City and municipal government agencies and departments"
+  }
+]

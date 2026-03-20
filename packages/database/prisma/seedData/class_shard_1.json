@@ -1,0 +1,32 @@
+[
+  {
+    "class_id": 1,
+    "school_id": 1,
+    "class_name": "Algebra II",
+    "subject_area": "Mathematics",
+    "teacher_id": 1,
+    "max_enrollment": 30,
+    "school_year": "2023-2024",
+    "state_region_id": 1
+  },
+  {
+    "class_id": 2,
+    "school_id": 2,
+    "class_name": "5th Grade Science",
+    "subject_area": "Science",
+    "teacher_id": 2,
+    "max_enrollment": 25,
+    "school_year": "2023-2024",
+    "state_region_id": 1
+  },
+  {
+    "class_id": 3,
+    "school_id": 3,
+    "class_name": "8th Grade English",
+    "subject_area": "English Language Arts",
+    "teacher_id": 3,
+    "max_enrollment": 28,
+    "school_year": "2023-2024",
+    "state_region_id": 1
+  }
+]

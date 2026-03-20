@@ -1,0 +1,22 @@
+[
+  { "referenceType": "state", "referenceId": 1, "name": "California", "code": "CA", "parentId": null },
+  { "referenceType": "state", "referenceId": 2, "name": "Texas", "code": "TX", "parentId": null },
+  { "referenceType": "state", "referenceId": 3, "name": "Florida", "code": "FL", "parentId": null },
+  { "referenceType": "state", "referenceId": 4, "name": "New York", "code": "NY", "parentId": null },
+  { "referenceType": "state", "referenceId": 5, "name": "Illinois", "code": "IL", "parentId": null },
+  { "referenceType": "county", "referenceId": 1, "name": "Los Angeles County", "code": "LA", "parentId": 1 },
+  { "referenceType": "county", "referenceId": 2, "name": "Harris County", "code": "Harris", "parentId": 2 },
+  { "referenceType": "county", "referenceId": 3, "name": "Miami-Dade County", "code": "Miami-Dade", "parentId": 3 },
+  { "referenceType": "county", "referenceId": 4, "name": "Kings County", "code": "Kings", "parentId": 4 },
+  { "referenceType": "county", "referenceId": 5, "name": "Cook County", "code": "Cook", "parentId": 5 },
+  { "referenceType": "city", "referenceId": 1, "name": "Los Angeles", "code": "LA", "parentId": 6 },
+  { "referenceType": "city", "referenceId": 2, "name": "Houston", "code": "Houston", "parentId": 7 },
+  { "referenceType": "city", "referenceId": 3, "name": "Miami", "code": "Miami", "parentId": 8 },
+  { "referenceType": "city", "referenceId": 4, "name": "Brooklyn", "code": "Brooklyn", "parentId": 9 },
+  { "referenceType": "city", "referenceId": 5, "name": "Chicago", "code": "Chicago", "parentId": 10 },
+  { "referenceType": "zip", "referenceId": 1, "name": "90210", "code": "90210", "parentId": 11 },
+  { "referenceType": "zip", "referenceId": 2, "name": "77001", "code": "77001", "parentId": 12 },
+  { "referenceType": "zip", "referenceId": 3, "name": "33101", "code": "33101", "parentId": 13 },
+  { "referenceType": "zip", "referenceId": 4, "name": "11201", "code": "11201", "parentId": 14 },
+  { "referenceType": "zip", "referenceId": 5, "name": "60601", "code": "60601", "parentId": 15 }
+]

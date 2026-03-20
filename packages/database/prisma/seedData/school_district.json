@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "districtId": 1,
+    "districtName": "Los Angeles Unified School District",
+    "cityId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "districtId": 2,
+    "districtName": "San Francisco Unified School District",
+    "cityId": 2,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "districtId": 3,
+    "districtName": "San Diego Unified School District",
+    "cityId": 3,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "districtId": 4,
+    "districtName": "Sacramento City Unified School District",
+    "cityId": 4,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "districtId": 5,
+    "districtName": "Fresno Unified School District",
+    "cityId": 5,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

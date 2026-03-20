@@ -1,0 +1,47 @@
+[
+  {
+    "punishment_id": 1,
+    "punishment_type": "Fine",
+    "min_penalty": "100",
+    "max_penalty": "1000",
+    "description": "Monetary penalty for misdemeanor offenses",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "punishment_id": 2,
+    "punishment_type": "Jail Time",
+    "min_penalty": "30 days",
+    "max_penalty": "1 year",
+    "description": "County jail sentence for misdemeanor offenses",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "punishment_id": 3,
+    "punishment_type": "Prison",
+    "min_penalty": "1 year",
+    "max_penalty": "25 years",
+    "description": "State prison sentence for felony offenses",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "punishment_id": 4,
+    "punishment_type": "Probation",
+    "min_penalty": "6 months",
+    "max_penalty": "5 years",
+    "description": "Supervised release in lieu of incarceration",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "punishment_id": 5,
+    "punishment_type": "Community Service",
+    "min_penalty": "40 hours",
+    "max_penalty": "500 hours",
+    "description": "Unpaid work for community benefit",
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

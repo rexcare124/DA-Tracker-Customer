@@ -1,0 +1,32 @@
+[
+  {
+    "stateId": 1,
+    "cityId": 1,
+    "year": 2024,
+    "totalCount": 8500,
+    "shelteredCount": 6000,
+    "unshelteredCount": 2500,
+    "familiesCount": 1200,
+    "individualsCount": 7300
+  },
+  {
+    "stateId": 1,
+    "cityId": 2,
+    "year": 2024,
+    "totalCount": 3200,
+    "shelteredCount": 2200,
+    "unshelteredCount": 1000,
+    "familiesCount": 500,
+    "individualsCount": 2700
+  },
+  {
+    "stateId": 1,
+    "cityId": 3,
+    "year": 2024,
+    "totalCount": 1850,
+    "shelteredCount": 1400,
+    "unshelteredCount": 450,
+    "familiesCount": 300,
+    "individualsCount": 1550
+  }
+]

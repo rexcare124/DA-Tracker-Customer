@@ -1,0 +1,22 @@
+[
+  { "configKey": "system.name", "configValue": "Government Data Analytics Platform", "dataType": "string", "category": "system", "description": "System name for display purposes" },
+  { "configKey": "system.version", "configValue": "1.0.0", "dataType": "string", "category": "system", "description": "Current system version" },
+  { "configKey": "system.maintenance_mode", "configValue": "false", "dataType": "boolean", "category": "system", "description": "Whether system is in maintenance mode" },
+  { "configKey": "security.password_min_length", "configValue": "8", "dataType": "number", "category": "security", "description": "Minimum password length requirement" },
+  { "configKey": "security.session_timeout", "configValue": "3600", "dataType": "number", "category": "security", "description": "Session timeout in seconds" },
+  { "configKey": "security.max_login_attempts", "configValue": "5", "dataType": "number", "category": "security", "description": "Maximum login attempts before lockout" },
+  { "configKey": "performance.query_timeout", "configValue": "30", "dataType": "number", "category": "performance", "description": "Query timeout in seconds" },
+  { "configKey": "performance.max_results_per_page", "configValue": "100", "dataType": "number", "category": "performance", "description": "Maximum results per page for pagination" },
+  { "configKey": "performance.cache_ttl", "configValue": "300", "dataType": "number", "category": "performance", "description": "Cache time-to-live in seconds" },
+  { "configKey": "ui.theme", "configValue": "light", "dataType": "string", "category": "ui", "description": "Default UI theme" },
+  { "configKey": "ui.language", "configValue": "en", "dataType": "string", "category": "ui", "description": "Default language" },
+  { "configKey": "ui.timezone", "configValue": "UTC", "dataType": "string", "category": "ui", "description": "Default timezone" },
+  { "configKey": "api.rate_limit", "configValue": "1000", "dataType": "number", "category": "performance", "description": "API rate limit per hour" },
+  { "configKey": "api.cors_origins", "configValue": "[\"http://localhost:3000\", \"https://gdap.example.com\"]", "dataType": "json", "category": "security", "description": "Allowed CORS origins" },
+  { "configKey": "database.connection_pool_size", "configValue": "10", "dataType": "number", "category": "performance", "description": "Database connection pool size" },
+  { "configKey": "database.query_logging", "configValue": "false", "dataType": "boolean", "category": "performance", "description": "Whether to log database queries" },
+  { "configKey": "email.smtp_host", "configValue": "smtp.example.com", "dataType": "string", "category": "system", "description": "SMTP server hostname", "isEncrypted": true },
+  { "configKey": "email.smtp_port", "configValue": "587", "dataType": "number", "category": "system", "description": "SMTP server port" },
+  { "configKey": "email.from_address", "configValue": "noreply@gdap.example.com", "dataType": "string", "category": "system", "description": "Default from email address" },
+  { "configKey": "logging.level", "configValue": "info", "dataType": "string", "category": "system", "description": "Logging level (debug, info, warn, error)" }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "fundName": "General Fund",
+    "fundCode": "GF",
+    "category": "general",
+    "description": "Primary operating fund for general government activities"
+  },
+  {
+    "fundName": "Special Revenue Fund",
+    "fundCode": "SRF",
+    "category": "special",
+    "description": "Fund for specific revenue sources with legally restricted purposes"
+  },
+  {
+    "fundName": "Capital Projects Fund",
+    "fundCode": "CPF",
+    "category": "special",
+    "description": "Fund for acquisition or construction of major capital facilities"
+  },
+  {
+    "fundName": "Debt Service Fund",
+    "fundCode": "DSF",
+    "category": "special",
+    "description": "Fund for payment of principal and interest on long-term debt"
+  },
+  {
+    "fundName": "Enterprise Fund",
+    "fundCode": "EF",
+    "category": "enterprise",
+    "description": "Fund for services provided to the general public on a user charge basis"
+  },
+  {
+    "fundName": "Internal Service Fund",
+    "fundCode": "ISF",
+    "category": "internal_service",
+    "description": "Fund for services provided to other departments on a cost-reimbursement basis"
+  },
+  {
+    "fundName": "Pension Trust Fund",
+    "fundCode": "PTF",
+    "category": "trust",
+    "description": "Fund for pension benefits for government employees"
+  },
+  {
+    "fundName": "OPEB Trust Fund",
+    "fundCode": "OTF",
+    "category": "trust",
+    "description": "Fund for other post-employment benefits"
+  },
+  {
+    "fundName": "Private-Purpose Trust Fund",
+    "fundCode": "PPTF",
+    "category": "trust",
+    "description": "Fund for resources held in trust for private individuals or organizations"
+  },
+  {
+    "fundName": "Agency Fund",
+    "fundCode": "AF",
+    "category": "trust",
+    "description": "Fund for resources held as an agent for other governments or organizations"
+  },
+  {
+    "fundName": "Water Utility Fund",
+    "fundCode": "WUF",
+    "category": "enterprise",
+    "description": "Enterprise fund for water utility operations"
+  },
+  {
+    "fundName": "Sewer Utility Fund",
+    "fundCode": "SUF",
+    "category": "enterprise",
+    "description": "Enterprise fund for sewer utility operations"
+  },
+  {
+    "fundName": "Electric Utility Fund",
+    "fundCode": "EUF",
+    "category": "enterprise",
+    "description": "Enterprise fund for electric utility operations"
+  },
+  {
+    "fundName": "Gas Utility Fund",
+    "fundCode": "GUF",
+    "category": "enterprise",
+    "description": "Enterprise fund for gas utility operations"
+  },
+  {
+    "fundName": "Transportation Fund",
+    "fundCode": "TF",
+    "category": "special",
+    "description": "Special revenue fund for transportation projects"
+  },
+  {
+    "fundName": "Parks and Recreation Fund",
+    "fundCode": "PRF",
+    "category": "special",
+    "description": "Special revenue fund for parks and recreation activities"
+  },
+  {
+    "fundName": "Library Fund",
+    "fundCode": "LF",
+    "category": "special",
+    "description": "Special revenue fund for library services"
+  },
+  {
+    "fundName": "Police Fund",
+    "fundCode": "PF",
+    "category": "special",
+    "description": "Special revenue fund for police services"
+  },
+  {
+    "fundName": "Fire Fund",
+    "fundCode": "FF",
+    "category": "special",
+    "description": "Special revenue fund for fire services"
+  },
+  {
+    "fundName": "Emergency Reserve Fund",
+    "fundCode": "ERF",
+    "category": "special",
+    "description": "Special revenue fund for emergency reserves"
+  }
+]

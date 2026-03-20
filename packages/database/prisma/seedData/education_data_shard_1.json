@@ -1,0 +1,60 @@
+[
+  {
+    "personId": 1,
+    "educationLevelId": 5,
+    "institutionName": "State University",
+    "graduationDate": "2020-05-15T00:00:00.000Z",
+    "gpa": 3.5,
+    "major": "Computer Science",
+    "degree": "Bachelor's Degree",
+    "stateRegionId": 1
+  },
+  {
+    "personId": 2,
+    "educationLevelId": 3,
+    "institutionName": "City High School",
+    "graduationDate": "2018-06-01T00:00:00.000Z",
+    "gpa": 3.2,
+    "stateRegionId": 1
+  },
+  {
+    "personId": 3,
+    "educationLevelId": 6,
+    "institutionName": "Graduate University",
+    "graduationDate": "2022-05-20T00:00:00.000Z",
+    "gpa": 3.8,
+    "major": "Business Administration",
+    "degree": "Master's Degree",
+    "stateRegionId": 1
+  },
+  {
+    "personId": 4,
+    "educationLevelId": 7,
+    "institutionName": "Research University",
+    "graduationDate": "2021-12-10T00:00:00.000Z",
+    "gpa": 3.9,
+    "major": "Physics",
+    "degree": "Doctoral Degree",
+    "stateRegionId": 1
+  },
+  {
+    "personId": 5,
+    "educationLevelId": 5,
+    "institutionName": "Community College",
+    "graduationDate": "2019-05-15T00:00:00.000Z",
+    "gpa": 3.4,
+    "major": "Engineering",
+    "degree": "Bachelor's Degree",
+    "stateRegionId": 1
+  },
+  {
+    "personId": 6,
+    "educationLevelId": 6,
+    "institutionName": "Business School",
+    "graduationDate": "2023-05-18T00:00:00.000Z",
+    "gpa": 3.7,
+    "major": "Finance",
+    "degree": "Master's Degree",
+    "stateRegionId": 1
+  }
+]

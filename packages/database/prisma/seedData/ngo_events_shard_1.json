@@ -1,0 +1,66 @@
+[
+  {
+    "ngo_id": "12-3456789",
+    "event_id": 5,
+    "relationship_type": "advocate",
+    "role": "Community Advocate",
+    "notes": "Local community development NGO advocating for affordable housing in zoning amendment",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "98-7654321",
+    "event_id": 6,
+    "relationship_type": "service_provider",
+    "role": "Housing Provider",
+    "notes": "Non-profit housing organization providing services funded by community development grant",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "45-6789012",
+    "event_id": 8,
+    "relationship_type": "service_provider",
+    "role": "Emergency Shelter",
+    "notes": "Local shelter organization providing emergency housing during flood response",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "78-9012345",
+    "event_id": 4,
+    "relationship_type": "advocate",
+    "role": "Environmental Advocate",
+    "notes": "Environmental NGO monitoring and advocating for resolution of industrial site violations",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "11-2233445",
+    "event_id": 10,
+    "relationship_type": "advocate",
+    "role": "Community Mediator",
+    "notes": "Community mediation organization facilitating resolution of noise complaint",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "66-7788990",
+    "event_id": 1,
+    "relationship_type": "advocate",
+    "role": "Business Advisor",
+    "notes": "Small business development NGO providing guidance to ABC Construction on license application",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "33-4455667",
+    "event_id": 7,
+    "relationship_type": "advocate",
+    "role": "Taxpayer Advocate",
+    "notes": "Taxpayer rights organization providing support for business tax dispute case",
+    "state_region_id": 1
+  },
+  {
+    "ngo_id": "88-9900112",
+    "event_id": 9,
+    "relationship_type": "advocate",
+    "role": "Infrastructure Advocate",
+    "notes": "Infrastructure improvement NGO supporting street repair service request",
+    "state_region_id": 1
+  }
+]

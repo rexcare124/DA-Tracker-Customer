@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "type_name": "Government",
+    "description": "Government agencies and departments",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "type_name": "Business",
+    "description": "Commercial businesses and enterprises",
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "type_name": "NGO",
+    "description": "Non-governmental organizations and non-profits",
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "type_name": "Educational",
+    "description": "Educational institutions and schools",
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "type_name": "Healthcare",
+    "description": "Healthcare organizations and medical facilities",
+    "is_active": true
+  }
+]

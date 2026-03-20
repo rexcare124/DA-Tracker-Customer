@@ -1,0 +1,52 @@
+[
+  {
+    "statute_id": 1,
+    "statute_number": "PC 484",
+    "title": "Theft",
+    "effective_date": "2020-01-01T00:00:00Z",
+    "repealed_date": null,
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "statute_id": 2,
+    "statute_number": "PC 240",
+    "title": "Assault",
+    "effective_date": "2020-01-01T00:00:00Z",
+    "repealed_date": null,
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "statute_id": 3,
+    "statute_number": "PC 594",
+    "title": "Vandalism",
+    "effective_date": "2020-01-01T00:00:00Z",
+    "repealed_date": null,
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "statute_id": 4,
+    "statute_number": "PC 211",
+    "title": "Robbery",
+    "effective_date": "2020-01-01T00:00:00Z",
+    "repealed_date": null,
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "statute_id": 5,
+    "statute_number": "PC 459",
+    "title": "Burglary",
+    "effective_date": "2020-01-01T00:00:00Z",
+    "repealed_date": null,
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

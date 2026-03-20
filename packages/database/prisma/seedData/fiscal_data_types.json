@@ -1,0 +1,102 @@
+[
+  {
+    "typeName": "general_fund_unrestricted_balance",
+    "category": "fund_balance",
+    "description": "Unrestricted fund balance in the general fund"
+  },
+  {
+    "typeName": "total_general_fund_expenditures",
+    "category": "expenditure",
+    "description": "Total expenditures from the general fund"
+  },
+  {
+    "typeName": "transfers_to_other_funds",
+    "category": "expenditure",
+    "description": "Transfers from general fund to other funds"
+  },
+  {
+    "typeName": "non_retirement_long_term_obligations",
+    "category": "liability",
+    "description": "Long-term debt excluding pension and OPEB obligations"
+  },
+  {
+    "typeName": "total_revenues",
+    "category": "revenue",
+    "description": "Total government-wide revenues"
+  },
+  {
+    "typeName": "general_fund_cash_and_equivalents",
+    "category": "asset",
+    "description": "Cash and cash equivalents in the general fund"
+  },
+  {
+    "typeName": "general_fund_investments",
+    "category": "asset",
+    "description": "Investments held in the general fund"
+  },
+  {
+    "typeName": "general_fund_liabilities",
+    "category": "liability",
+    "description": "Current liabilities in the general fund"
+  },
+  {
+    "typeName": "general_fund_revenues",
+    "category": "revenue",
+    "description": "Revenues specifically to the general fund"
+  },
+  {
+    "typeName": "unrestricted_net_position",
+    "category": "fund_balance",
+    "description": "Government-wide unrestricted net position"
+  },
+  {
+    "typeName": "Property Tax Revenue",
+    "category": "revenue",
+    "description": "Revenue from property taxes"
+  },
+  {
+    "typeName": "Sales Tax Revenue",
+    "category": "revenue",
+    "description": "Revenue from sales taxes"
+  },
+  {
+    "typeName": "Income Tax Revenue",
+    "category": "revenue",
+    "description": "Revenue from income taxes"
+  },
+  {
+    "typeName": "Federal Grants",
+    "category": "revenue",
+    "description": "Revenue from federal government grants"
+  },
+  {
+    "typeName": "State Grants",
+    "category": "revenue",
+    "description": "Revenue from state government grants"
+  },
+  {
+    "typeName": "Fees and Charges",
+    "category": "revenue",
+    "description": "Revenue from fees and service charges"
+  },
+  {
+    "typeName": "Personnel Services",
+    "category": "expenditure",
+    "description": "Expenditures for personnel services"
+  },
+  {
+    "typeName": "Operating Expenses",
+    "category": "expenditure",
+    "description": "General operating expenses"
+  },
+  {
+    "typeName": "Capital Outlay",
+    "category": "expenditure",
+    "description": "Expenditures for capital improvements"
+  },
+  {
+    "typeName": "Debt Service",
+    "category": "expenditure",
+    "description": "Principal and interest payments on debt"
+  }
+]

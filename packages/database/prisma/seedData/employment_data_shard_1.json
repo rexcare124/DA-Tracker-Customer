@@ -1,0 +1,23 @@
+[
+  {
+    "employment_id": 1,
+    "person_id": 1,
+    "employment_status": "Employed",
+    "city_id": 1,
+    "state_region_id": 1
+  },
+  {
+    "employment_id": 2,
+    "person_id": 2,
+    "employment_status": "Unemployed",
+    "city_id": 1,
+    "state_region_id": 1
+  },
+  {
+    "employment_id": 3,
+    "person_id": 3,
+    "employment_status": "Self-Employed",
+    "city_id": 2,
+    "state_region_id": 1
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "meeting_date_time": "2024-01-15T18:00:00Z",
+    "meeting_type": "Board Meeting",
+    "meeting_document_url": "https://www.sunsethillshoa.org/meetings/2024-01-15-minutes.pdf"
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "meeting_date_time": "2024-02-15T18:00:00Z",
+    "meeting_type": "Board Meeting",
+    "meeting_document_url": "https://www.sunsethillshoa.org/meetings/2024-02-15-minutes.pdf"
+  },
+  {
+    "id": 3,
+    "hoa_id": 1,
+    "meeting_date_time": "2024-03-20T18:00:00Z",
+    "meeting_type": "Annual Meeting",
+    "meeting_document_url": "https://www.sunsethillshoa.org/meetings/2024-annual-meeting.pdf"
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "meeting_date_time": "2024-01-10T19:00:00Z",
+    "meeting_type": "Board Meeting",
+    "meeting_document_url": "https://www.oakwoodestateshoa.com/meetings/2024-01-10-minutes.pdf"
+  },
+  {
+    "id": 5,
+    "hoa_id": 2,
+    "meeting_date_time": "2024-04-15T19:00:00Z",
+    "meeting_type": "Annual Meeting",
+    "meeting_document_url": "https://www.oakwoodestateshoa.com/meetings/2024-annual-meeting.pdf"
+  },
+  {
+    "id": 6,
+    "hoa_id": 3,
+    "meeting_date_time": "2024-01-05T17:30:00Z",
+    "meeting_type": "Board Meeting",
+    "meeting_document_url": "https://www.riversidecommons.org/meetings/2024-01-05-minutes.pdf"
+  }
+]
+

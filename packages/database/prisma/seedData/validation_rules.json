@@ -1,0 +1,22 @@
+[
+  { "ruleName": "email_format", "tableName": "person", "columnName": "email", "ruleType": "format", "ruleValue": "{\"pattern\": \"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$\"}", "errorMessage": "Invalid email format" },
+  { "ruleName": "phone_format", "tableName": "person", "columnName": "phone", "ruleType": "format", "ruleValue": "{\"pattern\": \"^\\+?[1-9]\\d{1,14}$\"}", "errorMessage": "Invalid phone number format" },
+  { "ruleName": "zip_code_format", "tableName": "zip_code", "columnName": "zip_code", "ruleType": "format", "ruleValue": "{\"pattern\": \"^\\d{5}(-\\d{4})?$\"}", "errorMessage": "Invalid ZIP code format" },
+  { "ruleName": "ein_format", "tableName": "non_governmental_organization_shard_1", "columnName": "employer_identification_number", "ruleType": "format", "ruleValue": "{\"pattern\": \"^\\d{2}-\\d{7}$\"}", "errorMessage": "Invalid EIN format (XX-XXXXXXX)" },
+  { "ruleName": "rating_range", "tableName": "state_review_shard_1", "columnName": "rating", "ruleType": "range", "ruleValue": "{\"min\": 1, \"max\": 5}", "errorMessage": "Rating must be between 1 and 5" },
+  { "ruleName": "age_range", "tableName": "person", "columnName": "date_of_birth", "ruleType": "range", "ruleValue": "{\"min_age\": 0, \"max_age\": 150}", "errorMessage": "Invalid age range" },
+  { "ruleName": "salary_positive", "tableName": "employment_data_shard_1", "columnName": "salary", "ruleType": "range", "ruleValue": "{\"min\": 0}", "errorMessage": "Salary must be positive" },
+  { "ruleName": "population_positive", "tableName": "city", "columnName": "population", "ruleType": "range", "ruleValue": "{\"min\": 0}", "errorMessage": "Population must be positive" },
+  { "ruleName": "url_format", "tableName": "business", "columnName": "website", "ruleType": "format", "ruleValue": "{\"pattern\": \"^https?://[\\w\\-]+(\\.[\\w\\-]+)+([\\w\\-\\.,@?^=%&:/~\\+#]*[\\w\\-\\@?^=%&/~\\+#])?$\"}", "errorMessage": "Invalid URL format" },
+  { "ruleName": "required_name", "tableName": "person", "columnName": "first_name", "ruleType": "required", "ruleValue": "{}", "errorMessage": "First name is required" },
+  { "ruleName": "required_last_name", "tableName": "person", "columnName": "last_name", "ruleType": "required", "ruleValue": "{}", "errorMessage": "Last name is required" },
+  { "ruleName": "unique_business_name", "tableName": "business", "columnName": "name", "ruleType": "unique", "ruleValue": "{\"scope\": \"state_region_id\"}", "errorMessage": "Business name must be unique within region" },
+  { "ruleName": "unique_license_number", "tableName": "business_license_shard_1", "columnName": "license_number", "ruleType": "unique", "ruleValue": "{}", "errorMessage": "License number must be unique" },
+  { "ruleName": "foreign_key_person", "tableName": "employment_data_shard_1", "columnName": "person_id", "ruleType": "foreign_key", "ruleValue": "{\"table\": \"person\", \"column\": \"id\"}", "errorMessage": "Person ID must reference valid person" },
+  { "ruleName": "foreign_key_state", "tableName": "county", "columnName": "state_id", "ruleType": "foreign_key", "ruleValue": "{\"table\": \"state\", \"column\": \"id\"}", "errorMessage": "State ID must reference valid state" },
+  { "ruleName": "date_not_future", "tableName": "person", "columnName": "date_of_birth", "ruleType": "range", "ruleValue": "{\"max\": \"now\"}", "errorMessage": "Date of birth cannot be in the future" },
+  { "ruleName": "expiration_after_issue", "tableName": "business_license_shard_1", "columnName": "expiration_date", "ruleType": "range", "ruleValue": "{\"min_column\": \"issue_date\"}", "errorMessage": "Expiration date must be after issue date" },
+  { "ruleName": "end_after_start", "tableName": "employment_data_shard_1", "columnName": "end_date", "ruleType": "range", "ruleValue": "{\"min_column\": \"start_date\"}", "errorMessage": "End date must be after start date" },
+  { "ruleName": "gpa_range", "tableName": "education_data_shard_1", "columnName": "gpa", "ruleType": "range", "ruleValue": "{\"min\": 0.0, \"max\": 4.0}", "errorMessage": "GPA must be between 0.0 and 4.0" },
+  { "ruleName": "event_date_not_future", "tableName": "event_shard_1", "columnName": "event_date", "ruleType": "range", "ruleValue": "{\"max\": \"now\"}", "errorMessage": "Event date cannot be in the future" }
+]

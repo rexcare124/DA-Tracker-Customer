@@ -1,0 +1,23 @@
+[
+  {
+    "status_id": 1,
+    "person_id": 1,
+    "housing_status": "Homeowner",
+    "city_id": 1,
+    "state_region_id": 1
+  },
+  {
+    "status_id": 2,
+    "person_id": 2,
+    "housing_status": "Renter",
+    "city_id": 1,
+    "state_region_id": 1
+  },
+  {
+    "status_id": 3,
+    "person_id": 3,
+    "housing_status": "Homeless",
+    "city_id": 2,
+    "state_region_id": 1
+  }
+]

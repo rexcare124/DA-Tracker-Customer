@@ -1,0 +1,82 @@
+[
+  {
+    "business_id": 1,
+    "event_id": 1,
+    "relationship_type": "subject",
+    "role": "License Applicant",
+    "notes": "ABC Construction LLC applying for new business license",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 2,
+    "event_id": 2,
+    "relationship_type": "subject",
+    "role": "Inspection Subject",
+    "notes": "Mario's Pizza restaurant subject to health department inspection",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 3,
+    "event_id": 3,
+    "relationship_type": "licensee",
+    "role": "Permit Applicant",
+    "notes": "Development company applying for building permit at 123 Main Street",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 4,
+    "event_id": 4,
+    "relationship_type": "violator",
+    "role": "Environmental Violator",
+    "notes": "Industrial facility with environmental compliance violations",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 5,
+    "event_id": 5,
+    "relationship_type": "subject",
+    "role": "Affected Business",
+    "notes": "Downtown business that would be affected by zoning amendment",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 6,
+    "event_id": 6,
+    "relationship_type": "beneficiary",
+    "role": "Grant Recipient",
+    "notes": "Local construction company awarded contract for affordable housing project",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 7,
+    "event_id": 7,
+    "relationship_type": "subject",
+    "role": "Tax Dispute Plaintiff",
+    "notes": "Business challenging property tax assessment in court",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 8,
+    "event_id": 8,
+    "relationship_type": "subject",
+    "role": "Flood Victim",
+    "notes": "Business affected by downtown flooding emergency",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 1,
+    "event_id": 9,
+    "relationship_type": "licensee",
+    "role": "Service Provider",
+    "notes": "Paving company contracted to repair potholes on Oak Street",
+    "state_region_id": 1
+  },
+  {
+    "business_id": 2,
+    "event_id": 10,
+    "relationship_type": "subject",
+    "role": "Noise Violator",
+    "notes": "Downtown bar subject to noise complaint and resolution",
+    "state_region_id": 1
+  }
+]

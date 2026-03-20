@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "table_name": "state_review_shard_1",
+    "schema_name": "public",
+    "shard_type": "geographic",
+    "shard_key": "state_id",
+    "description": "State-level reviews and complaints shard 1",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 2,
+    "table_name": "county_review_shard_1",
+    "schema_name": "public",
+    "shard_type": "geographic",
+    "shard_key": "county_id",
+    "description": "County-level reviews and complaints shard 1",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "table_name": "city_review_shard_1",
+    "schema_name": "public",
+    "shard_type": "geographic",
+    "shard_key": "city_id",
+    "description": "City-level reviews and complaints shard 1",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 4,
+    "table_name": "location_shard_1",
+    "schema_name": "public",
+    "shard_type": "geographic",
+    "shard_key": "region_id",
+    "description": "Geographic location data shard 1",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 5,
+    "table_name": "person_organization_relationships",
+    "schema_name": "public",
+    "shard_type": "hash",
+    "shard_key": "person_id",
+    "description": "Relationships between persons and organizations",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 6,
+    "table_name": "business_government_relationships",
+    "schema_name": "public",
+    "shard_type": "hash",
+    "shard_key": "business_entity_id",
+    "description": "Relationships between business entities and government entities",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": 7,
+    "table_name": "ngo_government_relationships",
+    "schema_name": "public",
+    "shard_type": "hash",
+    "shard_key": "ngo_entity_id",
+    "description": "Relationships between NGO entities and government entities",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

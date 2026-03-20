@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "report_incident_id": "CRI-2024-001",
+    "agency_id": 1,
+    "crime_id": 1,
+    "statute_id": 1,
+    "rpt_inc_document_url": "https://reports.gov/crime/2024/001.pdf",
+    "incident_date_time": "2024-01-15T14:30:00Z",
+    "location_id": 1,
+    "ai_rpt_inc_summary": "Theft of personal property from vehicle in downtown area",
+    "state_region_id": 1,
+    "created_at": "2024-01-15T15:00:00Z",
+    "updated_at": "2024-01-15T15:00:00Z"
+  },
+  {
+    "id": 2,
+    "report_incident_id": "CRI-2024-002",
+    "agency_id": 2,
+    "crime_id": 2,
+    "statute_id": 2,
+    "rpt_inc_document_url": "https://reports.gov/crime/2024/002.pdf",
+    "incident_date_time": "2024-01-20T22:15:00Z",
+    "location_id": 2,
+    "ai_rpt_inc_summary": "Assault incident at local establishment",
+    "state_region_id": 1,
+    "created_at": "2024-01-20T23:00:00Z",
+    "updated_at": "2024-01-20T23:00:00Z"
+  },
+  {
+    "id": 3,
+    "report_incident_id": "CRI-2024-003",
+    "agency_id": 1,
+    "crime_id": 3,
+    "statute_id": 3,
+    "rpt_inc_document_url": "https://reports.gov/crime/2024/003.pdf",
+    "incident_date_time": "2024-02-01T10:45:00Z",
+    "location_id": 3,
+    "ai_rpt_inc_summary": "Vandalism of public property",
+    "state_region_id": 1,
+    "created_at": "2024-02-01T11:30:00Z",
+    "updated_at": "2024-02-01T11:30:00Z"
+  }
+]

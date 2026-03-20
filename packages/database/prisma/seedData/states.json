@@ -1,0 +1,62 @@
+[
+  {
+    "state_id": 1,
+    "state_name": "California",
+    "abbreviation": "CA",
+    "population": 39538223
+  },
+  {
+    "state_id": 2,
+    "state_name": "Texas",
+    "abbreviation": "TX",
+    "population": 29145505
+  },
+  {
+    "state_id": 3,
+    "state_name": "Florida",
+    "abbreviation": "FL",
+    "population": 21538187
+  },
+  {
+    "state_id": 4,
+    "state_name": "New York",
+    "abbreviation": "NY",
+    "population": 20201249
+  },
+  {
+    "state_id": 5,
+    "state_name": "Pennsylvania",
+    "abbreviation": "PA",
+    "population": 13002700
+  },
+  {
+    "state_id": 6,
+    "state_name": "Illinois",
+    "abbreviation": "IL",
+    "population": 12812508
+  },
+  {
+    "state_id": 7,
+    "state_name": "Ohio",
+    "abbreviation": "OH",
+    "population": 11799448
+  },
+  {
+    "state_id": 8,
+    "state_name": "Georgia",
+    "abbreviation": "GA",
+    "population": 10711908
+  },
+  {
+    "state_id": 9,
+    "state_name": "North Carolina",
+    "abbreviation": "NC",
+    "population": 10439388
+  },
+  {
+    "state_id": 10,
+    "state_name": "Michigan",
+    "abbreviation": "MI",
+    "population": 10037261
+  }
+]

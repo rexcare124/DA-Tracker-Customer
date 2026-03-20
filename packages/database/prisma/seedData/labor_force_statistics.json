@@ -1,0 +1,23 @@
+[
+  {
+    "stat_id": 1,
+    "city_id": 1,
+    "reporting_period": "2024-Q1",
+    "total_labor_force": 125000,
+    "unemployed_count": 8750
+  },
+  {
+    "stat_id": 2,
+    "city_id": 2,
+    "reporting_period": "2024-Q1",
+    "total_labor_force": 95000,
+    "unemployed_count": 5700
+  },
+  {
+    "stat_id": 3,
+    "city_id": 3,
+    "reporting_period": "2024-Q1",
+    "total_labor_force": 78000,
+    "unemployed_count": 4680
+  }
+]

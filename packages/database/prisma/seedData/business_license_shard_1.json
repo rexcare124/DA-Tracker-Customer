@@ -1,0 +1,35 @@
+[
+  {
+    "license_id": 1,
+    "business_id": 1,
+    "license_number": "BL-2024-001",
+    "license_type": "General Business License",
+    "issue_date": "2024-01-15T00:00:00Z",
+    "expiration_date": "2025-01-15T00:00:00Z",
+    "status": "Valid",
+    "issuing_authority": "City of Los Angeles",
+    "state_region_id": 1
+  },
+  {
+    "license_id": 2,
+    "business_id": 2,
+    "license_number": "BL-2024-002",
+    "license_type": "Restaurant License",
+    "issue_date": "2024-02-01T00:00:00Z",
+    "expiration_date": "2025-02-01T00:00:00Z",
+    "status": "Valid",
+    "issuing_authority": "City of Houston",
+    "state_region_id": 1
+  },
+  {
+    "license_id": 3,
+    "business_id": 3,
+    "license_number": "BL-2024-003",
+    "license_type": "Retail License",
+    "issue_date": "2024-01-30T00:00:00Z",
+    "expiration_date": "2025-01-30T00:00:00Z",
+    "status": "Valid",
+    "issuing_authority": "City of Los Angeles",
+    "state_region_id": 1
+  }
+]

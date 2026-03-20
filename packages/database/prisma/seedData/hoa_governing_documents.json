@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "document_type": "CC&Rs",
+    "title": "Declaration of Covenants, Conditions, and Restrictions",
+    "version": "3.2",
+    "effective_date": "2020-01-15T00:00:00Z",
+    "document_url": "https://www.sunsethillshoa.org/documents/ccrs-v3.2.pdf",
+    "description": "Governing document outlining property use restrictions and community rules"
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "document_type": "Bylaws",
+    "title": "Association Bylaws",
+    "version": "2.1",
+    "effective_date": "2019-06-01T00:00:00Z",
+    "document_url": "https://www.sunsethillshoa.org/documents/bylaws-v2.1.pdf",
+    "description": "Rules governing the operation of the association"
+  },
+  {
+    "id": 3,
+    "hoa_id": 2,
+    "document_type": "CC&Rs",
+    "title": "Declaration of Covenants, Conditions, and Restrictions",
+    "version": "1.5",
+    "effective_date": "2000-03-20T00:00:00Z",
+    "document_url": "https://www.oakwoodestateshoa.com/documents/ccrs-v1.5.pdf",
+    "description": "Original CC&Rs with subsequent amendments"
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "document_type": "Rules and Regulations",
+    "title": "Community Rules and Regulations",
+    "version": "4.0",
+    "effective_date": "2023-09-01T00:00:00Z",
+    "document_url": "https://www.oakwoodestateshoa.com/documents/rules-v4.0.pdf",
+    "description": "Detailed rules for community living"
+  },
+  {
+    "id": 5,
+    "hoa_id": 3,
+    "document_type": "CC&Rs",
+    "title": "Declaration of Covenants, Conditions, and Restrictions",
+    "version": "2.0",
+    "effective_date": "1988-11-10T00:00:00Z",
+    "document_url": "https://www.riversidecommons.org/documents/ccrs-v2.0.pdf",
+    "description": "Governing document for Riverside Commons"
+  }
+]
+

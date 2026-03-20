@@ -1,0 +1,179 @@
+[
+  {
+    "id": 1,
+    "type_name": "License Application",
+    "description": "Business or professional license application submitted",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "type_name": "License Renewal",
+    "description": "Business or professional license renewal submitted",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "License Violation",
+    "description": "Violation of business or professional license terms",
+    "category": "legal",
+    "severity": "high",
+    "is_active": true
+  },
+  {
+    "type_name": "License Revocation",
+    "description": "Business or professional license revoked",
+    "category": "legal",
+    "severity": "critical",
+    "is_active": true
+  },
+  {
+    "type_name": "Permit Application",
+    "description": "Building, zoning, or operational permit application",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Permit Approval",
+    "description": "Building, zoning, or operational permit approved",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Permit Denial",
+    "description": "Building, zoning, or operational permit denied",
+    "category": "administrative",
+    "severity": "medium",
+    "is_active": true
+  },
+  {
+    "type_name": "Inspection Scheduled",
+    "description": "Safety, health, or compliance inspection scheduled",
+    "category": "operational",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Inspection Passed",
+    "description": "Safety, health, or compliance inspection passed",
+    "category": "operational",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Inspection Failed",
+    "description": "Safety, health, or compliance inspection failed",
+    "category": "operational",
+    "severity": "high",
+    "is_active": true
+  },
+  {
+    "type_name": "Compliance Violation",
+    "description": "Regulatory compliance violation identified",
+    "category": "legal",
+    "severity": "high",
+    "is_active": true
+  },
+  {
+    "type_name": "Fine Imposed",
+    "description": "Administrative or regulatory fine imposed",
+    "category": "financial",
+    "severity": "medium",
+    "is_active": true
+  },
+  {
+    "type_name": "Fine Paid",
+    "description": "Administrative or regulatory fine paid",
+    "category": "financial",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Court Case Filed",
+    "description": "Legal case filed in court",
+    "category": "legal",
+    "severity": "high",
+    "is_active": true
+  },
+  {
+    "type_name": "Court Case Resolved",
+    "description": "Legal case resolved or settled",
+    "category": "legal",
+    "severity": "medium",
+    "is_active": true
+  },
+  {
+    "type_name": "Public Hearing",
+    "description": "Public hearing or meeting scheduled",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Policy Change",
+    "description": "Government policy or regulation change",
+    "category": "administrative",
+    "severity": "medium",
+    "is_active": true
+  },
+  {
+    "type_name": "Emergency Response",
+    "description": "Emergency response or incident",
+    "category": "operational",
+    "severity": "critical",
+    "is_active": true
+  },
+  {
+    "type_name": "Grant Awarded",
+    "description": "Government grant or funding awarded",
+    "category": "financial",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Contract Awarded",
+    "description": "Government contract awarded",
+    "category": "financial",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Contract Terminated",
+    "description": "Government contract terminated",
+    "category": "financial",
+    "severity": "high",
+    "is_active": true
+  },
+  {
+    "type_name": "Service Request",
+    "description": "Citizen service request submitted",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Service Completed",
+    "description": "Citizen service request completed",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  },
+  {
+    "type_name": "Complaint Filed",
+    "description": "Citizen complaint filed",
+    "category": "administrative",
+    "severity": "medium",
+    "is_active": true
+  },
+  {
+    "type_name": "Complaint Resolved",
+    "description": "Citizen complaint resolved",
+    "category": "administrative",
+    "severity": "low",
+    "is_active": true
+  }
+]

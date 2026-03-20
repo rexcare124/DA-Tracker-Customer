@@ -1,0 +1,170 @@
+[
+  {
+    "county_id": 1,
+    "county_name": "Los Angeles County",
+    "population": 10014009,
+    "state_id": 1
+  },
+  {
+    "county_id": 2,
+    "county_name": "Cook County",
+    "population": 5275541,
+    "state_id": 6
+  },
+  {
+    "county_id": 3,
+    "county_name": "Harris County",
+    "population": 4731145,
+    "state_id": 2
+  },
+  {
+    "county_id": 4,
+    "county_name": "Maricopa County",
+    "population": 4485414,
+    "state_id": 1
+  },
+  {
+    "county_id": 5,
+    "county_name": "San Diego County",
+    "population": 3338330,
+    "state_id": 1
+  },
+  {
+    "county_id": 6,
+    "county_name": "Orange County",
+    "population": 3186989,
+    "state_id": 1
+  },
+  {
+    "county_id": 7,
+    "county_name": "Miami-Dade County",
+    "population": 2716940,
+    "state_id": 3
+  },
+  {
+    "county_id": 8,
+    "county_name": "Kings County",
+    "population": 2559903,
+    "state_id": 4
+  },
+  {
+    "county_id": 9,
+    "county_name": "Dallas County",
+    "population": 2613539,
+    "state_id": 2
+  },
+  {
+    "county_id": 10,
+    "county_name": "Queens County",
+    "population": 2405464,
+    "state_id": 4
+  },
+  {
+    "county_id": 11,
+    "county_name": "Riverside County",
+    "population": 2418185,
+    "state_id": 1
+  },
+  {
+    "county_id": 12,
+    "county_name": "San Bernardino County",
+    "population": 2181654,
+    "state_id": 1
+  },
+  {
+    "county_id": 13,
+    "county_name": "Broward County",
+    "population": 1944375,
+    "state_id": 3
+  },
+  {
+    "county_id": 14,
+    "county_name": "New York County",
+    "population": 1694251,
+    "state_id": 4
+  },
+  {
+    "county_id": 15,
+    "county_name": "Tarrant County",
+    "population": 2110640,
+    "state_id": 2
+  },
+  {
+    "county_id": 16,
+    "county_name": "Bexar County",
+    "population": 2003554,
+    "state_id": 2
+  },
+  {
+    "county_id": 17,
+    "county_name": "Santa Clara County",
+    "population": 1927852,
+    "state_id": 1
+  },
+  {
+    "county_id": 18,
+    "county_name": "Travis County",
+    "population": 1274179,
+    "state_id": 2
+  },
+  {
+    "county_id": 19,
+    "county_name": "Duval County",
+    "population": 957755,
+    "state_id": 3
+  },
+  {
+    "county_id": 20,
+    "county_name": "Franklin County",
+    "population": 1323807,
+    "state_id": 7
+  },
+  {
+    "county_id": 21,
+    "county_name": "Marion County",
+    "population": 964582,
+    "state_id": 6
+  },
+  {
+    "county_id": 22,
+    "county_name": "Mecklenburg County",
+    "population": 1115482,
+    "state_id": 9
+  },
+  {
+    "county_id": 23,
+    "county_name": "San Francisco County",
+    "population": 873965,
+    "state_id": 1
+  },
+  {
+    "county_id": 24,
+    "county_name": "King County",
+    "population": 2269675,
+    "state_id": 10
+  },
+  {
+    "county_id": 25,
+    "county_name": "Denver County",
+    "population": 715522,
+    "state_id": 8
+  },
+  {
+    "county_id": 26,
+    "county_name": "District of Columbia",
+    "population": 689545,
+    "state_id": 4
+  },
+  {
+    "county_id": 27,
+    "county_name": "Suffolk County",
+    "population": 803907,
+    "state_id": 5
+  },
+  {
+    "county_id": 28,
+    "county_name": "El Paso County",
+    "population": 865657,
+    "state_id": 2
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "infraction_type_id": 1,
+    "infraction_name": "Tardiness",
+    "severity_level": "Minor",
+    "category": "Attendance"
+  },
+  {
+    "infraction_type_id": 2,
+    "infraction_name": "Disruptive Behavior",
+    "severity_level": "Moderate",
+    "category": "Conduct"
+  },
+  {
+    "infraction_type_id": 3,
+    "infraction_name": "Fighting",
+    "severity_level": "Major",
+    "category": "Violence"
+  },
+  {
+    "infraction_type_id": 4,
+    "infraction_name": "Cheating",
+    "severity_level": "Moderate",
+    "category": "Academic"
+  },
+  {
+    "infraction_type_id": 5,
+    "infraction_name": "Vandalism",
+    "severity_level": "Major",
+    "category": "Property"
+  }
+]

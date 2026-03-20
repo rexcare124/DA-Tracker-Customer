@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "assessment_type": "Special Assessment",
+    "amount": 1500.00,
+    "purpose": "Parking lot resurfacing project",
+    "due_date": "2024-09-01T00:00:00Z",
+    "assessment_document_url": "https://www.sunsethillshoa.org/assessments/parking-lot-2024.pdf"
+  },
+  {
+    "id": 2,
+    "hoa_id": 2,
+    "assessment_type": "Special Assessment",
+    "amount": 500.00,
+    "purpose": "Roof replacement fund",
+    "due_date": "2024-06-01T00:00:00Z",
+    "assessment_document_url": "https://www.oakwoodestateshoa.com/assessments/roof-2024.pdf"
+  },
+  {
+    "id": 3,
+    "hoa_id": 2,
+    "assessment_type": "Emergency Assessment",
+    "amount": 300.00,
+    "purpose": "Storm damage repairs",
+    "due_date": "2024-02-15T00:00:00Z",
+    "assessment_document_url": "https://www.oakwoodestateshoa.com/assessments/storm-damage-2024.pdf"
+  },
+  {
+    "id": 4,
+    "hoa_id": 3,
+    "assessment_type": "Special Assessment",
+    "amount": 800.00,
+    "purpose": "Landscape improvement project",
+    "due_date": "2024-05-01T00:00:00Z",
+    "assessment_document_url": "https://www.riversidecommons.org/assessments/landscape-2024.pdf"
+  }
+]
+

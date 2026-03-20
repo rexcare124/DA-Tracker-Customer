@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 2,
+    "management_company_id": 1,
+    "contract_start_date": "2020-01-01T00:00:00Z",
+    "contract_end_date": null,
+    "is_active": true,
+    "contract_amount": 2500.00,
+    "contract_type": "full_service",
+    "contract_document_url": "https://www.oakwoodestateshoa.com/contracts/management-2020.pdf",
+    "termination_reason": null,
+    "notes": "Full-service management including financial, administrative, and maintenance coordination"
+  },
+  {
+    "id": 2,
+    "hoa_id": 4,
+    "management_company_id": 2,
+    "contract_start_date": "2018-06-01T00:00:00Z",
+    "contract_end_date": null,
+    "is_active": true,
+    "contract_amount": 3200.00,
+    "contract_type": "full_service",
+    "contract_document_url": "https://www.meadowbrookvillagehoa.org/contracts/management-2018.pdf",
+    "termination_reason": null,
+    "notes": "Comprehensive management services for large community"
+  },
+  {
+    "id": 3,
+    "hoa_id": 3,
+    "management_company_id": 3,
+    "contract_start_date": "2015-03-15T00:00:00Z",
+    "contract_end_date": "2023-12-31T00:00:00Z",
+    "is_active": false,
+    "contract_amount": 1800.00,
+    "contract_type": "financial_only",
+    "contract_document_url": "https://www.riversidecommons.org/contracts/management-2015.pdf",
+    "termination_reason": "Switched to hybrid management model",
+    "notes": "Previous management company handled financial services only"
+  },
+  {
+    "id": 4,
+    "hoa_id": 5,
+    "management_company_id": 1,
+    "contract_start_date": "2022-01-01T00:00:00Z",
+    "contract_end_date": null,
+    "is_active": true,
+    "contract_amount": 2200.00,
+    "contract_type": "administrative_only",
+    "contract_document_url": "https://www.pinecresthoa.com/contracts/management-2022.pdf",
+    "termination_reason": null,
+    "notes": "Administrative support while board handles financial oversight"
+  }
+]
+

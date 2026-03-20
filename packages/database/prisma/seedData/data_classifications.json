@@ -1,0 +1,12 @@
+[
+  { "classificationName": "Public", "level": 1, "description": "Public information with no restrictions", "retentionPeriod": 2555, "encryptionRequired": false },
+  { "classificationName": "Internal", "level": 2, "description": "Internal use only, not for public disclosure", "retentionPeriod": 1825, "encryptionRequired": false },
+  { "classificationName": "Confidential", "level": 3, "description": "Confidential information requiring protection", "retentionPeriod": 1095, "encryptionRequired": true },
+  { "classificationName": "Restricted", "level": 4, "description": "Highly sensitive information with strict access controls", "retentionPeriod": 365, "encryptionRequired": true },
+  { "classificationName": "Top Secret", "level": 5, "description": "Highest level of classification for national security", "retentionPeriod": 90, "encryptionRequired": true },
+  { "classificationName": "Personal Information", "level": 3, "description": "Personal identifiable information (PII)", "retentionPeriod": 2555, "encryptionRequired": true },
+  { "classificationName": "Financial Data", "level": 3, "description": "Financial and banking information", "retentionPeriod": 2555, "encryptionRequired": true },
+  { "classificationName": "Health Information", "level": 4, "description": "Protected health information (PHI)", "retentionPeriod": 2555, "encryptionRequired": true },
+  { "classificationName": "Legal Documents", "level": 3, "description": "Legal documents and court records", "retentionPeriod": 2555, "encryptionRequired": false },
+  { "classificationName": "Audit Logs", "level": 2, "description": "System audit and access logs", "retentionPeriod": 1095, "encryptionRequired": false }
+]

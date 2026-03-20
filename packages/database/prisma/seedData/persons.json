@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "prefix": "Mr.",
+    "first_name": "John",
+    "middle_name": "Michael",
+    "last_name": "Smith",
+    "suffix": null,
+    "date_of_birth": "1975-03-15T00:00:00.000Z",
+    "gender": "Male",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 2,
+    "prefix": "Ms.",
+    "first_name": "Sarah",
+    "middle_name": "Elizabeth",
+    "last_name": "Johnson",
+    "suffix": null,
+    "date_of_birth": "1982-07-22T00:00:00.000Z",
+    "gender": "Female",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 3,
+    "prefix": "Dr.",
+    "first_name": "Robert",
+    "middle_name": "James",
+    "last_name": "Williams",
+    "suffix": "Jr.",
+    "date_of_birth": "1968-11-08T00:00:00.000Z",
+    "gender": "Male",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 4,
+    "prefix": "Mrs.",
+    "first_name": "Maria",
+    "middle_name": "Carmen",
+    "last_name": "Garcia",
+    "suffix": null,
+    "date_of_birth": "1979-04-12T00:00:00.000Z",
+    "gender": "Female",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 5,
+    "prefix": "Mr.",
+    "first_name": "David",
+    "middle_name": "Andrew",
+    "last_name": "Brown",
+    "suffix": null,
+    "date_of_birth": "1985-09-30T00:00:00.000Z",
+    "gender": "Male",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 6,
+    "prefix": "Ms.",
+    "first_name": "Jennifer",
+    "middle_name": "Lynn",
+    "last_name": "Davis",
+    "suffix": null,
+    "date_of_birth": "1977-12-05T00:00:00.000Z",
+    "gender": "Female",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 7,
+    "prefix": "Mr.",
+    "first_name": "Michael",
+    "middle_name": "Thomas",
+    "last_name": "Miller",
+    "suffix": "III",
+    "date_of_birth": "1973-06-18T00:00:00.000Z",
+    "gender": "Male",
+    "juvenile": false,
+    "deceased": false
+  },
+  {
+    "id": 8,
+    "prefix": "Dr.",
+    "first_name": "Lisa",
+    "middle_name": "Marie",
+    "last_name": "Wilson",
+    "suffix": null,
+    "date_of_birth": "1981-02-14T00:00:00.000Z",
+    "gender": "Female",
+    "juvenile": false,
+    "deceased": false
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "amenity_name": "Swimming Pool",
+    "description": "Olympic-sized community pool with deck area",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Residents and guests only, pool pass required"
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "amenity_name": "Clubhouse",
+    "description": "Multi-purpose community center with kitchen facilities",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Reservation required for private events"
+  },
+  {
+    "id": 3,
+    "hoa_id": 1,
+    "amenity_name": "Tennis Courts",
+    "description": "Two lighted tennis courts",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Residents only, first-come first-served"
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "amenity_name": "Fitness Center",
+    "description": "24/7 access fitness center with cardio and weight equipment",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Residents 18+ only, key card access"
+  },
+  {
+    "id": 5,
+    "hoa_id": 2,
+    "amenity_name": "Walking Trails",
+    "description": "2.5 miles of paved walking trails throughout the community",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Open to all residents and guests"
+  },
+  {
+    "id": 6,
+    "hoa_id": 3,
+    "amenity_name": "Playground",
+    "description": "Children's playground with modern equipment",
+    "maintenance_responsibility": "HOA",
+    "access_restrictions": "Children must be supervised by adults"
+  }
+]
+

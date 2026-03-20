@@ -1,0 +1,47 @@
+[
+  {
+    "element_id": 1,
+    "element_name": "Intent",
+    "description": "Mental state of intending to commit the crime",
+    "element_type": "Mental Element",
+    "is_required": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "element_id": 2,
+    "element_name": "Taking",
+    "description": "Physical removal or control of property",
+    "element_type": "Physical Element",
+    "is_required": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "element_id": 3,
+    "element_name": "Property of Another",
+    "description": "The property must belong to someone other than the defendant",
+    "element_type": "Circumstantial Element",
+    "is_required": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "element_id": 4,
+    "element_name": "Force or Fear",
+    "description": "Use of force or threat of force against victim",
+    "element_type": "Physical Element",
+    "is_required": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "element_id": 5,
+    "element_name": "Unlawful Entry",
+    "description": "Entry into structure without permission",
+    "element_type": "Physical Element",
+    "is_required": true,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

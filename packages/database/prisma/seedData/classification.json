@@ -1,0 +1,29 @@
+[
+  {
+    "classification_id": 1,
+    "classification_name": "Misdemeanor",
+    "classification_type": "Minor Offense",
+    "description": "Less serious criminal offense typically punishable by fine or short jail term",
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "classification_id": 2,
+    "classification_name": "Felony",
+    "classification_type": "Major Offense",
+    "description": "Serious criminal offense typically punishable by imprisonment for more than one year",
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  },
+  {
+    "classification_id": 3,
+    "classification_name": "Infraction",
+    "classification_type": "Violation",
+    "description": "Minor violation typically punishable by fine only",
+    "state_id": 1,
+    "created_at": "2024-01-01T00:00:00Z",
+    "updated_at": "2024-01-01T00:00:00Z"
+  }
+]

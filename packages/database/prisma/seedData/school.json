@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "schoolId": 1,
+    "schoolName": "Lincoln High School",
+    "districtId": 1,
+    "schoolType": "High School",
+    "cityId": 1,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "schoolId": 2,
+    "schoolName": "Washington Elementary School",
+    "districtId": 1,
+    "schoolType": "Elementary School",
+    "cityId": 1,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "schoolId": 3,
+    "schoolName": "Roosevelt Middle School",
+    "districtId": 2,
+    "schoolType": "Middle School",
+    "cityId": 2,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "schoolId": 4,
+    "schoolName": "Jefferson High School",
+    "districtId": 2,
+    "schoolType": "High School",
+    "cityId": 2,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "schoolId": 5,
+    "schoolName": "Madison Elementary School",
+    "districtId": 3,
+    "schoolType": "Elementary School",
+    "cityId": 3,
+    "stateRegionId": 2,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

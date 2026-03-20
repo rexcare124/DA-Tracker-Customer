@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "fee_type": "Monthly HOA Fee",
+    "amount": 250.00,
+    "effective_date": "2024-01-01T00:00:00Z",
+    "reason": "Annual increase to cover rising maintenance costs"
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "fee_type": "Monthly HOA Fee",
+    "amount": 225.00,
+    "effective_date": "2023-01-01T00:00:00Z",
+    "reason": "Previous rate"
+  },
+  {
+    "id": 3,
+    "hoa_id": 2,
+    "fee_type": "Monthly HOA Fee",
+    "amount": 350.00,
+    "effective_date": "2024-01-01T00:00:00Z",
+    "reason": "Annual increase for enhanced amenities maintenance"
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "fee_type": "Special Assessment",
+    "amount": 500.00,
+    "effective_date": "2024-06-01T00:00:00Z",
+    "reason": "Roof replacement project"
+  },
+  {
+    "id": 5,
+    "hoa_id": 3,
+    "fee_type": "Monthly HOA Fee",
+    "amount": 180.00,
+    "effective_date": "2024-01-01T00:00:00Z",
+    "reason": "Standard monthly assessment"
+  }
+]
+

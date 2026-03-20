@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "incidentId": 1,
+    "schoolId": 1,
+    "incidentDate": "2024-01-15T10:30:00.000Z",
+    "incidentType": "Fire Alarm",
+    "responseTimeMinutes": 5,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "incidentId": 2,
+    "schoolId": 2,
+    "incidentDate": "2024-02-20T14:15:00.000Z",
+    "incidentType": "Medical Emergency",
+    "responseTimeMinutes": 3,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "incidentId": 3,
+    "schoolId": 3,
+    "incidentDate": "2024-03-10T09:45:00.000Z",
+    "incidentType": "Security Threat",
+    "responseTimeMinutes": 8,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "incidentId": 4,
+    "schoolId": 4,
+    "incidentDate": "2024-04-05T11:20:00.000Z",
+    "incidentType": "Natural Disaster",
+    "responseTimeMinutes": 12,
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "incidentId": 5,
+    "schoolId": 5,
+    "incidentDate": "2024-05-12T16:00:00.000Z",
+    "incidentType": "Equipment Failure",
+    "responseTimeMinutes": 6,
+    "stateRegionId": 2,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

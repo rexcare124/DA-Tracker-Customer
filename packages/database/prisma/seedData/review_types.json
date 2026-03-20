@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "type_name": "Complaint",
+    "description": "Formal complaint about government service or entity",
+    "requires_response": true,
+    "priority_level": 3,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "type_name": "Compliment",
+    "description": "Positive feedback about government service or entity",
+    "requires_response": false,
+    "priority_level": 1,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "type_name": "Suggestion",
+    "description": "Suggestion for improvement",
+    "requires_response": false,
+    "priority_level": 2,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "type_name": "Information Request",
+    "description": "Request for information or clarification",
+    "requires_response": true,
+    "priority_level": 2,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "type_name": "Service Issue",
+    "description": "Issue with government service delivery",
+    "requires_response": true,
+    "priority_level": 3,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "type_name": "Emergency",
+    "description": "Urgent issue requiring immediate attention",
+    "requires_response": true,
+    "priority_level": 4,
+    "is_active": true
+  }
+]

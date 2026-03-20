@@ -1,0 +1,23 @@
+[
+  { "id": 1, "statusName": "Active", "category": "event", "description": "Event is currently active and ongoing" },
+  { "id": 2, "statusName": "Resolved", "category": "event", "description": "Event has been completed or resolved" },
+  { "statusName": "Archived", "category": "event", "description": "Event has been archived for historical purposes" },
+  { "statusName": "Pending", "category": "review", "description": "Review is awaiting processing" },
+  { "statusName": "Under Review", "category": "review", "description": "Review is currently being processed" },
+  { "statusName": "Approved", "category": "review", "description": "Review has been approved" },
+  { "statusName": "Rejected", "category": "review", "description": "Review has been rejected" },
+  { "statusName": "Valid", "category": "license", "description": "License is currently valid" },
+  { "statusName": "Expired", "category": "license", "description": "License has expired" },
+  { "statusName": "Suspended", "category": "license", "description": "License has been suspended" },
+  { "statusName": "Revoked", "category": "license", "description": "License has been revoked" },
+  { "statusName": "Employed", "category": "employment", "description": "Person is currently employed" },
+  { "statusName": "Unemployed", "category": "employment", "description": "Person is currently unemployed" },
+  { "statusName": "Retired", "category": "employment", "description": "Person has retired" },
+  { "statusName": "Self-Employed", "category": "employment", "description": "Person is self-employed" },
+  { "statusName": "Enrolled", "category": "education", "description": "Student is currently enrolled" },
+  { "statusName": "Graduated", "category": "education", "description": "Student has graduated" },
+  { "statusName": "Dropped Out", "category": "education", "description": "Student has dropped out" },
+  { "statusName": "Transferred", "category": "education", "description": "Student has transferred to another institution" },
+  { "statusName": "Valid", "category": "education", "description": "Credential is currently valid" },
+  { "statusName": "Expired", "category": "education", "description": "Credential has expired" }
+]

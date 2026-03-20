@@ -1,0 +1,7 @@
+{
+  "version": "add_check_constraints_20250929T022627",
+  "description": "Add check constraints for data validation",
+  "type": "custom",
+  "created": "2025-09-29T02:26:27.490Z",
+  "constraints": 46
+}

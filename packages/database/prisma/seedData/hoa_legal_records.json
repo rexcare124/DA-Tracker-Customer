@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "record_type": "Lawsuit",
+    "case_number": "CV-2023-01234",
+    "jurisdiction": "Superior Court of California, County of Los Angeles",
+    "description": "Dispute regarding architectural approval process",
+    "status": "Settled",
+    "date_filed": "2023-03-15T00:00:00Z",
+    "resolution_date": "2023-11-20T00:00:00Z",
+    "legal_document_url": "https://www.sunsethillshoa.org/legal/cv-2023-01234-settlement.pdf"
+  },
+  {
+    "id": 2,
+    "hoa_id": 2,
+    "record_type": "Complaint",
+    "case_number": "SC-2024-00567",
+    "jurisdiction": "Small Claims Court, County of Orange",
+    "description": "Assessment collection case",
+    "status": "Resolved",
+    "date_filed": "2024-01-10T00:00:00Z",
+    "resolution_date": "2024-02-28T00:00:00Z",
+    "legal_document_url": null
+  },
+  {
+    "id": 3,
+    "hoa_id": 1,
+    "record_type": "Regulatory Filing",
+    "case_number": "REG-2024-00089",
+    "jurisdiction": "California Department of Real Estate",
+    "description": "Annual registration filing",
+    "status": "Active",
+    "date_filed": "2024-01-05T00:00:00Z",
+    "resolution_date": null,
+    "legal_document_url": "https://www.sunsethillshoa.org/legal/reg-2024-00089.pdf"
+  }
+]
+

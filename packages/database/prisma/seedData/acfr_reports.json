@@ -1,0 +1,145 @@
+[
+  {
+    "governmentEntityId": 1,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Smith & Associates CPA",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/audited-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 1,
+    "fiscalYear": 2022,
+    "reportDate": "2023-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Smith & Associates CPA",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2022/audited-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 2,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Johnson & Partners LLC",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/county-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 2,
+    "fiscalYear": 2022,
+    "reportDate": "2023-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Johnson & Partners LLC",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2022/county-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 3,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Brown & Company CPAs",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/school-district-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 3,
+    "fiscalYear": 2022,
+    "reportDate": "2023-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Brown & Company CPAs",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2022/school-district-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 4,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Wilson & Associates",
+    "auditorOpinion": "qualified",
+    "reportUrl": "https://example.gov/acfr/2023/small-city-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 2
+  },
+  {
+    "governmentEntityId": 5,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Davis & Company",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/medium-city-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 2
+  },
+  {
+    "governmentEntityId": 6,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Miller & Partners",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/large-city-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 3
+  },
+  {
+    "governmentEntityId": 7,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Taylor & Associates",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/special-district-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 3
+  },
+  {
+    "governmentEntityId": 8,
+    "fiscalYear": 2023,
+    "reportDate": "2024-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Anderson & Company",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2023/water-district-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 4
+  },
+  {
+    "governmentEntityId": 1,
+    "fiscalYear": 2021,
+    "reportDate": "2022-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Smith & Associates CPA",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2021/audited-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 1,
+    "fiscalYear": 2020,
+    "reportDate": "2021-03-31T00:00:00.000Z",
+    "reportType": "audited",
+    "auditorName": "Smith & Associates CPA",
+    "auditorOpinion": "unqualified",
+    "reportUrl": "https://example.gov/acfr/2020/audited-report.pdf",
+    "isExempt": false,
+    "stateRegionId": 1
+  }
+]

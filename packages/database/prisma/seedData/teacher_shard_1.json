@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "teacherId": 1,
+    "personId": 6,
+    "schoolId": 1,
+    "hireDate": "2020-08-15T00:00:00.000Z",
+    "yearsExperience": 5,
+    "employmentStatus": "Active",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "teacherId": 2,
+    "personId": 7,
+    "schoolId": 1,
+    "hireDate": "2019-08-15T00:00:00.000Z",
+    "yearsExperience": 6,
+    "employmentStatus": "Active",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "teacherId": 3,
+    "personId": 8,
+    "schoolId": 2,
+    "hireDate": "2021-08-15T00:00:00.000Z",
+    "yearsExperience": 4,
+    "employmentStatus": "Active",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "teacherId": 4,
+    "personId": 9,
+    "schoolId": 3,
+    "hireDate": "2018-08-15T00:00:00.000Z",
+    "yearsExperience": 7,
+    "employmentStatus": "Active",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "teacherId": 5,
+    "personId": 10,
+    "schoolId": 4,
+    "hireDate": "2022-08-15T00:00:00.000Z",
+    "yearsExperience": 3,
+    "employmentStatus": "Active",
+    "stateRegionId": 1,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "license_type_id": 1,
+    "license_name": "General Business License",
+    "category": "Commercial"
+  },
+  {
+    "license_type_id": 2,
+    "license_name": "Food Service License",
+    "category": "Food & Beverage"
+  },
+  {
+    "license_type_id": 3,
+    "license_name": "Retail License",
+    "category": "Retail"
+  },
+  {
+    "license_type_id": 4,
+    "license_name": "Professional Services License",
+    "category": "Professional"
+  },
+  {
+    "license_type_id": 5,
+    "license_name": "Construction License",
+    "category": "Construction"
+  }
+]

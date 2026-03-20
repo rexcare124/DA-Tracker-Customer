@@ -1,0 +1,82 @@
+[
+  {
+    "government_entity_id": 1,
+    "event_id": 1,
+    "relationship_type": "jurisdiction",
+    "role": "Licensing Authority",
+    "notes": "City Business License Department processing ABC Construction license application",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 2,
+    "event_id": 2,
+    "relationship_type": "regulator",
+    "role": "Health Inspector",
+    "notes": "County Health Department conducting restaurant inspection",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 3,
+    "event_id": 3,
+    "relationship_type": "jurisdiction",
+    "role": "Permit Authority",
+    "notes": "City Planning Department denying building permit application",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 4,
+    "event_id": 4,
+    "relationship_type": "regulator",
+    "role": "Environmental Enforcer",
+    "notes": "Environmental Protection Agency identifying compliance violations",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 5,
+    "event_id": 5,
+    "relationship_type": "jurisdiction",
+    "role": "Hearing Authority",
+    "notes": "City Planning Commission conducting public hearing on zoning amendment",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 6,
+    "event_id": 6,
+    "relationship_type": "jurisdiction",
+    "role": "Funding Agency",
+    "notes": "Department of Housing and Urban Development awarding community development grant",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 7,
+    "event_id": 7,
+    "relationship_type": "jurisdiction",
+    "role": "Tax Authority",
+    "notes": "City Tax Assessor's Office defending property tax assessment in court",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 8,
+    "event_id": 8,
+    "relationship_type": "responder",
+    "role": "Emergency Coordinator",
+    "notes": "Emergency Management Office coordinating flood response efforts",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 1,
+    "event_id": 9,
+    "relationship_type": "responder",
+    "role": "Public Works",
+    "notes": "City Public Works Department handling street repair service request",
+    "state_region_id": 1
+  },
+  {
+    "government_entity_id": 2,
+    "event_id": 10,
+    "relationship_type": "regulator",
+    "role": "Code Enforcement",
+    "notes": "Code Enforcement Division mediating noise complaint resolution",
+    "state_region_id": 1
+  }
+]

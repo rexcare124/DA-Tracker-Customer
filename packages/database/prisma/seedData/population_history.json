@@ -1,0 +1,38 @@
+[
+  {
+    "history_id": 1,
+    "city_id": 1,
+    "year": 2020,
+    "population_count": 875000
+  },
+  {
+    "history_id": 2,
+    "city_id": 1,
+    "year": 2021,
+    "population_count": 882000
+  },
+  {
+    "history_id": 3,
+    "city_id": 1,
+    "year": 2022,
+    "population_count": 889000
+  },
+  {
+    "history_id": 4,
+    "city_id": 2,
+    "year": 2020,
+    "population_count": 425000
+  },
+  {
+    "history_id": 5,
+    "city_id": 2,
+    "year": 2021,
+    "population_count": 431000
+  },
+  {
+    "history_id": 6,
+    "city_id": 2,
+    "year": 2022,
+    "population_count": 437000
+  }
+]

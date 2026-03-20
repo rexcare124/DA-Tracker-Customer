@@ -1,0 +1,26 @@
+[
+  {
+    "enrollment_id": 1,
+    "class_id": 1,
+    "student_id": 1,
+    "enrollment_date": "2023-08-15T00:00:00Z",
+    "completion_status": "Enrolled",
+    "state_region_id": 1
+  },
+  {
+    "enrollment_id": 2,
+    "class_id": 2,
+    "student_id": 2,
+    "enrollment_date": "2023-08-20T00:00:00Z",
+    "completion_status": "Enrolled",
+    "state_region_id": 1
+  },
+  {
+    "enrollment_id": 3,
+    "class_id": 3,
+    "student_id": 3,
+    "enrollment_date": "2023-08-18T00:00:00Z",
+    "completion_status": "Enrolled",
+    "state_region_id": 1
+  }
+]

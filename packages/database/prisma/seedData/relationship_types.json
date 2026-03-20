@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "relationship_name": "Employee",
+    "description": "Full-time or part-time employee",
+    "is_employment": true,
+    "is_active": true
+  },
+  {
+    "id": 2,
+    "relationship_name": "Contractor",
+    "description": "Independent contractor or consultant",
+    "is_employment": false,
+    "is_active": true
+  },
+  {
+    "id": 3,
+    "relationship_name": "Board Member",
+    "description": "Member of board of directors",
+    "is_employment": false,
+    "is_active": true
+  },
+  {
+    "id": 4,
+    "relationship_name": "Executive",
+    "description": "Executive leadership position",
+    "is_employment": true,
+    "is_active": true
+  },
+  {
+    "id": 5,
+    "relationship_name": "Volunteer",
+    "description": "Volunteer worker",
+    "is_employment": false,
+    "is_active": true
+  },
+  {
+    "id": 6,
+    "relationship_name": "Advisor",
+    "description": "Advisory role or consultant",
+    "is_employment": false,
+    "is_active": true
+  }
+]

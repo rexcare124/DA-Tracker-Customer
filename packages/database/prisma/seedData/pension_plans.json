@@ -1,0 +1,98 @@
+[
+  {
+    "governmentEntityId": 1,
+    "planName": "City Employee Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "CERS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 1,
+    "planName": "Police and Fire Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "PFRS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 2,
+    "planName": "County Employee Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "COERS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 2,
+    "planName": "County Safety Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "CSRS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 3,
+    "planName": "School District Employee Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "SDERS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 3,
+    "planName": "Teacher Retirement System",
+    "planType": "defined_benefit",
+    "planCode": "TRS",
+    "isActive": true,
+    "stateRegionId": 1
+  },
+  {
+    "governmentEntityId": 4,
+    "planName": "Small City Employee Retirement",
+    "planType": "defined_benefit",
+    "planCode": "SCER",
+    "isActive": true,
+    "stateRegionId": 2
+  },
+  {
+    "governmentEntityId": 5,
+    "planName": "Medium City Employee Retirement",
+    "planType": "defined_benefit",
+    "planCode": "MCER",
+    "isActive": true,
+    "stateRegionId": 2
+  },
+  {
+    "governmentEntityId": 6,
+    "planName": "Large City Employee Retirement",
+    "planType": "defined_benefit",
+    "planCode": "LCER",
+    "isActive": true,
+    "stateRegionId": 3
+  },
+  {
+    "governmentEntityId": 6,
+    "planName": "Large City Safety Retirement",
+    "planType": "defined_benefit",
+    "planCode": "LCSR",
+    "isActive": true,
+    "stateRegionId": 3
+  },
+  {
+    "governmentEntityId": 7,
+    "planName": "Special District Employee Retirement",
+    "planType": "defined_benefit",
+    "planCode": "SDER",
+    "isActive": true,
+    "stateRegionId": 3
+  },
+  {
+    "governmentEntityId": 8,
+    "planName": "Water District Employee Retirement",
+    "planType": "defined_benefit",
+    "planCode": "WDER",
+    "isActive": true,
+    "stateRegionId": 4
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "name": "Sunset Hills Phase 1",
+    "date_created": "1995-06-15T00:00:00Z",
+    "home_builder_id": 1
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "name": "Sunset Hills Phase 2",
+    "date_created": "1997-08-20T00:00:00Z",
+    "home_builder_id": 1
+  },
+  {
+    "id": 3,
+    "hoa_id": 2,
+    "name": "Oakwood Estates North",
+    "date_created": "2000-03-20T00:00:00Z",
+    "home_builder_id": 2
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "name": "Oakwood Estates South",
+    "date_created": "2002-05-10T00:00:00Z",
+    "home_builder_id": 2
+  },
+  {
+    "id": 5,
+    "hoa_id": 3,
+    "name": "Riverside Commons Original",
+    "date_created": "1988-11-10T00:00:00Z",
+    "home_builder_id": 3
+  }
+]
+

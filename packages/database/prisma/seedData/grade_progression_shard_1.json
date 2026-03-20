@@ -1,0 +1,26 @@
+[
+  {
+    "progression_id": 1,
+    "student_id": 1,
+    "school_year": "2023-2024",
+    "grade_level": 11,
+    "promoted": true,
+    "state_region_id": 1
+  },
+  {
+    "progression_id": 2,
+    "student_id": 2,
+    "school_year": "2023-2024",
+    "grade_level": 5,
+    "promoted": true,
+    "state_region_id": 1
+  },
+  {
+    "progression_id": 3,
+    "student_id": 3,
+    "school_year": "2023-2024",
+    "grade_level": 8,
+    "promoted": true,
+    "state_region_id": 1
+  }
+]

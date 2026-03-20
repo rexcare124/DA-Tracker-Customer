@@ -1,0 +1,50 @@
+[
+  {
+    "stateId": 1,
+    "cityId": 1,
+    "year": 2023,
+    "sizeCategory": "small",
+    "businessCount": 150,
+    "employeeCount": 500
+  },
+  {
+    "stateId": 1,
+    "cityId": 1,
+    "year": 2023,
+    "sizeCategory": "medium",
+    "businessCount": 75,
+    "employeeCount": 1200
+  },
+  {
+    "stateId": 1,
+    "cityId": 1,
+    "year": 2023,
+    "sizeCategory": "large",
+    "businessCount": 25,
+    "employeeCount": 3000
+  },
+  {
+    "stateId": 1,
+    "cityId": 2,
+    "year": 2023,
+    "sizeCategory": "small",
+    "businessCount": 200,
+    "employeeCount": 600
+  },
+  {
+    "stateId": 1,
+    "cityId": 2,
+    "year": 2023,
+    "sizeCategory": "medium",
+    "businessCount": 100,
+    "employeeCount": 1500
+  },
+  {
+    "stateId": 1,
+    "cityId": 2,
+    "year": 2023,
+    "sizeCategory": "large",
+    "businessCount": 30,
+    "employeeCount": 4000
+  }
+]

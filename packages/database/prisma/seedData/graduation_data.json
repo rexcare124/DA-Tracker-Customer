@@ -1,0 +1,29 @@
+[
+  {
+    "grad_id": 1,
+    "district_id": 1,
+    "school_id": 1,
+    "school_year": "2023-2024",
+    "total_seniors": 450,
+    "graduates": 425,
+    "city_id": 1
+  },
+  {
+    "grad_id": 2,
+    "district_id": 2,
+    "school_id": 2,
+    "school_year": "2023-2024",
+    "total_seniors": 380,
+    "graduates": 362,
+    "city_id": 2
+  },
+  {
+    "grad_id": 3,
+    "district_id": 3,
+    "school_id": 3,
+    "school_year": "2023-2024",
+    "total_seniors": 320,
+    "graduates": 305,
+    "city_id": 3
+  }
+]

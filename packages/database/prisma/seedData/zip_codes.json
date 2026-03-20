@@ -1,0 +1,102 @@
+[
+  {
+    "zip_code_id": 1,
+    "zip_code": "90210",
+    "city_id": 1
+  },
+  {
+    "zip_code_id": 2,
+    "zip_code": "90401",
+    "city_id": 1
+  },
+  {
+    "zip_code_id": 3,
+    "zip_code": "91105",
+    "city_id": 1
+  },
+  {
+    "zip_code_id": 4,
+    "zip_code": "60601",
+    "city_id": 2
+  },
+  {
+    "zip_code_id": 5,
+    "zip_code": "60602",
+    "city_id": 2
+  },
+  {
+    "zip_code_id": 6,
+    "zip_code": "77001",
+    "city_id": 3
+  },
+  {
+    "zip_code_id": 7,
+    "zip_code": "77002",
+    "city_id": 3
+  },
+  {
+    "zip_code_id": 8,
+    "zip_code": "85001",
+    "city_id": 4
+  },
+  {
+    "zip_code_id": 9,
+    "zip_code": "85002",
+    "city_id": 4
+  },
+  {
+    "zip_code_id": 10,
+    "zip_code": "92101",
+    "city_id": 5
+  },
+  {
+    "zip_code_id": 11,
+    "zip_code": "92102",
+    "city_id": 5
+  },
+  {
+    "zip_code_id": 12,
+    "zip_code": "75201",
+    "city_id": 6
+  },
+  {
+    "zip_code_id": 13,
+    "zip_code": "75202",
+    "city_id": 6
+  },
+  {
+    "zip_code_id": 14,
+    "zip_code": "78201",
+    "city_id": 7
+  },
+  {
+    "zip_code_id": 15,
+    "zip_code": "78202",
+    "city_id": 7
+  },
+  {
+    "zip_code_id": 16,
+    "zip_code": "95101",
+    "city_id": 8
+  },
+  {
+    "zip_code_id": 17,
+    "zip_code": "95102",
+    "city_id": 8
+  },
+  {
+    "zip_code_id": 18,
+    "zip_code": "73301",
+    "city_id": 9
+  },
+  {
+    "zip_code_id": 19,
+    "zip_code": "73302",
+    "city_id": 9
+  },
+  {
+    "zip_code_id": 20,
+    "zip_code": "32201",
+    "city_id": 10
+  }
+]

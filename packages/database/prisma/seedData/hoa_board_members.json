@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "hoa_id": 1,
+    "prefix": "Mr.",
+    "first_name": "John",
+    "last_name": "Smith",
+    "position": "President",
+    "term_start": "2023-01-01T00:00:00Z",
+    "term_end": "2025-12-31T00:00:00Z",
+    "contact_email": "john.smith@sunsethillshoa.org",
+    "contact_phone": "555-0101",
+    "is_current": true
+  },
+  {
+    "id": 2,
+    "hoa_id": 1,
+    "prefix": "Ms.",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "position": "Vice President",
+    "term_start": "2023-01-01T00:00:00Z",
+    "term_end": "2025-12-31T00:00:00Z",
+    "contact_email": "sarah.johnson@sunsethillshoa.org",
+    "contact_phone": "555-0102",
+    "is_current": true
+  },
+  {
+    "id": 3,
+    "hoa_id": 1,
+    "prefix": "Mr.",
+    "first_name": "Michael",
+    "last_name": "Davis",
+    "position": "Treasurer",
+    "term_start": "2023-01-01T00:00:00Z",
+    "term_end": "2025-12-31T00:00:00Z",
+    "contact_email": "michael.davis@sunsethillshoa.org",
+    "contact_phone": "555-0103",
+    "is_current": true
+  },
+  {
+    "id": 4,
+    "hoa_id": 2,
+    "prefix": "Dr.",
+    "first_name": "Robert",
+    "last_name": "Williams",
+    "position": "President",
+    "term_start": "2024-01-01T00:00:00Z",
+    "term_end": "2026-12-31T00:00:00Z",
+    "contact_email": "robert.williams@oakwoodestateshoa.com",
+    "contact_phone": "555-0201",
+    "is_current": true
+  },
+  {
+    "id": 5,
+    "hoa_id": 2,
+    "prefix": "Mrs.",
+    "first_name": "Linda",
+    "last_name": "Brown",
+    "position": "Secretary",
+    "term_start": "2024-01-01T00:00:00Z",
+    "term_end": "2026-12-31T00:00:00Z",
+    "contact_email": "linda.brown@oakwoodestateshoa.com",
+    "contact_phone": "555-0202",
+    "is_current": true
+  },
+  {
+    "id": 6,
+    "hoa_id": 3,
+    "prefix": "Mr.",
+    "first_name": "David",
+    "last_name": "Miller",
+    "position": "President",
+    "term_start": "2022-01-01T00:00:00Z",
+    "term_end": "2024-12-31T00:00:00Z",
+    "contact_email": "david.miller@riversidecommons.org",
+    "contact_phone": "555-0301",
+    "is_current": true
+  }
+]
+

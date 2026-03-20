@@ -1,0 +1,82 @@
+[
+  {
+    "person_id": 1,
+    "event_id": 1,
+    "relationship_type": "participant",
+    "role": "Business Owner",
+    "notes": "Primary applicant for ABC Construction business license",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 2,
+    "event_id": 2,
+    "relationship_type": "subject",
+    "role": "Restaurant Owner",
+    "notes": "Owner of Mario's Pizza restaurant subject to health inspection",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 3,
+    "event_id": 3,
+    "relationship_type": "participant",
+    "role": "Property Developer",
+    "notes": "Developer who submitted building permit application for 123 Main Street",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 4,
+    "event_id": 4,
+    "relationship_type": "subject",
+    "role": "Facility Manager",
+    "notes": "Facility manager responsible for environmental compliance violations",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 5,
+    "event_id": 5,
+    "relationship_type": "participant",
+    "role": "City Council Member",
+    "notes": "City council member participating in zoning amendment public hearing",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 6,
+    "event_id": 6,
+    "relationship_type": "participant",
+    "role": "Housing Director",
+    "notes": "City housing director who will oversee community development grant funds",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 7,
+    "event_id": 7,
+    "relationship_type": "participant",
+    "role": "Business Owner",
+    "notes": "Business owner filing tax dispute lawsuit against city",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 8,
+    "event_id": 8,
+    "relationship_type": "participant",
+    "role": "Emergency Manager",
+    "notes": "Emergency management coordinator leading flood response efforts",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 1,
+    "event_id": 9,
+    "relationship_type": "witness",
+    "role": "Resident",
+    "notes": "Local resident who reported potholes on Oak Street",
+    "state_region_id": 1
+  },
+  {
+    "person_id": 2,
+    "event_id": 10,
+    "relationship_type": "witness",
+    "role": "Resident",
+    "notes": "Resident who filed noise complaint against downtown bar",
+    "state_region_id": 1
+  }
+]

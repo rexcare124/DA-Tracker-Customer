@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Sunset Hills Community Association",
+    "date_established": "1995-06-15T00:00:00Z",
+    "location_id": 1,
+    "website": "https://www.sunsethillshoa.org",
+    "administration_software": "Buildium",
+    "management_structure": "Self-Managed",
+    "age_restrictions": null
+  },
+  {
+    "id": 2,
+    "name": "Oakwood Estates HOA",
+    "date_established": "2000-03-20T00:00:00Z",
+    "location_id": 2,
+    "website": "https://www.oakwoodestateshoa.com",
+    "administration_software": "AppFolio",
+    "management_structure": "Professional Management",
+    "age_restrictions": "55+ Community"
+  },
+  {
+    "id": 3,
+    "name": "Riverside Commons Association",
+    "date_established": "1988-11-10T00:00:00Z",
+    "location_id": 3,
+    "website": "https://www.riversidecommons.org",
+    "administration_software": "TOPS Software",
+    "management_structure": "Hybrid Management",
+    "age_restrictions": null
+  },
+  {
+    "id": 4,
+    "name": "Meadowbrook Village HOA",
+    "date_established": "2005-08-05T00:00:00Z",
+    "location_id": 4,
+    "website": "https://www.meadowbrookvillagehoa.org",
+    "administration_software": "Yardi",
+    "management_structure": "Professional Management",
+    "age_restrictions": null
+  },
+  {
+    "id": 5,
+    "name": "Pinecrest Community Association",
+    "date_established": "1992-04-12T00:00:00Z",
+    "location_id": 5,
+    "website": "https://www.pinecresthoa.com",
+    "administration_software": "Buildium",
+    "management_structure": "Self-Managed",
+    "age_restrictions": null
+  }
+]
+
