@@ -69,8 +69,11 @@ class SecureEnv {
       NODE_ENV: process.env.NODE_ENV,
     };
 
-    this.validateRequired();
+    // Mark as initialized before validating.
+    // Otherwise validateRequired() -> getSanitized() -> get() would re-enter init()
+    // while initialization is still in progress, causing a call stack overflow.
     this.initialized = true;
+    this.validateRequired();
   }
 
   /**
