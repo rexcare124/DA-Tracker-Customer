@@ -19,9 +19,9 @@ for (const p of dotenvPathCandidates) {
   }
 }
 
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+// Reuse the already-generated Prisma client from this package.
+// (This repo generates Prisma into `generated/client`, so `@prisma/client` may not have `.prisma/` types.)
+import { prisma } from "@pk/database";
 
 async function validateSeeding() {
   console.log("🔍 Validating database seeding...\n");
@@ -49,7 +49,11 @@ async function validateSeeding() {
     console.log(`   Found ${financialRecords.length} financial records`);
     
     // Check for document URLs
-    const hasDocumentUrls = financialRecords.some((r) => r.documentUrl !== null);
+    // `financialRecords` may come back untyped depending on how the Prisma client is generated/imported,
+    // so we explicitly type the callback arg to avoid `noImplicitAny` failures during build.
+    const hasDocumentUrls = financialRecords.some(
+      (r: { documentUrl: any }) => r.documentUrl !== null
+    );
     if (hasDocumentUrls) {
       console.log("   ✅ Document URLs are present");
     } else {
@@ -84,7 +88,7 @@ async function validateSeeding() {
     
     // Check for invoice fields
     const hasInvoiceFields = invoices.some(
-      (i) =>
+      (i: { invoiceAmount: any; vendorName: any; invoiceNumber: any }) =>
         i.invoiceAmount !== null ||
         i.vendorName !== null ||
         i.invoiceNumber !== null
@@ -125,21 +129,26 @@ async function validateSeeding() {
         invoices: true,
       },
     });
-    console.log(`   HOAs with management companies: ${hoaWithManagement.filter((h) => h.managementCompanies.length > 0).length}`);
-    console.log(`   HOAs with financial records: ${hoaWithManagement.filter((h) => h.financialRecords.length > 0).length}`);
-    console.log(`   HOAs with invoices: ${hoaWithManagement.filter((h) => h.invoices.length > 0).length}`);
+    console.log(`   HOAs with management companies: ${hoaWithManagement.filter((h: { managementCompanies: any[] }) => h.managementCompanies.length > 0).length}`);
+    console.log(`   HOAs with financial records: ${hoaWithManagement.filter((h: { financialRecords: any[] }) => h.financialRecords.length > 0).length}`);
+    console.log(`   HOAs with invoices: ${hoaWithManagement.filter((h: { invoices: any[] }) => h.invoices.length > 0).length}`);
     
     // Validate that invoices have exactly one authorizer
-    const invoicesWithAuthorizers = hoaWithManagement.flatMap((h) => h.invoices);
+    const invoicesWithAuthorizers = hoaWithManagement.flatMap(
+      (h: { invoices: any[] }) => h.invoices
+    );
     const invoicesWithBothAuthorizers = invoicesWithAuthorizers.filter(
-      (i) => i.authorizingBoardMemberId !== null && i.authorizingManagementCompanyId !== null
+      (i: { authorizingBoardMemberId: any; authorizingManagementCompanyId: any }) =>
+        i.authorizingBoardMemberId !== null && i.authorizingManagementCompanyId !== null
     );
     const invoicesWithNoAuthorizers = invoicesWithAuthorizers.filter(
-      (i) => i.authorizingBoardMemberId === null && i.authorizingManagementCompanyId === null
+      (i: { authorizingBoardMemberId: any; authorizingManagementCompanyId: any }) =>
+        i.authorizingBoardMemberId === null && i.authorizingManagementCompanyId === null
     );
     const invoicesWithOneAuthorizer = invoicesWithAuthorizers.filter(
-      (i) => (i.authorizingBoardMemberId !== null && i.authorizingManagementCompanyId === null) ||
-             (i.authorizingBoardMemberId === null && i.authorizingManagementCompanyId !== null)
+      (i: { authorizingBoardMemberId: any; authorizingManagementCompanyId: any }) =>
+        (i.authorizingBoardMemberId !== null && i.authorizingManagementCompanyId === null) ||
+        (i.authorizingBoardMemberId === null && i.authorizingManagementCompanyId !== null)
     );
     
     if (invoicesWithBothAuthorizers.length > 0) {
@@ -159,8 +168,12 @@ async function validateSeeding() {
         hoaManagementCompanies: true,
       },
     });
-    const vendorsWithInvoices = businessesAsVendors.filter((b) => b.hoaInvoicesAsVendor.length > 0);
-    const businessesAsMgmt = businessesAsVendors.filter((b) => b.hoaManagementCompanies.length > 0);
+    const vendorsWithInvoices = businessesAsVendors.filter(
+      (b: { hoaInvoicesAsVendor: any[] }) => b.hoaInvoicesAsVendor.length > 0
+    );
+    const businessesAsMgmt = businessesAsVendors.filter(
+      (b: { hoaManagementCompanies: any[] }) => b.hoaManagementCompanies.length > 0
+    );
     console.log(`   Businesses as vendors (invoices): ${vendorsWithInvoices.length}`);
     console.log(`   Businesses as management companies: ${businessesAsMgmt.length}`);
 

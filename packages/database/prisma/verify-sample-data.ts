@@ -17,9 +17,7 @@ for (const p of dotenvPathCandidates) {
   }
 }
 
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "@pk/database";
 
 async function verifySamples() {
   console.log("🔍 Verifying sample data...\n");

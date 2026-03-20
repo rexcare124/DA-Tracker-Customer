@@ -15,13 +15,14 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.checkDatabaseHealth = exports.disconnectFromDatabase = exports.connectToDatabase = exports.prisma = void 0;
-const client_1 = require("../generated/client");
 const extension_accelerate_1 = require("@prisma/extension-accelerate");
 // Global Prisma client instance for connection pooling
 const globalForPrisma = globalThis;
 // Create Prisma client with connection pooling and acceleration
 const createPrismaClient = () => {
-    const client = new client_1.PrismaClient({
+    // Lazy-load generated Prisma client to avoid build-time filesystem globbing.
+    const generated = require("../generated/client");
+    const client = new generated.PrismaClient({
         log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
     });
     // Add Accelerate extension if DATABASE_URL supports it
@@ -30,13 +31,29 @@ const createPrismaClient = () => {
     }
     return client;
 };
-// Use global instance in development to prevent multiple connections
-exports.prisma = globalForPrisma.prisma ?? createPrismaClient();
-if (process.env.NODE_ENV !== 'production') {
-    globalForPrisma.prisma = exports.prisma;
-}
-// Export all Prisma types and namespace (Prisma.sql, Prisma.join, etc.) for client and server
-__exportStar(require("../generated/client"), exports);
+// Lazy Prisma initialization:
+// `next build` server tracing can end up touching this module. Delay client construction
+// until runtime by exporting a Proxy instead of instantiating immediately.
+let prismaInstance = globalForPrisma.prisma;
+const getPrisma = () => {
+    if (!prismaInstance) {
+        prismaInstance = globalForPrisma.prisma ?? createPrismaClient();
+        if (process.env.NODE_ENV !== 'production') {
+            globalForPrisma.prisma = prismaInstance;
+        }
+    }
+    return prismaInstance;
+};
+exports.prisma = new Proxy({}, {
+    get(_target, prop) {
+        const client = getPrisma();
+        const value = client[prop];
+        // Bind Prisma methods so `this` is correct.
+        if (typeof value === 'function')
+            return value.bind(client);
+        return value;
+    }
+});
 // Export utility functions
 const connectToDatabase = async () => {
     try {

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { Toaster } from "@/components/ui/sonner";
@@ -8,8 +7,6 @@ import Providers from "./providers";
 import SessionProviders from "./SessionProviders";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import ConsoleFilter from "@/components/ConsoleFilter";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "DA Tracker",
@@ -33,7 +30,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      {/* Avoid next/font/google build-time fetch (e.g., blocked/airgapped builds). */}
+      <body className="font-inter">
         <ConsoleFilter />
         <GoogleAnalytics />
         <SessionProviders>

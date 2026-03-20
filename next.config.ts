@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Turbopack/webpack can hit file-lock (EBUSY) issues under `.next/` on Windows.
+  // Using a separate dist folder avoids collisions with watchers/AV on `.next`.
+  distDir: process.env.NEXT_DIST_DIR || "build",
   images: {
     remotePatterns: [
       {
